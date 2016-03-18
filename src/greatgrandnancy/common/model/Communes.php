@@ -9,6 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 class Communes extends Model
 {
 	protected $table = 'communes';
-	protected $primaryKey = 'geodb_oid';
+	protected $primaryKey = 'id';
 	public $timestamps = false;
 }

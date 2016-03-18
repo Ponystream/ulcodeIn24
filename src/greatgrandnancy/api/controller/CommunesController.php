@@ -4,44 +4,48 @@
 namespace greatgrandnancy\api\controller;
 
 use \greatgrandnancy\common\model\CommerceDetail;
+use greatgrandnancy\common\model\Communes;
 
 class CommunesController extends AbstractController
 {
-    public function getAllCommunes($data) {
+    public function getAllCommunes()
+    {
         $router = $this->app->getContainer()->get('router');
-//        $ville = ['Art-sur-Meurthe', 'Dommartemont', 'Laneuveville-devant-Nancy', 'Saulxures', 'Pulnoy', 'Seichamps', 'Essey-les-Nancy', 'Tomblaine', 'Jarville', 'Nancy', 'Fléville-devant-Nancy']
 
-        if(isset($data['ville'])){
-            $ville = [];
-            // parser $data['villes']
-            $parsed = urldecode($data['ville']);
-            $explode = explode(';', $parsed);
-            // foreach sur le resultat
-            $commerce = CommerceDetail::select('*');
+        $communes = Communes::all();
 
-            foreach($explode as $e) {
-                $commerce->orWhere('LIBGEO', '=', $e);
-
-            }
-
-            $query = $commerce->get();
-
-            foreach ($query as $q) {
-                $res[] = ['ville' => $q];
-//                    'links' => ['self' => ['href' => $router->pathFor('annonce', ['id' => $q->id]),
-//                    'annonceur' => $router->pathFor('annonceur', ['id' => $a->id])]]];
-            }
-
-            $tab = ['villes' => $res];
-            $encoded = json_encode($tab);
-
-            $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
-            $response = $this->Status($response, 200);
-            $response = $this->Write($response, $encoded);
-
-            return $response;
+        foreach ($communes as $commune) {
+            $res[] = ['commune' => $commune, 'links' => ['self' => ['href' => $router->pathFor('communeById', ['id' => $commune->id])]]];
         }
+
+        $tab = array('communes' => $res, 'Links' => []);
+        $encoded = json_encode($tab);
+
+        $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
+        $response = $this->Status($response, 200);
+        $response = $this->Write($response, $encoded);
+
+        return $response;
+    }
+
+    public function getCommuneById($id)
+    {
+        $router = $this->app->getContainer()->get('router');
+
+        $communes = Communes::find($id);
+
+
+        $res = ['communes' => $communes, 'Links' => []];
+//                    'links' => ['self' => ['href' => $router->pathFor('annonce', ['id' => $q->id]),
+//                    'annonceur' => $router->pathFor('a    nnonceur', ['id' => $a->id])]]];
+
+//        $tab = ['communes' => $res];
+        $encoded = json_encode($res);
+
+        $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
+        $response = $this->Status($response, 200);
+        $response = $this->Write($response, $encoded);
+
+        return $response;
     }
 }
-
-//$url = "/api/commerces?ville=pulnoy&hypermarche=0&supermarche=0";
