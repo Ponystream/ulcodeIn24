@@ -1,0 +1,1 @@
+ulcodeIn24 = angular.module('ulcodeIn24', []);
