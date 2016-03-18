@@ -1,0 +1,2344 @@
+﻿1
+00:00:06,633 --> 00:00:08,001
+Cobra, Cobra...
+
+2
+00:00:08,035 --> 00:00:10,570
+Cobra, Cobra...
+
+3
+00:00:10,604 --> 00:00:12,472
+Cobra, Cobra.
+
+4
+00:00:12,506 --> 00:00:14,273
+Cobra !
+
+5
+00:00:14,308 --> 00:00:16,175
+Détruisez le Taj Mahal.
+
+6
+00:00:16,210 --> 00:00:18,578
+Cobra !
+
+7
+00:00:23,484 --> 00:00:25,218
+Pas si G.I. Joe peut aider.
+
+8
+00:00:25,252 --> 00:00:26,586
+Roadblock, débarrasse toi d'eux.
+
+9
+00:00:26,620 --> 00:00:28,054
+Repoussez ces tanks cracheurs.
+
+10
+00:00:28,088 --> 00:00:30,223
+- Yo, Joe!
+- Hat Muffs, Pit Take,
+
+11
+00:00:30,257 --> 00:00:32,325
+descendez ces serpents.
+
+12
+00:00:34,495 --> 00:00:36,396
+Hum, excusez-moi chef.
+
+13
+00:00:36,430 --> 00:00:38,464
+Pourquoi Cobra attaque-t-il
+une attraction touristique
+
+14
+00:00:38,499 --> 00:00:39,632
+sans aucun intérêt tactique,
+
+15
+00:00:39,666 --> 00:00:41,200
+et avec tout le respect
+que je dois aux indiens,
+
+16
+00:00:41,235 --> 00:00:42,468
+pourquoi la défendons-nous ?
+
+17
+00:00:42,503 --> 00:00:44,070
+Tightship, tu peux
+remanier G.I. Joe
+
+18
+00:00:44,104 --> 00:00:45,204
+quand tu es aux commandes.
+
+19
+00:00:45,239 --> 00:00:47,273
+Ce qui peut arriver
+n'importe quand là,
+
+20
+00:00:47,308 --> 00:00:49,208
+aussi longtemps que
+ton [Bip] reste exposé.
+
+21
+00:00:49,243 --> 00:00:51,544
+Buzzkill, ton langage.
+
+22
+00:00:51,578 --> 00:00:53,046
+Non, tu ne peux pas avoir 
+de glace au repas.
+
+23
+00:00:53,080 --> 00:00:54,280
+Passe moi ton frère.
+
+24
+00:00:54,315 --> 00:00:55,481
+Three Kids, pose ce téléphone.
+
+25
+00:00:55,516 --> 00:00:57,050
+On est au milieu d'une bataille.
+
+26
+00:00:57,084 --> 00:00:58,351
+Va te faire, Flint.
+
+27
+00:00:58,385 --> 00:00:59,919
+Je suis dans une bataille nommée 
+avoir trois enfants.
+
+28
+00:01:01,455 --> 00:01:03,690
+Les gars, nous sommes une équipe.
+Vous me faites passer pour un imbécile.
+
+29
+00:01:03,724 --> 00:01:05,024
+Bien, si tu est si doué, Wingman,
+
+30
+00:01:05,059 --> 00:01:06,693
+montre nous comment faire.
+
+31
+00:01:06,727 --> 00:01:09,228
+Avec plaisir
+
+32
+00:01:14,134 --> 00:01:16,502
+On se reverra G.I Joe !
+
+33
+00:01:17,871 --> 00:01:19,205
+Joli tir, Wingman,
+
+34
+00:01:19,239 --> 00:01:20,440
+mais Destro s'est enfui.
+
+35
+00:01:20,474 --> 00:01:22,275
+Pas forcément, monsieur.
+
+36
+00:01:22,309 --> 00:01:25,445
+Bon dieu !
+
+37
+00:01:25,479 --> 00:01:26,713
+Quoi ? Oh, non. Tu fais quoi ?
+
+38
+00:01:26,747 --> 00:01:29,115
+T'es fou ? Que...
+
+39
+00:01:34,455 --> 00:01:37,223
+Yo, Joe !
+
+40
+00:01:39,393 --> 00:01:41,260
+Quoi ?
+
+41
+00:01:41,295 --> 00:01:43,529
+Quoi, on ne le
+dit pas ensemble ?
+
+42
+00:01:46,266 --> 00:01:48,568
+Yo, Joe !
+
+43
+00:01:48,602 --> 00:01:51,270
+♪ He'll fight for freedom,
+wherever there's trouble ♪
+
+44
+00:01:51,305 --> 00:01:52,839
+♪ G.I. Joe is there ♪
+
+45
+00:01:52,873 --> 00:01:56,342
+♪ G.I. Joe, American hero ♪
+
+46
+00:01:56,377 --> 00:01:58,544
+♪ G.I. Joe is there ♪
+
+47
+00:01:58,579 --> 00:01:59,779
+♪ it's G.I. Joe ♪
+
+48
+00:01:59,813 --> 00:02:01,447
+♪ against Cobra the enemy ♪
+
+49
+00:02:01,482 --> 00:02:03,950
+♪ fighting to save the day ♪
+
+50
+00:02:03,984 --> 00:02:06,586
+♪ he never gives up, he's always there ♪
+
+51
+00:02:06,620 --> 00:02:10,256
+♪ fighting for freedom over land and air ♪
+
+52
+00:02:10,290 --> 00:02:13,059
+♪ G.I. Joe, a real American hero ♪
+
+53
+00:02:13,093 --> 00:02:15,261
+♪ G.I. Joe is there ♪
+
+54
+00:02:15,296 --> 00:02:16,829
+G.I. Joe est le nom de code
+
+55
+00:02:16,864 --> 00:02:18,965
+pour le plus audacieuse,
+génialement entrainée,
+
+56
+00:02:18,999 --> 00:02:20,433
+force d'intervention américaine.
+
+57
+00:02:20,467 --> 00:02:22,135
+Son but... combattre Cobra,
+
+58
+00:02:22,169 --> 00:02:23,936
+car ce sont des terroristes.
+
+59
+00:02:23,971 --> 00:02:26,072
+Je crois que j'en fais un peu trop.
+
+60
+00:02:26,106 --> 00:02:27,273
+Les méchants sont des serpents,
+
+61
+00:02:27,308 --> 00:02:29,409
+et les gentils sont les militaires.
+
+62
+00:02:29,475 --> 00:02:30,742
+♪ He never gives up ♪
+
+63
+00:02:30,777 --> 00:02:31,977
+♪ he'll stay till the fight's won ♪
+
+64
+00:02:32,011 --> 00:02:34,179
+♪ G.I. Joe will dare ♪
+
+65
+00:02:34,213 --> 00:02:37,349
+♪ G.I. Joe, a real American hero ♪
+
+66
+00:02:37,383 --> 00:02:40,719
+♪ G.I. Joe ♪
+
+67
+00:02:46,756 --> 00:02:49,324
+Wingman, Three Kids, Buzzkill, Tightship,
+
+68
+00:02:49,358 --> 00:02:51,126
+vous êtes accusés de violence,
+
+69
+00:02:51,160 --> 00:02:53,795
+de langage osé et de situations
+
+70
+00:02:53,830 --> 00:02:56,531
+inappropriées de G.I. Joe.
+Que dites-vous ?
+
+71
+00:02:56,566 --> 00:02:58,100
+Écoute, je comprends que
+c'est la première fois
+
+72
+00:02:58,134 --> 00:03:01,103
+dans l'histoire
+qu'un G.I. Joe tue quelqu'un.
+
+73
+00:03:01,137 --> 00:03:02,704
+- Pourtant...
+- Pourtant, soyons honnête.
+
+74
+00:03:02,739 --> 00:03:04,539
+C'est vraiment une milice désorganisée.
+
+75
+00:03:04,574 --> 00:03:06,074
+Ouais, quel est le grade de chacun ?
+
+76
+00:03:06,109 --> 00:03:08,176
+On est juste habillé comme des tueurs
+en série et strip-teaseuses.
+	
+
+77
+00:03:08,211 --> 00:03:09,478
+J'ai trois enfants.
+
+78
+00:03:09,512 --> 00:03:11,246
+Vous êtes d'une aucune aide les gars.
+
+79
+00:03:11,280 --> 00:03:13,415
+Duke, Flint, Scarlett,
+
+80
+00:03:13,449 --> 00:03:16,184
+oui, c'est vrai j'ai tué Destro.
+
+81
+00:03:16,304 --> 00:03:17,971
+Et je promets
+de ne pas recommencer.
+
+82
+00:03:18,005 --> 00:03:19,372
+Mais est-ce vraiment un crime ?
+
+83
+00:03:19,407 --> 00:03:21,408
+Cobra n'est-elle pas une impitoyable
+organisation terroriste
+
+84
+00:03:21,442 --> 00:03:23,043
+qui n'a pour seul objectif que de
+dominer le monde ?
+
+85
+00:03:23,077 --> 00:03:24,544
+Et si nous ne les tuons jamais,
+
+86
+00:03:24,579 --> 00:03:26,980
+alors ne sommes-nous pas
+tout bonnement de leur côté ?
+
+87
+00:03:27,014 --> 00:03:29,483
+Et cette guerre ne durera-t-elle
+pas éternellement
+
+88
+00:03:29,517 --> 00:03:31,218
+à moins qu'on ne finisse
+par tuer Cobra
+
+89
+00:03:31,252 --> 00:03:33,253
+ou qu'on commence
+à nous entretuer ?
+
+90
+00:03:35,756 --> 00:03:37,824
+On va rester ici combien
+de temps, Cold Shoulder ?
+
+91
+00:03:37,859 --> 00:03:39,226
+Cold Shoulder ?
+
+92
+00:03:39,260 --> 00:03:40,460
+C'est qui ce gars?
+
+93
+00:03:40,495 --> 00:03:42,529
+"Commencer à tuer Cobra 
+ou nous suicider ?"
+
+94
+00:03:42,563 --> 00:03:44,865
+On est à la dernière tentative.
+C'était un Avé Maria.
+
+95
+00:03:44,899 --> 00:03:47,367
+Cet endroit est un cimetière 
+pour les rebuts de G.I. Joe.
+
+96
+00:03:47,401 --> 00:03:48,735
+Regardez qui est là...
+
+97
+00:03:48,770 --> 00:03:50,971
+Deep Dish, Shark Arms,
+
+98
+00:03:51,005 --> 00:03:52,706
+Weird Head, Home Free,
+
+99
+00:03:52,740 --> 00:03:55,075
+Place Holder, Sleep Apnea, et nous !
+
+100
+00:03:55,109 --> 00:03:56,276
+J'ai trois gosses.
+
+101
+00:03:56,310 --> 00:03:57,978
+C'est la pire journée de ma vie.
+
+102
+00:03:58,012 --> 00:04:00,146
+C'est ça la vie?
+
+103
+00:04:00,181 --> 00:04:02,415
+Mon nom est Fourth Wall.
+
+104
+00:04:02,450 --> 00:04:04,417
+Et je crois que ce
+qu'on perçoit comme la vie
+
+105
+00:04:04,452 --> 00:04:07,854
+est en fait un dessin
+animé pour gamins.
+
+106
+00:04:07,889 --> 00:04:10,257
+Quoi ? La ferme, Fourth Wall.
+
+107
+00:04:10,291 --> 00:04:12,526
+Si c'était un dessin animé, 
+il y aurait un mot pour "dessin animé"
+
+108
+00:04:12,560 --> 00:04:15,262
+dans notre langue, 
+et ce n'est pas le cas.
+
+109
+00:04:15,296 --> 00:04:17,264
+Il y aurait aussi moins de 
+mouvements et de détails
+
+110
+00:04:17,298 --> 00:04:18,832
+et des constantes fautes de 
+synchronisation labiale.
+
+111
+00:04:18,866 --> 00:04:20,901
+Et si je te dis qu'il y a plus que ça,
+
+112
+00:04:20,935 --> 00:04:22,569
+une plus haute réalité,
+
+113
+00:04:22,603 --> 00:04:24,938
+avec plus de 65 couleurs et 
+au moins 3 dimensions ?
+
+114
+00:04:24,972 --> 00:04:26,273
+Alors je crois qu'on 
+devrait t'enfermer
+
+115
+00:04:26,307 --> 00:04:27,474
+avec les fous.
+
+116
+00:04:27,508 --> 00:04:28,708
+Oh, Bien.
+
+117
+00:04:28,743 --> 00:04:32,112
+J'ai récemment infiltré une 
+cachète secrète de Cobra,
+
+118
+00:04:32,146 --> 00:04:33,680
+nom de code: Greendale.
+
+119
+00:04:36,284 --> 00:04:37,584
+Qu'as-tu dit ?
+
+120
+00:04:37,618 --> 00:04:39,586
+Cobra a découvert une 
+ancienne structure entérée
+
+121
+00:04:39,620 --> 00:04:41,621
+remplies de choses étranges.
+
+122
+00:04:41,656 --> 00:04:43,023
+Regardez.
+
+123
+00:04:43,057 --> 00:04:45,592
+- Regardez ça.
+- C'est un jouet pour enfant.
+
+124
+00:04:45,626 --> 00:04:47,961
+Le jouet était plus réel 
+que ça à Greendale.
+
+125
+00:04:49,063 --> 00:04:51,598
+C'est quoi ce mot ?
+
+126
+00:04:51,632 --> 00:04:52,632
+Greendale ?
+
+127
+00:05:02,744 --> 00:05:05,111
+Cobra est là pour conquérir le monde,
+
+128
+00:05:05,146 --> 00:05:06,580
+Mais G.I. Joe est là.
+
+129
+00:05:06,614 --> 00:05:08,248
+G.I. Joe doit être détruit. 	
+
+130
+00:05:08,282 --> 00:05:09,950
+Cobra ssse prépare à attaquer.
+
+131
+00:05:09,984 --> 00:05:12,586
+C'est le nouveau G.I. Joe Mitracopter,
+
+132
+00:05:12,620 --> 00:05:13,587
+piloté par Wingman.
+
+133
+00:05:13,621 --> 00:05:15,922
+- Battez en retraite !
+- Yo, Joe !
+
+134
+00:05:15,957 --> 00:05:17,491
+On est dans une pub pour un jouet !
+
+135
+00:05:17,525 --> 00:05:20,127
+Je ne peux pas t'entendre quand 
+tu es enseveli sous des rochers.
+
+136
+00:05:20,161 --> 00:05:21,862
+Ça ne fait pas mal car ce n'est pas réel.
+
+137
+00:05:21,896 --> 00:05:23,897
+- Bon boulot, Wingman.
+- Merci, Duke.
+
+138
+00:05:23,931 --> 00:05:25,999
+G.I. Joe c'est toute ma vie.
+
+139
+00:05:26,033 --> 00:05:27,934
+Yo, Joe ! 	
+
+140
+00:05:27,969 --> 00:05:29,770
+Figurines et véhicules vendus séparément.
+
+141
+00:05:30,972 --> 00:05:33,907
+- Wingman, que s'est-il passé ?
+- Je ne sais pas.
+
+142
+00:05:33,941 --> 00:05:36,076
+Il a clairement un contact 
+avec la réalité.
+
+143
+00:05:36,110 --> 00:05:37,144
+Quand j'ai mentionné Greenda...
+
+144
+00:05:37,178 --> 00:05:39,012
+Tais-toi. Arrête de dire ce mot.
+
+145
+00:05:39,046 --> 00:05:40,580
+Tu es un genre de démon,
+
+146
+00:05:40,615 --> 00:05:43,216
+et ta tenue est trois
+couches de raciste.
+
+147
+00:05:43,251 --> 00:05:44,317
+Oh, mon Dieu, il a une attaque !
+
+148
+00:05:44,352 --> 00:05:45,852
+Jeff, tu nous entends ?
+C'est Annie.
+
+149
+00:05:45,887 --> 00:05:47,120
+Comment m'as-tu appelé ?
+
+150
+00:05:47,155 --> 00:05:48,388
+Jeffrey, tu sais où tu es ?
+
+151
+00:05:48,423 --> 00:05:49,656
+Tais-toi. Laissez moi seul.
+
+152
+00:05:49,690 --> 00:05:52,392
+Je... Je ne suis pas d'ici.
+J'appartiens à G.I. Joe.
+
+153
+00:05:52,426 --> 00:05:55,462
+Et ne me touche pas. 
+Qui porte une scie sur son bras ?
+
+154
+00:06:01,836 --> 00:06:03,804
+La première fois que 
+j'ai rencontré Destro,
+
+155
+00:06:03,838 --> 00:06:05,572
+il m'a demandé s'il devait
+
+156
+00:06:05,606 --> 00:06:07,808
+recouvrir sa tête avec du chrome.
+
+157
+00:06:07,842 --> 00:06:09,709
+Je lui ai dit "Non. 
+Comment tu ferais ça ?"
+
+158
+00:06:09,744 --> 00:06:12,179
+Comment ça pourrait même marcher ?
+
+159
+00:06:13,247 --> 00:06:15,082
+Écoute, je suis pas bon
+pour les éloges
+
+160
+00:06:15,116 --> 00:06:16,750
+parce que je n'ai jamais eu à en faire.
+
+161
+00:06:16,784 --> 00:06:20,420
+Tout ce que je veux savoir, 
+c'est comment G.I. Joe font ça ?
+
+162
+00:06:20,455 --> 00:06:23,390
+On se tire dessus sans 
+succès depuis 20 ans.
+
+163
+00:06:23,424 --> 00:06:24,558
+Et là soudainement...
+
+164
+00:06:24,592 --> 00:06:26,326
+Incroyable. Quoi ?
+
+165
+00:06:26,360 --> 00:06:27,427
+Commandant Cobra,
+
+166
+00:06:27,462 --> 00:06:29,629
+je suis Vice commandant adjoint Cobra.
+
+167
+00:06:29,664 --> 00:06:31,465
+On a eu une intéressante hausse d'énergie
+
+168
+00:06:31,499 --> 00:06:32,632
+à Greendale.
+
+169
+00:06:32,667 --> 00:06:35,535
+Oh, ok. C'est très intéressant.
+
+170
+00:06:35,570 --> 00:06:37,471
+Destro est mort !
+
+171
+00:06:37,505 --> 00:06:40,607
+Oh, mon Dieu, Destro ?
+Vous étiez proches ?
+
+172
+00:06:40,641 --> 00:06:42,075
+Proches ? Oui !
+
+173
+00:06:42,110 --> 00:06:43,276
+C'est quoi cette question...
+
+174
+00:06:43,311 --> 00:06:46,380
+Ok, bien. Je l'aimais !
+
+175
+00:06:46,414 --> 00:06:48,115
+C'est ça que vous voulez entendre ?
+
+176
+00:06:48,149 --> 00:06:49,449
+On en est resté là.
+
+177
+00:06:50,752 --> 00:06:52,185
+Et on va découvrir 
+comment ça s'est passé.
+
+178
+00:06:52,220 --> 00:06:57,157
+et G.I. Joe va payer !
+
+179
+00:06:57,191 --> 00:06:58,725
+J'ai fait un riff de ça.
+
+180
+00:06:58,760 --> 00:07:00,026
+Pas de mauvaises réponses.
+
+181
+00:07:00,061 --> 00:07:01,828
+C'est une condition qui arrive
+
+182
+00:07:01,863 --> 00:07:03,130
+quand on atteint un certain poids.
+
+183
+00:07:03,164 --> 00:07:04,231
+Oh, je vois.
+
+184
+00:07:04,265 --> 00:07:05,699
+Y-a-t-il un M. Tightship, ou...
+
+185
+00:07:08,336 --> 00:07:09,436
+C'est un code 3.
+
+186
+00:07:09,470 --> 00:07:12,973
+Les forces de Cobra infiltrent la base.
+
+187
+00:07:13,007 --> 00:07:14,641
+Cobra !
+
+188
+00:07:14,675 --> 00:07:19,479
+Vengez mon ami totalement platonique !
+
+189
+00:07:19,514 --> 00:07:21,114
+Génial, et on est coincés ici.
+
+190
+00:07:21,149 --> 00:07:22,516
+On n'a pas à l'être.
+
+191
+00:07:22,550 --> 00:07:24,951
+Pendant 15 ans, j'ai utilisé 
+ma cuillère à soupe
+
+192
+00:07:24,986 --> 00:07:27,187
+pour creuser un tunnel,
+
+193
+00:07:27,221 --> 00:07:29,890
+avalant des poignées de poussières
+et de cailloux dans mes repas
+
+194
+00:07:29,924 --> 00:07:31,224
+et écoutant seulement Smashmouth
+
+195
+00:07:31,259 --> 00:07:33,093
+pour justifier ce poster.
+
+196
+00:07:33,127 --> 00:07:36,696
+Je suis sur le point d'atteindre le...
+
+197
+00:07:36,731 --> 00:07:38,498
+Allez, si on aide à sauver la base,
+
+198
+00:07:38,533 --> 00:07:41,868
+peut-être qu'ils nous laisseront 
+être des G.I. Joe à nouveau.
+
+199
+00:07:41,903 --> 00:07:43,904
+Postes de combat !
+
+200
+00:07:43,938 --> 00:07:46,339
+Serpents à 6 heures !
+
+201
+00:07:47,942 --> 00:07:50,444
+Ok, et souvenez-vous... ne tuez personne.
+
+202
+00:07:50,478 --> 00:07:51,978
+Faites juste un tir répressif.
+
+203
+00:07:52,013 --> 00:07:54,080
+comme ceci.
+
+204
+00:07:54,115 --> 00:07:56,550
+Oh, mon Dieu ! Je suis désolé.
+
+205
+00:07:56,584 --> 00:07:58,852
+Oh, mon Dieu.
+
+206
+00:07:58,886 --> 00:08:00,754
+Mec. Zut.
+
+207
+00:08:00,788 --> 00:08:02,322
+Je dirais qu'ils sont répressés.
+
+208
+00:08:02,356 --> 00:08:04,725
+Doux Jésus. C'était
+une corde de sécurité ?
+
+209
+00:08:04,759 --> 00:08:05,759
+Désolé !
+
+210
+00:08:05,793 --> 00:08:07,160
+Quelqu'un tue des gens !
+
+211
+00:08:07,195 --> 00:08:08,895
+C'est Wingman ! Il s'est échappé !
+
+212
+00:08:08,930 --> 00:08:11,698
+Faites un tir répressif !
+
+213
+00:08:11,732 --> 00:08:13,500
+Ils nous tirent répressivement !
+
+214
+00:08:13,534 --> 00:08:14,568
+Je pense qu'ils nous arrivera rien.
+
+215
+00:08:14,602 --> 00:08:15,969
+Souviens-toi, c'est juste un dessin animé
+
+216
+00:08:16,003 --> 00:08:17,003
+avec des jouets pour enfants.
+
+217
+00:08:17,038 --> 00:08:18,171
+Tais-toi, Fourth Wall,
+
+218
+00:08:18,206 --> 00:08:20,273
+Et monte dans le nouveau 
+Mitracopter G.I. Joe
+
+219
+00:08:20,308 --> 00:08:23,009
+avec un double lanceur de roquettes
+et un réacteur d'attaque rotatif.
+
+220
+00:08:26,948 --> 00:08:29,282
+Tout ce que je veux faire, 
+c'est être un bon G.I. Joe.
+
+221
+00:08:29,317 --> 00:08:30,884
+Qu'est-ce qui cloche chez moi ?
+
+222
+00:08:30,918 --> 00:08:33,587
+Je n'en suis pas sur, mais je pense 
+que nos réponses seront à Greendale.
+
+223
+00:08:35,490 --> 00:08:36,623
+Oups.
+
+224
+00:08:36,657 --> 00:08:37,724
+On ne devrait pas
+piloter l'avion ?
+
+225
+00:08:37,759 --> 00:08:39,126
+- C'est le Mitracopter.
+- Comme tu veux.
+
+226
+00:08:39,160 --> 00:08:40,260
+Quelqu'un va attraper le manche ?
+
+227
+00:08:40,294 --> 00:08:42,362
+Je ne veux pas mourir ici ! Seigneur !
+
+228
+00:08:46,631 --> 00:08:48,565
+Les G.I. Joe mutinés sont 
+encore pires que Cobra
+
+229
+00:08:48,600 --> 00:08:49,666
+parce que se sont des traîtres.
+
+230
+00:08:49,701 --> 00:08:51,735
+- Buzzkill...
+- Le gouvernement est un mensonge.
+
+231
+00:08:51,770 --> 00:08:52,736
+Tightship...
+
+232
+00:08:52,771 --> 00:08:54,037
+Je contrôle tout, ou presque !
+
+233
+00:08:54,072 --> 00:08:56,173
+- Three Kids...
+- Ma famille d'abord.
+
+234
+00:08:56,207 --> 00:08:57,307
+Fourth Wall...
+
+235
+00:08:57,342 --> 00:08:58,308
+Ce gars ne fait pas aussi la voix
+
+236
+00:08:58,343 --> 00:08:59,309
+de Musclor dans les pubs ?
+
+237
+00:08:59,344 --> 00:09:00,511
+Et leur infâme,
+
+238
+00:09:00,545 --> 00:09:01,545
+impitoyable meneur, Wingman.
+
+239
+00:09:01,579 --> 00:09:02,546
+C'est pas vrai !
+
+240
+00:09:02,580 --> 00:09:03,914
+J'aime G.I. Joe !
+
+241
+00:09:03,948 --> 00:09:05,616
+Je ne sais pas, mec. 
+On dirait que tu le détestes.
+
+242
+00:09:05,650 --> 00:09:07,251
+C'est un malentendu.
+
+243
+00:09:07,285 --> 00:09:08,719
+Dis ça au juge.
+
+244
+00:09:08,753 --> 00:09:11,221
+Tout est vendu séparément.
+Assemblage requis.
+
+245
+00:09:11,256 --> 00:09:12,289
+Il ne se passe rien.
+
+246
+00:09:13,324 --> 00:09:14,425
+Café de dessin animé ?
+
+247
+00:09:14,459 --> 00:09:16,193
+Tightship pilote le Mitracopter.
+
+248
+00:09:16,227 --> 00:09:17,895
+Au début, c'était Buzzkill, mais
+elle a failli se crasher cinq fois.
+
+249
+00:09:17,929 --> 00:09:19,129
+et on lui a fait remarquer,
+
+250
+00:09:19,164 --> 00:09:20,664
+elle nous a appelés sexistes 
+et est allée aux toilettes.
+
+251
+00:09:20,699 --> 00:09:22,099
+Tu sais qu'elle fume là dedans ?
+
+252
+00:09:22,133 --> 00:09:24,268
+Elle a cassé le détecteur.
+C'est un crime fédéral.
+
+253
+00:09:24,302 --> 00:09:26,470
+Je continue d'avoir ces visions.
+
+254
+00:09:26,504 --> 00:09:28,439
+Des enfants, des petits garçons...
+
+255
+00:09:28,473 --> 00:09:29,606
+Ce sont des visions
+
+256
+00:09:29,641 --> 00:09:31,308
+qu'on doit signaler aux autorités ?
+
+257
+00:09:31,343 --> 00:09:33,010
+Je veux aller à Greendale maintenant.
+
+258
+00:09:33,044 --> 00:09:34,111
+On est en chemin.
+
+259
+00:09:34,145 --> 00:09:35,479
+Tu te souviens de Greendale ?
+
+260
+00:09:35,513 --> 00:09:37,514
+Pourquoi vous m'avez appelé comme ça ?
+C'est quoi votre soucis vous autres ?
+
+261
+00:09:37,549 --> 00:09:38,816
+Que veux-tu dire par "vous autres" ?
+
+262
+00:09:38,850 --> 00:09:40,184
+Cool.
+
+263
+00:09:44,073 --> 00:09:46,575
+C'est l'entrée du site d'excavation.
+
+264
+00:09:46,609 --> 00:09:48,410
+Comment on se débarrasse de ces gardes ?
+
+265
+00:09:48,445 --> 00:09:50,579
+J'ai une idée.
+
+266
+00:09:53,249 --> 00:09:55,017
+Ton idée était de faire exactement 
+la même chose qu'on a fait
+
+267
+00:09:55,051 --> 00:09:56,552
+à ceux au quartier général ?
+
+268
+00:09:56,586 --> 00:09:57,820
+Ce fut efficace.
+
+269
+00:09:57,854 --> 00:09:59,154
+Je ne sais pas, ça semble facile.
+
+270
+00:09:59,189 --> 00:10:01,056
+Pour un dessin animé, très facile.
+
+271
+00:10:01,090 --> 00:10:03,926
+Aidez-moi à ouvrir la trappe.
+
+272
+00:10:07,464 --> 00:10:10,099
+Je connais cet endroit.
+
+273
+00:10:10,133 --> 00:10:12,468
+Je ressens les heures interminables
+
+274
+00:10:12,502 --> 00:10:15,938
+pour des salaires injustes et des 
+imprimantes qui n'ont jamais d'encre.
+
+275
+00:10:15,972 --> 00:10:17,840
+Qu'est-ce que c'est, Major Dick ?
+
+276
+00:10:17,874 --> 00:10:20,109
+C'est une requête pour 
+une prime de risque.
+
+277
+00:10:20,143 --> 00:10:21,310
+Peut-être que vous n'avez pas entendu,
+
+278
+00:10:21,344 --> 00:10:23,512
+mais on peut mourir, maintenant.
+
+279
+00:10:23,546 --> 00:10:24,913
+On ne peut pas s'offrir ça.
+
+280
+00:10:24,948 --> 00:10:26,348
+Alors on peut se permettre de créer
+
+281
+00:10:26,382 --> 00:10:28,617
+un nouveau modèle de véhicule 
+armé, une fois par semaine
+
+282
+00:10:28,651 --> 00:10:31,286
+mais on a un smig 
+pour risquer nos vies.
+
+283
+00:10:31,321 --> 00:10:33,522
+Bienvenue à Cobra, Ximxam.
+
+284
+00:10:33,556 --> 00:10:35,824
+Vous avez remarqué que 
+notre logo est un serpent ?
+
+285
+00:10:35,859 --> 00:10:36,859
+Faites avec !
+
+286
+00:10:36,893 --> 00:10:38,327
+Et pendant que j'ai 
+votre attention, voici.
+
+287
+00:10:38,361 --> 00:10:39,795
+Qu'est-ce que c'est ?
+
+288
+00:10:39,829 --> 00:10:42,064
+On doit baisser les salaires.
+Notre assurance augmente.
+
+289
+00:10:42,098 --> 00:10:43,198
+- Sans blague.
+- Quoi ?
+
+290
+00:10:43,233 --> 00:10:45,134
+Vous pouvez mourir maintenant.
+
+291
+00:10:45,168 --> 00:10:46,802
+Ça affecte le plan santé.
+
+292
+00:10:46,836 --> 00:10:48,937
+Vice commandant adjoint Cobra,
+
+293
+00:10:48,972 --> 00:10:50,472
+nous avons été infiltrés 
+par les G.I. Joe.
+
+294
+00:10:50,507 --> 00:10:52,608
+Eh bien ?
+
+295
+00:10:52,642 --> 00:10:53,609
+Protégez-moi !
+
+296
+00:10:53,643 --> 00:10:55,377
+Bonjour, Greendale.
+
+297
+00:10:55,411 --> 00:10:57,613
+J'ai compris que G.I. Joe 
+à infiltré le périmètre.
+
+298
+00:10:57,647 --> 00:10:59,148
+S'il vous plait, éliminez-les.
+
+299
+00:10:59,182 --> 00:11:01,817
+Et n'oubliez pas que samedi, 
+c'est la course amicale de Cobra.
+
+300
+00:11:01,851 --> 00:11:04,353
+Si vous la manquez, vous laissez 
+les anti-terroristes gagner.
+
+301
+00:11:04,387 --> 00:11:06,822
+Ugh, surextermination.
+
+302
+00:11:06,856 --> 00:11:08,390
+Oui, c'est moi.
+
+303
+00:11:08,425 --> 00:11:09,892
+Mais quel moi
+
+304
+00:11:09,926 --> 00:11:12,127
+est le vrai moi ?
+
+305
+00:11:15,698 --> 00:11:16,665
+Probablement celui du milieu.
+
+306
+00:11:16,699 --> 00:11:17,699
+Du milieu, d'accord ?
+
+307
+00:11:17,734 --> 00:11:20,536
+Aïe, ma jambe !
+
+308
+00:11:20,570 --> 00:11:22,337
+Là, avant de se battre, G.I. Joe,
+
+309
+00:11:22,372 --> 00:11:23,505
+tu dois être averti.
+
+310
+00:11:23,540 --> 00:11:26,308
+Moi, Ximxam, j'ai un jumeau, Mixmax
+
+311
+00:11:26,342 --> 00:11:27,843
+qui ressent toute ma douleur.
+
+312
+00:11:27,877 --> 00:11:30,879
+Et comment c'est supposé nous affecter ?
+
+313
+00:11:30,914 --> 00:11:33,182
+Psychologiquement ?
+
+314
+00:11:34,217 --> 00:11:36,218
+La soupe du jour est une carotte purée
+
+315
+00:11:36,252 --> 00:11:38,554
+avec un... bon sang !
+
+316
+00:11:38,588 --> 00:11:41,056
+Désolé. Mon frère jumeau est un...
+
+317
+00:11:41,090 --> 00:11:43,325
+c'est inutile de l'expliquer.
+
+318
+00:11:43,359 --> 00:11:44,760
+- Ca fait mal !
+- N'est-ce pas ?
+
+319
+00:11:44,794 --> 00:11:47,362
+Il a déchiré mon ménisque.
+
+320
+00:11:50,713 --> 00:11:52,114
+Je n'aurais pas du faire ça.
+
+321
+00:11:52,148 --> 00:11:54,082
+Non. Je n'aime pas ce son.
+
+322
+00:11:54,117 --> 00:11:55,450
+Incroyable.
+
+323
+00:11:55,485 --> 00:11:56,618
+C'est comme si
+il y avait dans ce lieu
+
+324
+00:11:56,653 --> 00:11:59,454
+quelque chose qui
+se nourrit d'ambition.
+
+325
+00:12:05,695 --> 00:12:09,631
+Je suis venu ici. Je travaille ici.
+
+326
+00:12:09,666 --> 00:12:12,401
+Mon nom est Jeff Winger, Et tu es Annie.
+
+327
+00:12:12,435 --> 00:12:14,169
+Et... et Shirley.
+
+328
+00:12:14,204 --> 00:12:15,671
+Et Abed et Britta.
+
+329
+00:12:15,705 --> 00:12:17,639
+Britta ? C'est quoi ce nom débile ?
+
+330
+00:12:17,674 --> 00:12:20,108
+Je veux être Buzzkill parce que 
+j'ai une scie géniale.
+
+331
+00:12:22,078 --> 00:12:24,379
+Vous êtes mes amis dans la vie réelle.
+
+332
+00:12:24,414 --> 00:12:27,115
+C'est mon imagination, ou 
+un truc dans le genre.
+
+333
+00:12:27,150 --> 00:12:28,183
+Ne bougez plus !
+
+334
+00:12:28,218 --> 00:12:29,318
+Ne me faites pas tirer !
+
+335
+00:12:29,352 --> 00:12:30,452
+Craig, c'est moi, Jeff.
+
+336
+00:12:30,486 --> 00:12:32,554
+Ça va ?
+
+337
+00:12:32,589 --> 00:12:34,556
+Non, ça ne va pas.
+Amenez-le à un expert en délire.
+
+338
+00:12:34,591 --> 00:12:36,325
+Si Jeff imagine un truc aussi cool,
+
+339
+00:12:36,359 --> 00:12:37,759
+quelque chose ne va pas, 
+il doit y retourner.
+
+340
+00:12:37,794 --> 00:12:38,894
+Wingman, tu as ton jetpack,
+
+341
+00:12:38,928 --> 00:12:40,395
+- ou c'est vendu séparément ?
+- Le voilà.
+
+342
+00:12:40,430 --> 00:12:42,297
+C'est bon, mes pouvoirs de 
+pénétration de Fourth Wall
+
+343
+00:12:42,332 --> 00:12:44,466
+combinés au manque de logique
+interne de ce support
+
+344
+00:12:44,501 --> 00:12:46,201
+devrait me permettre d'arriver 
+à une solution hyper simplifiée.
+
+345
+00:12:46,236 --> 00:12:49,304
+Je reviens, je dois 
+récupérer quelque chose.
+
+346
+00:12:49,339 --> 00:12:51,206
+- Quoi ? 
+- La vérité.
+
+347
+00:13:02,886 --> 00:13:05,587
+Merde.
+
+348
+00:13:07,123 --> 00:13:09,024
+Pendant que tu étais parti, 
+j'ai tout compris
+
+349
+00:13:09,058 --> 00:13:10,559
+et j'ai fait tout ce 
+qu'il y avait à faire.
+
+350
+00:13:10,593 --> 00:13:12,828
+C'est peut-être ton délire, mais
+je suis toujours celui qui pige tout.
+
+351
+00:13:12,862 --> 00:13:15,264
+Je sais pourquoi je suis là. 
+Je suis inconscient.
+
+352
+00:13:15,298 --> 00:13:17,499
+Jeff Winger est inconscient car...
+
+353
+00:13:17,534 --> 00:13:20,202
+J'ai bu un cinquième scotch.
+
+354
+00:13:20,236 --> 00:13:22,671
+Et j'ai pris quelques pilules.
+
+355
+00:13:22,705 --> 00:13:25,574
+Honte à toi Jeffrey. J'ai trois enfants.
+
+356
+00:13:25,608 --> 00:13:27,209
+Tu veux dire que tu as essayé de...
+
+357
+00:13:27,243 --> 00:13:28,644
+Non, c'était des pilules 
+de jeunesse débiles
+
+358
+00:13:28,678 --> 00:13:30,479
+que j'ai acheté à Koreatown.
+
+359
+00:13:30,513 --> 00:13:33,815
+Je les ai prises car 
+c'est mon anniversaire et...
+
+360
+00:13:33,850 --> 00:13:36,418
+J'ai menti sur mon age.
+
+361
+00:13:36,453 --> 00:13:38,420
+C'est quelque chose que je ne suis pas 
+réellement prêt à affronter.
+
+362
+00:13:38,455 --> 00:13:39,555
+Tu as trouvé
+un moyen de faire avec
+
+363
+00:13:39,589 --> 00:13:41,123
+inconsciemment à travers 
+un épisode psychotique.
+
+364
+00:13:41,157 --> 00:13:42,291
+Ça arrive aux meilleurs d'entre nous.
+
+365
+00:13:42,325 --> 00:13:43,959
+Ce sont les trois couches de réalité.
+
+366
+00:13:43,993 --> 00:13:45,427
+On est dans la couche
+"dessin animé".
+
+367
+00:13:45,462 --> 00:13:46,895
+C'est séparé de la réalité
+
+368
+00:13:46,930 --> 00:13:49,698
+par une dangereuse couche intermédiaire 
+appelée "pub de jouets pour enfants"
+
+369
+00:13:49,732 --> 00:13:51,166
+celle que tu vois
+dans tes visions.
+
+370
+00:13:51,201 --> 00:13:53,302
+J'ai modifié ton jetpack pour 
+percer cette barrière, et...
+
+371
+00:13:53,336 --> 00:13:56,138
+- Je n'y retourne pas.
+- Jeff, tu dois y retourner.
+
+372
+00:13:56,172 --> 00:13:59,308
+Je ne veux pas être un 
+professeur de fac.
+
+373
+00:13:59,342 --> 00:14:01,210
+Je veux être dans G.I. Joe.
+
+374
+00:14:01,244 --> 00:14:02,478
+Je veux me battre pour la liberté
+
+375
+00:14:02,512 --> 00:14:04,079
+partout où il y a des problèmes, 
+pour toujours.
+
+376
+00:14:04,113 --> 00:14:06,548
+C'est ton toi enfant qui parle.
+
+377
+00:14:06,583 --> 00:14:09,051
+Tu as régressé dans une partie
+infantile de ton esprit.
+
+378
+00:14:09,085 --> 00:14:11,720
+Britta imaginaire a raison.
+Et que la Britta imaginaire.
+
+379
+00:14:11,754 --> 00:14:12,988
+Dans ces visions que tu as
+
+380
+00:14:13,022 --> 00:14:14,256
+un enfant géant te contrôle.
+
+381
+00:14:14,290 --> 00:14:15,290
+Tu dois t'échapper.
+
+382
+00:14:15,325 --> 00:14:17,026
+Je suis cet enfant !
+C'est ça le soucis.
+
+383
+00:14:17,060 --> 00:14:19,595
+J'ai créé ça. J'ai choisi cela.
+
+384
+00:14:19,629 --> 00:14:22,164
+Mais tu comprends
+que le vrai Jeff Winger
+
+385
+00:14:22,198 --> 00:14:24,299
+est dans un genre de réel 
+danger médical ?
+
+386
+00:14:24,334 --> 00:14:25,467
+Comme dans les drames d'une heure ?
+
+387
+00:14:25,502 --> 00:14:28,070
+S'il te plait. Je ne veux pas
+que tu meurs.
+
+388
+00:14:28,104 --> 00:14:29,238
+Tu m'entends ?
+
+389
+00:14:29,272 --> 00:14:31,507
+Je meurs seulement là bas, Annie.
+
+390
+00:14:31,541 --> 00:14:32,708
+Ici, nous sommes immortels.
+
+391
+00:14:32,827 --> 00:14:34,194
+Regarde cette poitrine que je t'ai donnée.
+
+392
+00:14:34,229 --> 00:14:36,563
+Ces choses vont rester là 
+où elles sont pour l'éternité.
+
+393
+00:14:36,598 --> 00:14:39,700
+De rien.
+
+394
+00:14:39,734 --> 00:14:42,369
+Yo, Jobra !
+
+395
+00:14:42,403 --> 00:14:43,904
+"Yo, Jobra" ?
+
+396
+00:14:43,938 --> 00:14:45,906
+On a discuté et on s'est
+rendu compte que
+
+397
+00:14:45,940 --> 00:14:48,175
+comme on ne peut pas s’entretuer,
+on devrait faire équipe.
+
+398
+00:14:48,209 --> 00:14:50,711
+Car nous avons un ennemi commun.
+
+399
+00:14:50,745 --> 00:14:51,912
+Saisissez-les !
+
+400
+00:14:51,946 --> 00:14:53,313
+Vous ne pouvez pas me saisir.
+
+401
+00:14:53,348 --> 00:14:55,415
+Je suis le créateur de votre réalité.
+
+402
+00:14:55,450 --> 00:14:58,051
+Je suis Néo dans la troisième
+partie de Matrix.
+
+403
+00:14:58,086 --> 00:15:01,054
+Je suis aussi Néo dans la 
+première partie du second Matrix.
+
+404
+00:15:01,089 --> 00:15:02,623
+J'ai pas eu le temps de
+voir le troisième,
+
+405
+00:15:02,657 --> 00:15:03,690
+mais mon idée est...
+
+406
+00:15:07,625 --> 00:15:09,392
+Cobra et G.I. Joe se sont unis.
+
+407
+00:15:09,427 --> 00:15:10,393
+Vous avez besoin de quelque chose ?
+
+408
+00:15:10,428 --> 00:15:11,528
+On pourrait utiliser du lait.
+
+409
+00:15:11,562 --> 00:15:13,296
+Allons chercher du lait pour G.I. Joe.
+
+410
+00:15:13,331 --> 00:15:16,633
+Je vais attendre dans cette cellule 
+jusqu'à ce que vous me rééduquiez.
+
+411
+00:15:16,667 --> 00:15:18,268
+Yo, Jobra !
+
+412
+00:15:18,302 --> 00:15:19,503
+Yo Jobra.
+
+413
+00:15:19,537 --> 00:15:21,171
+Chaque jouet est fourni 
+avec son propre accessoire.
+
+414
+00:15:21,205 --> 00:15:22,906
+Wingman vendu séparément ou 
+quelque chose dans le genre.
+
+415
+00:15:25,676 --> 00:15:29,679
+Regarde qui est à
+nouveau conscient ?
+
+416
+00:15:29,714 --> 00:15:31,948
+Tu es plutôt sélectif avec
+ces "s" de serpent.
+
+417
+00:15:31,983 --> 00:15:33,350
+Qui es-tu, mon coach de vie ?
+
+418
+00:15:33,384 --> 00:15:36,052
+Je me foutrais bien de ton physique,
+
+419
+00:15:36,087 --> 00:15:37,220
+mais tu n'as aucun défaut.
+
+420
+00:15:37,345 --> 00:15:39,646
+Tu ressembles à un joueur 
+de football aryen.
+
+421
+00:15:39,680 --> 00:15:41,581
+Vous n'avez pas à me retenir prisonnier.
+
+422
+00:15:41,616 --> 00:15:43,016
+Je veux ce que vous voulez.
+
+423
+00:15:43,050 --> 00:15:45,085
+On ne peut pas te laisser 
+en liberté, Wingman.
+
+424
+00:15:45,119 --> 00:15:46,086
+Tu es trop puissant.
+
+425
+00:15:46,120 --> 00:15:47,787
+Alors partageons le pouvoir.
+
+426
+00:15:47,822 --> 00:15:49,623
+On peut être des dieux ici pour toujours.
+
+427
+00:15:49,657 --> 00:15:52,125
+Vraiment ?
+
+428
+00:15:52,159 --> 00:15:54,160
+Absolument. Je ne veux pas partir.
+
+429
+00:15:54,195 --> 00:15:57,063
+Je veux traîner avec vous 
+et exploser des trucs.
+
+430
+00:15:57,098 --> 00:15:59,899
+D'accord.
+
+431
+00:15:59,934 --> 00:16:02,569
+- Yo, Jobra.
+- Yo, Jobra.
+
+432
+00:16:02,603 --> 00:16:04,137
+Yo, Jobra.
+
+433
+00:16:04,172 --> 00:16:08,208
+Ca te dérange si on te pose des 
+questions à propos de la vie réelle ?
+
+434
+00:16:08,242 --> 00:16:09,609
+Pas de problème.
+
+435
+00:16:09,644 --> 00:16:12,112
+- Allez-y.
+- Alors...
+
+436
+00:16:12,146 --> 00:16:14,481
+À quoi ressemble des seins ?
+
+437
+00:16:14,515 --> 00:16:18,251
+Quoi. Vous ne savez pas ?
+
+438
+00:16:18,286 --> 00:16:20,554
+Vous n'avez jamais vu de femme nue ?
+
+439
+00:16:20,588 --> 00:16:22,656
+T'es pas obligé de nous faire 
+passer pour des nuls.
+
+440
+00:16:22,690 --> 00:16:25,525
+Vous avez déjà bu du scotch ?
+
+441
+00:16:25,560 --> 00:16:29,062
+Ça existe ici ?
+
+442
+00:16:29,096 --> 00:16:30,797
+Vous savez quoi ?
+
+443
+00:16:30,831 --> 00:16:34,000
+Je peux aller aux toilettes, vite fait ?
+
+444
+00:16:34,035 --> 00:16:36,269
+Bien sur. 
+C'est la seconde porte à droite.
+
+445
+00:16:36,304 --> 00:16:38,071
+On ne peut pas aller aux toilettes !
+
+446
+00:16:38,105 --> 00:16:40,574
+Imbécile ! Il s'enfuit !
+
+447
+00:16:53,254 --> 00:16:54,588
+Ça a intérêt à marcher.
+
+448
+00:16:54,622 --> 00:16:57,090
+Non, non... attends !
+
+449
+00:16:58,459 --> 00:17:00,560
+Lâche-moi ! 
+Je veux rentrer chez moi !
+
+450
+00:17:00,595 --> 00:17:03,129
+Emmène-moi ! Je veux voir 
+les seins d'une femme !
+
+451
+00:17:03,164 --> 00:17:04,931
+On ne peut pas y aller à deux.
+
+452
+00:17:04,966 --> 00:17:08,368
+Tu me ralentis, laisse moi partir.
+
+453
+00:17:10,805 --> 00:17:14,641
+Je peux la sentir ! Oui !
+Je peux sentir la réalité !
+
+454
+00:17:14,675 --> 00:17:17,544
+Je ne me suis jamais senti aussi vivant !
+
+455
+00:17:17,578 --> 00:17:20,580
+Parce que tu n'est pas réel !
+Tu ne peux pas survivre à ça !
+
+456
+00:17:20,615 --> 00:17:22,716
+Attends, pourquoi j'ai mal au dos ?
+
+457
+00:17:22,750 --> 00:17:25,252
+Pourquoi j'ai des douleurs
+dans mon corps ?
+
+458
+00:17:25,286 --> 00:17:28,688
+Pourquoi mon habilité à apprécier 
+la musique d'aujourd'hui diminue ?
+
+459
+00:17:31,425 --> 00:17:35,562
+Je dois gagner de la vitesse avant...
+
+460
+00:17:35,596 --> 00:17:37,864
+Wingman essaye d’échapper à G.I. Joe,
+
+461
+00:17:37,899 --> 00:17:39,332
+et c'est à toi de l'en empêcher.
+
+462
+00:17:39,367 --> 00:17:40,634
+avec la main de l'enfant 
+qui sommeille en vous.
+
+463
+00:17:40,668 --> 00:17:42,302
+Bon sang, je n'ai pas réussi.
+
+464
+00:17:42,336 --> 00:17:45,372
+Je ne le contrôle pas !
+Il fait ça lui même !
+
+465
+00:17:45,406 --> 00:17:46,373
+Va te faire, gamin.
+
+466
+00:17:46,407 --> 00:17:48,275
+Il m'a brûlé la main.
+
+467
+00:17:48,309 --> 00:17:50,277
+Le jetpack Wingman n'est pas 
+disponible en magasins.
+
+468
+00:17:50,311 --> 00:17:51,711
+Tu contrôles le jouet.
+
+469
+00:17:51,746 --> 00:17:53,847
+Tu contrôles le jouet, mon cul.
+
+470
+00:17:53,881 --> 00:17:56,183
+- Qu'est-ce que ça fait ?
+- Ça fait de toi un homme.
+
+471
+00:17:58,619 --> 00:17:59,986
+Tout est vendu séparément.
+
+472
+00:18:00,021 --> 00:18:01,354
+Tout le monde finit par mourir.
+
+473
+00:18:01,389 --> 00:18:04,491
+Personne ne s'en sort vivant.
+
+474
+00:18:04,525 --> 00:18:06,293
+Ses yeux s'ouvrent.
+
+475
+00:18:06,327 --> 00:18:08,128
+Ouais, mais ça arrive aussi 
+quand les gens meurent.
+
+476
+00:18:08,162 --> 00:18:10,430
+Attends, ne le gifle pas !
+
+477
+00:18:10,464 --> 00:18:12,132
+C'est moi, le Doyen. Je suis là.
+
+478
+00:18:12,166 --> 00:18:13,300
+Attends... non...
+tu dois...
+
+479
+00:18:13,334 --> 00:18:15,068
+Arrête, je suis réveillé.
+
+480
+00:18:17,438 --> 00:18:19,773
+Tu gardais ton 
+anniversaire secret ?
+
+481
+00:18:19,807 --> 00:18:21,241
+La plupart des gens ont un gâteau.
+
+482
+00:18:21,275 --> 00:18:24,244
+Pas un cinquième de scotch et
+peu importe quoi d'autre.
+
+483
+00:18:24,278 --> 00:18:27,214
+"Age inversé, pouvoir
+d'extension de la vie" ?
+
+484
+00:18:31,619 --> 00:18:33,153
+C'est Coréen.
+
+485
+00:18:33,187 --> 00:18:35,422
+- Bon, je suis quoi ? 
+- Chinois !
+
+486
+00:18:35,456 --> 00:18:36,756
+D'accord, je jure je me sens coréen.
+
+487
+00:18:36,791 --> 00:18:38,892
+Les gars...
+
+488
+00:18:38,926 --> 00:18:39,893
+J'ai 40 ans.
+
+489
+00:18:39,927 --> 00:18:41,027
+Quoi ?
+
+490
+00:18:41,062 --> 00:18:42,295
+Je suis tellement désolé.
+
+491
+00:18:42,330 --> 00:18:43,296
+Oui, on sait ça.
+
+492
+00:18:43,331 --> 00:18:46,399
+Tu sais, je crois qu'on savait
+
+493
+00:18:46,434 --> 00:18:48,235
+que tu devais avoir une trentaine 
+d'années quand on s'est rencontrés.
+
+494
+00:18:48,269 --> 00:18:50,237
+Et ça fait 5 ans.
+
+495
+00:18:50,271 --> 00:18:53,340
+Et même s'il avait 32 ans, 
+nous aurions du savoir qu'il a...
+
+496
+00:18:53,374 --> 00:18:55,642
+- Ca n'aide pas.
+- Vous savez que j'ai 38 ans ?
+
+497
+00:18:55,676 --> 00:18:57,377
+Quoi ?
+
+498
+00:18:57,411 --> 00:18:59,212
+Je plaisante.
+
+499
+00:18:59,247 --> 00:19:00,947
+Mais, Jeff, tu ne devrais pas 
+presque mourir pour un nombre.
+
+500
+00:19:00,982 --> 00:19:02,883
+Ce qui est important c'est
+les séries de nombres.
+
+501
+00:19:02,917 --> 00:19:04,618
+Tu as toujours 18 à 49 pendant 
+pendant presque une décennie.
+
+502
+00:19:04,652 --> 00:19:05,986
+C'est précieux pour la société.
+
+503
+00:19:06,020 --> 00:19:07,888
+Il te reste de ces pilules ?
+
+504
+00:19:07,922 --> 00:19:10,056
+J'ai eu le rêve le plus fou.
+
+505
+00:19:10,091 --> 00:19:11,291
+Il était tout animé
+
+506
+00:19:11,325 --> 00:19:14,394
+c'était un dessin animé G.I. Joe, 
+et vous étiez tous dedans !
+
+507
+00:19:14,428 --> 00:19:15,695
+Dedans ? Combien ?
+
+508
+00:19:15,730 --> 00:19:17,230
+Comment tu m'as habillée ?
+
+509
+00:19:17,265 --> 00:19:18,665
+Entièrement animé ?
+
+510
+00:19:18,699 --> 00:19:20,700
+C'était un rêve car tu étais inconscient.
+
+511
+00:19:20,735 --> 00:19:21,902
+Tu te souviens de ce Noël où je...
+
+512
+00:19:24,005 --> 00:19:26,873
+Voilà ton cadeau.
+
+513
+00:19:26,908 --> 00:19:28,775
+Slim Pickings à la boutique
+de l'hôpital,
+
+514
+00:19:28,810 --> 00:19:32,078
+mais on s'est débrouillé
+
+515
+00:19:33,147 --> 00:19:35,582
+"C'est un vieux garçon."
+
+516
+00:19:35,616 --> 00:19:37,451
+C'est un vieux garçon.
+
+517
+00:19:37,485 --> 00:19:39,252
+C'est un vieux garçon.
+
+518
+00:19:39,287 --> 00:19:41,121
+Allez, venez les gars.
+
+519
+00:19:42,223 --> 00:19:44,457
+Écoute, j'ai un ancien partenaire
+
+520
+00:19:44,492 --> 00:19:47,661
+qui est dans le coma depuis 89, donc...
+
+521
+00:19:47,695 --> 00:19:50,096
+1889 ?
+
+522
+00:19:50,131 --> 00:19:52,098
+Winger, tu es drôle !
+
+523
+00:20:01,064 --> 00:20:03,466
+- C'est cool !
+- Mets mon nom aussi.
+
+524
+00:20:03,500 --> 00:20:05,677
+- Qui êtes-vous, des hommes de cavernes ?
+- Buzzkill !
+
+525
+00:20:05,702 --> 00:20:07,302
+Ce que vous faites, c'est gâcher 
+une bombe de peinture.
+
+526
+00:20:07,336 --> 00:20:09,705
+On vit dans un état de police 
+fasciste déguisé en démocratie.
+
+527
+00:20:09,739 --> 00:20:11,640
+Vous pensez que vous allez 
+briser cette illusion
+
+528
+00:20:11,674 --> 00:20:13,208
+en célébrant vos identités 
+dénuées de sens ?
+
+529
+00:20:13,242 --> 00:20:15,711
+- L'église est terminée ?
+- Fourth Wall !
+
+530
+00:20:15,745 --> 00:20:17,846
+Un bon dessin animé
+a une morale à la fin.
+
+531
+00:20:17,880 --> 00:20:19,381
+Mais avoir la main lourde
+ou faire la morale
+
+532
+00:20:19,415 --> 00:20:22,017
+pourrait changer tout une génération
+en bébés blasés et sarcastiques.
+
+533
+00:20:22,051 --> 00:20:24,686
+- Être amicaux et directs.
+- Garder le message simple.
+
+534
+00:20:24,721 --> 00:20:26,488
+Les graffitis c'est mal.
+Allez faire du sport !
+
+535
+00:20:26,522 --> 00:20:28,523
+- Cool !
+- J'ai compris !
+
+536
+00:20:28,558 --> 00:20:30,358
+J'essayais de les garder 
+à un plus haut niveau.
+
+537
+00:20:30,393 --> 00:20:32,527
+Si les médias disent aux enfants quoi
+penser, tout ce qu'ils sauront c'est...
+
+538
+00:20:32,562 --> 00:20:33,528
+Et savoir c'est déjà la moitié.
+
+539
+00:20:33,563 --> 00:20:35,530
+Quoi ?
+
+540
+00:20:35,531 --> 00:20:36,531
+Synchro par chamallow
+Traduit par la communauté 
+www.addic7ed.com
+
