@@ -1,5 +1,6 @@
 ulcodeIn24.controller('MapController', ['$scope', '$http', function($scope, $http){
 
+
     var map = L.map('map').setView([48.6880756,6.1384176], 13);
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
