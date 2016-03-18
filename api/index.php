@@ -1,6 +1,7 @@
 <?php
 
 require_once '../vendor/autoload.php';
+
 use greatgrandnancy\api\controller as Controller;
 
 $app = new \Slim\App();
@@ -25,11 +26,12 @@ $c['errorHandler'] = function ($c) {
 // Database conf
 greatgrandnancy\app\App::DbConf('../src/greatgrandnancy/utils/config.ini');
 
-$app->group('/', function () use ($app) {
+$app->group('/commerce', function () use ($app) {
 
     ///////////// Retourne la liste des photos /////////////
     $app->get('', function ($req, $res) use ($app) {
-        return "ça marche";
+        $controller = new Controller\CommerceController($req, $res, $app);
+        return $controller->getAllCommerce($req->getQueryParams());
     })->setName('index');
 });
 
