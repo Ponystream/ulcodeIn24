@@ -3,6 +3,25 @@ body{
 }
 
 .logo{
-    height: 39px;
-    vertical-align: sub;
+    display: inline !important;
+    height: 29px;
+    margin-right: 10px;
+}
+
+.navbar-brand{
+    width: 225px;
+    background-color: aqua;
+    color: white !important;
+}
+
+.navbar-brand{
+    width: 225px;
+    background-color: aqua !important;
+    color: white !important;
+}
+.navbar-fixed-top{
+    background-color: white;
+    color: #262626;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    border: none;
 }

@@ -1,3 +1,1 @@
-/**
- * Created by Fabien on 18/03/2016.
- */
+ulcodeIn24 = angular.module('ulcodeIn24', []);
