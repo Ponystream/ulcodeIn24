@@ -16,6 +16,7 @@ vendor/
 # if you remove the above rule, at least ignore the following:
 
 # User-specific stuff:
+/src/greatgrandnancy/utils/config.ini
 # .idea/workspace.xml
 # .idea/tasks.xml
 # .idea/dictionaries
