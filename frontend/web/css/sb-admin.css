@@ -17,15 +17,6 @@ body {
     }
 }
 
-#wrapper {
-    padding-left: 0;
-}
-
-#page-wrapper {
-    width: 100%;
-    padding: 0;
-    background-color: #fff;
-}
 
 .huge {
     font-size: 50px;
@@ -135,7 +126,9 @@ ul.alert-dropdown {
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
-        background-color: #000 !important;
+        background-color: #414141 !important;
+        border-left: 3px solid #00d0d0;
+        transition: background-color 0.3s;
     }
 }
 
