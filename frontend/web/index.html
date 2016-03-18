@@ -44,7 +44,7 @@
             </li>
         </ul>
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="ThematiqueController">
             <ul class="nav navbar-nav side-nav">
                 <li class="input-search">
                     <span class="icon"><i class="fa fa-search"></i></span>
@@ -69,12 +69,13 @@
                         <li>
                             <a href="#"><i class="fa fa-futbol-o"></i> Sport</a>
                         </li>
-                        <li>
-                            <a href="#"><i class="fa fa-shopping-cart"></i> Commerce</a>
+                        <li ng-click="nbCommerce()">
+                            <a ><i class="fa fa-shopping-cart"></i> Commerce</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-university"></i> Institution</a>
                         </li>
+                        <button ng-click="nbCommerce()">test</button>
                     </ul>
                 </li>
                 <li>

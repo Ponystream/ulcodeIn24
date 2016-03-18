@@ -1,4 +1,4 @@
-ulcodeIn24.controller('MapController', ['$scope', '$http', function($scope, $http) {
+ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', function($scope, $http) {
 
     //get sur les series pour initialiser les variables dans serie.js
     var GetCommerce = function () {
@@ -16,6 +16,12 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', function($scope, $htt
                 });
     };
     GetCommerce();
+
+    var nbCommerce = function(){
+        console.log('test');
+      GetCommerce();
+    };
+
 
 
 }]);
