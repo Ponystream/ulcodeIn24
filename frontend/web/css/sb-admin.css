@@ -147,6 +147,10 @@ ul.alert-dropdown {
     color: #fff;
 }
 
+.side-nav{
+    background-color: #222;
+}
+
 /* Flot Chart Containers */
 
 .flot-chart {

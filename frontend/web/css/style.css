@@ -7,17 +7,15 @@ body {
     height: 100%;
 }
 
-#maps{
+#maps {
     height: 100%;
 }
 
-
-.container-body{
-    position: absolute;
+.container-body {
+    position: fixed;
     height: 100%;
     width: 100%;
     top: 100px;
-
 }
 
 .logo {
@@ -43,12 +41,19 @@ body {
     border: none;
 }
 
-.navbar-toogle {
-    background-color: black;
+.menu-resp {
+    box-shadow: 2px 2px 8px -3px #000;
+    border-radius: 50px;
+    border: none;
+    background-color: #2b303b;
 }
 
 .navbar-header {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.navbar-collapse{
+    border: none;
 }
 
 input#search {
@@ -62,7 +67,7 @@ input#search {
     color: #fff;
 }
 
-input#search:hover > .icon{
+input#search:hover > .icon {
     color: #4f5b66;
 }
 
@@ -152,7 +157,7 @@ input#search:focus, input#search:active {
 }
 
 .mat-btn ul .spin-btn {
-    background-image: url("https://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/2x/bt_speed_dial_2x.png");
+        background-image: url("../img/menu-verticale.png");
     background-size: 20px;
     background-repeat: no-repeat;
     background-position: center;
@@ -208,11 +213,44 @@ input#search:focus, input#search:active {
     transition-delay: 0.01s;
 }
 
+.leaflet-control-zoom-in {
+    box-shadow: 2px 2px 8px -3px #000;
+    border-radius: 55px !important;
+    background-color: #f44336 !important;
+    color: white !important;
+    height: 38px !important;
+    padding-top: 5px !important;
+    width: 38px !important;
+}
+
+.leaflet-control-zoom-in:hover {
+    background-color: #ae3027 !important;
+}
+
+.leaflet-control-zoom-out {
+    box-shadow: 2px 2px 8px -3px #000 !important;
+    border-radius: 55px !important;
+    background-color: #f44336 !important;
+    color: white !important;
+    height: 38px !important;
+    padding-top: 5px !important;
+    width: 38px !important;
+}
+
+.leaflet-control-zoom-out:hover {
+    background-color: #ae3027 !important;
+}
+
+.leaflet-bar{
+    box-shadow: none !important;
+}
+
 @media screen and (min-width: 640px) {
     input#search {
         width: 225px;
     }
-    .container-body{
+
+    .container-body {
         top: 50px;
     }
 }
