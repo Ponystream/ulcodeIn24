@@ -1,9 +1,6 @@
 <?php
 
-require_once '../vendor/autoload.php';
-use photolocate\api\controller as Controller;
-
-photolocate\app\App::DbConf('../src/photolocate/utils/config.ini');
+require_once 'vendor/autoload.php';
 
 $app = new \Slim\App();
 
