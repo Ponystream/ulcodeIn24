@@ -20,14 +20,15 @@ body {
 
 .logo {
     display: inline !important;
-    height: 29px;
-    margin-right: 10px;
+    height: 33px;
+    margin-bottom: 3px;
 }
 
 .navbar-brand {
     width: 225px;
     background-color: #00d0d0;
     color: white !important;
+    padding: 8px 15px;
 }
 
 .navbar-brand:hover {
