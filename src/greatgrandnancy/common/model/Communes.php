@@ -6,9 +6,9 @@ namespace greatgrandnancy\common\model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class User extends Model 
+class Communes extends Model
 {
-	protected $table = 'user';
-	protected $primaryKey = 'name';
+	protected $table = 'communes';
+	protected $primaryKey = 'geodb_oid';
 	public $timestamps = false;
 }
