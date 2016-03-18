@@ -2,7 +2,7 @@
 
 // Model super classique
 
-namespace model;
+namespace greatgrandnancy\common\model;
 
 use Illuminate\Database\Eloquent\Model;
 

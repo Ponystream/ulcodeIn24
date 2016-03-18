@@ -1,10 +1,11 @@
 <?php
 
 // Le namespace pour etre importe tout seul pas l'autoloader
-namespace controller;
+namespace greatgrandnancy\api\controller;
 
 // Les use ici si besoin
-use model\User;
+
+use greatgrandnancy\common\model\User;
 
 class Test
 {
