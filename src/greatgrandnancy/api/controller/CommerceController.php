@@ -43,5 +43,3 @@ class CommerceController extends AbstractController
         }
     }
 }
-
-//$url = "/api/commerces?ville=pulnoy&hypermarche=0&supermarche=0";
