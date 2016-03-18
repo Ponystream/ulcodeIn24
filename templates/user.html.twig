@@ -1,0 +1,16 @@
+{% extends 'main.html.twig' %}
+
+{% block main %}
+    
+    {% if ajout %}
+        <h2> ajouter en bdd ! </h2>
+    {% endif %}
+
+	{% if autre %}
+        <h3> {{  autre }} </h3>
+    {% endif %}
+
+    <h1>Bonjour {{ name }}</h1>
+    
+{% endblock %}
+
