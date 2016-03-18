@@ -4,13 +4,12 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', function($scop
     var GetCommerce = function () {
         $http.get('../../api/commerce?ville=Nancy')
             .then(function (response) {
-                    console.log(response);
+                    // console.log(response.data.villes[0].ville);
                     // $scope.commerces = [];
-                    // response.data.ville.forEach(function (data) {
-                    //     var newSerie = new Serie(data);
-                    //     $scope.series.push(newSerie);
-                    // });
-                },
+                       response.data.villes.forEach(function (data) {
+                           console.log(data.ville);
+                    });
+                             },
                 function (error) {
                     console.log(error);
                 });
@@ -21,7 +20,4 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', function($scop
         console.log('test');
       GetCommerce();
     };
-
-
-
 }]);
