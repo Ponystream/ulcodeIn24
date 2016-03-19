@@ -38,8 +38,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
             fillColor: '#f03',
             fillOpacity: 0.5
         }).addTo(map);
-
-        L.control.locate().addTo(map);
+        
     };
 
     $scope.afficheTransport = function (){

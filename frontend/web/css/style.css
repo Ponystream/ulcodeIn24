@@ -143,6 +143,10 @@ input#inputTheme:-ms-input-placeholder {
     color: #4f5b66;
 }
 
+.badge{
+    float: right;
+}
+
 input#inputTheme:focus, input#inputTheme:active {
     outline: none;
 }
