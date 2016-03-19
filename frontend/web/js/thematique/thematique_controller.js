@@ -1,4 +1,4 @@
-ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', 'Sante', 'Loisir', 'Enseignement', 'Entreprise', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent, Sante, Loisir, Enseignement, Entreprise) {
+ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', 'Sante', 'Loisir', 'Enseignement', 'Entreprise', 'Salaires', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent, Sante, Loisir, Enseignement, Entreprise, Salaires) {
     $scope.theme = "";
 
 
@@ -11,6 +11,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         $scope.santes = 0;
         $scope.restaurants = 0;
         $scope.enseignements = 0;
+        $scope.salaires = 0;
         $scope.entreprises = 0;
         $scope.cleCommerce = [];
         $scope.cleLoisir = [];
@@ -18,6 +19,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         $scope.cleRestaurant = [];
         $scope.cleEnseignement = [];
         $scope.cleEntreprise = [];
+        $scope.cleSalaire = [];
         $scope.cleServicePublic = [];
 
 
@@ -133,7 +135,6 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
     var GetEntreprise= function (ville) {
         $http.get('../api/entreprises?ville=' + ville)
             .then(function (response) {
-                console.log(response);
                     response.data.entreprises.forEach(function (data) {
                         var newEntreprise = new Entreprise(data.entreprise);
 
@@ -149,6 +150,23 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
                 });
 
     };
+    var GetSalaire= function (ville){
+        $http.get('../api/salaires?ville=' + ville)
+            .then(function (response) {
+                    response.data.salaires.forEach(function (data) {
+                        var newSalaire = new Salaires(data.salaire);
+                        console.log(newSalaire);
+
+                        $.each(newSalaire, function (key, value) {
+                            $scope.salaires += parseFloat(value);
+                            $scope.cleSalaire.push({'nom' : key, 'valeur' : value});
+                        });
+                    });
+                },
+                function (error) {
+
+                });
+    };
     
     $scope.localiser = function (ville) {
         GetCommerce(ville);
@@ -158,6 +176,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         GetSante(ville);
         GetEnseignement(ville);
         GetEntreprise(ville);
+        GetSalaire(ville);
     };
 
 }]);

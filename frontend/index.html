@@ -63,6 +63,7 @@
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
             <div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="ThematiqueController">
+                <!--==============================PARTICULIER=====================-->
                 <ul class="nav navbar-nav side-nav" id="particulier">
                     <li class="input-search">
                         <form role="searchThematique">
@@ -145,14 +146,16 @@
                         <a href="#" ng-click="afficheTransport()"><i class="fa fa-bus"></i> Transport </a>
                     </li>
                     </ul>
-                
+
+                <!--=========================FIN PARTICULIER=======================================-->
+                <!--==========================PROFESSIONNEL=======================================-->
                     <ul class="nav navbar-nav side-nav" id="professionnel">
                         <li>
                             <a href="#" data-toggle="collapse" data-target="#restaurant"><i class="fa fa-cutlery"></i>
                                 Restauration <span
                                         class="badge">{{restaurants}}</span></a>
                             <ul class="collapse" id="restaurant2">
-                                <li ng-repeat="restaurant in cleRestaurant" value="loisir">
+                                <li ng-repeat="restaurant in cleRestaurant" value="restaurant">
                                     <a href="#">{{restaurant.nom}} <span class="badge">{{restaurant.valeur}}</span></a>
                                 </li>
                             </ul>
@@ -162,7 +165,7 @@
                                 Entreprise <span
                                         class="badge">{{entreprises}}</span></a>
                             <ul class="collapse" id="entreprise2">
-                                <li ng-repeat="entreprise in cleEntreprise" value="loisir">
+                                <li ng-repeat="entreprise in cleEntreprise" value="entreprise">
                                     <a href="#">{{entreprise.nom}} <span class="badge">{{entreprise.valeur}}</span></a>
                                 </li>
                             </ul>
@@ -178,12 +181,19 @@
                             </ul>
                         </li>
                         <li>
+                            <a href="#" data-toggle="collapse" data-target="#salaire"><i class="fa fa-cutlery"></i>
+                                Salaire </a>
+                            <ul class="collapse" id="salaire">
+                                <li ng-repeat="salaire in cleSalaire" value="salaire">
+                                    <a href="#">{{salaire.nom}} <span class="badge">{{salaire.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
                             <a href="#" ng-click="afficheTransport()"><i class="fa fa-bus"></i> Transport </a>
                         </li>
-                    <li><a href="">{{cle[0][0]}}</a></li>
                 </ul>
-
-                <!-- /.navbar-collapse -->
+                <!--==========================FIN PROFESSIONNEL=======================================-->
             </div>
 
         </nav>
@@ -231,6 +241,7 @@
 <script src="web/js/thematique/santes.js"></script>
 <script src="web/js/thematique/entreprises.js"></script>
 <script src="web/js/thematique/particulier_directive.js"></script>
+<script src="web/js/thematique/salaires.js"></script>
 <script src="web/lib/reqwest.min.js"></script>
 <script src="web/lib/cluster/leaflet.markercluster.js"></script>
 <script src="web/js/Leaflet.Photo.js"></script>
