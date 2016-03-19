@@ -62,7 +62,7 @@ body {
     border: none;
 }
 
-input#search, input#inputPlace {
+input#inputTheme, input#inputPlace {
     width: 100%;
     height: 40px;
     background: #2b303b;
@@ -99,35 +99,36 @@ input#inputPlace::-webkit-input-placeholder{
     color: #5f5f5d;
 }
 
-input#search:hover > .icon {
+input#inputTheme:hover > .icon {
     color: #4f5b66;
 }
 
-input#search::-webkit-input-placeholder {
+input#inputTheme::-webkit-input-placeholder {
     color: #65737e;
 }
 
-input#search:-moz-placeholder { /* Firefox 18- */
+input#inputTheme:-moz-placeholder { /* Firefox 18- */
     color: #65737e;
 }
 
-input#search::-moz-placeholder { /* Firefox 19+ */
+input#inputTheme::-moz-placeholder { /* Firefox 19+ */
     color: #65737e;
 }
 
-input#search:-ms-input-placeholder {
+input#inputTheme:-ms-input-placeholder {
     color: #65737e;
 }
 
 .icon {
     position: absolute;
-    margin-left: 17px;
-    margin-top: 10px;
-    z-index: 1;
+    top: 8px;
+    left:2px;
+    background: none;
+    border: none;
     color: #4f5b66;
 }
 
-input#search:focus, input#search:active {
+input#inputTheme:focus, input#inputTheme:active {
     outline: none;
 }
 
