@@ -26,7 +26,8 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
     var init = function(){
         // on affiche la carte
         map.remove();
-        map = L.map('map').setView([villeCurrent.lat, villeCurrent.lon], 13);
+        map = L.map('map', {
+            maxZoom : 17}).setView([villeCurrent.lat, villeCurrent.lon], 13);
         marker = L.marker([villeCurrent.lat, villeCurrent.lon]).addTo(map);
         marker.bindPopup(villeCurrent.ville).openPopup();
         //Ajout d'un layer de carte
@@ -38,7 +39,14 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
             fillColor: '#f03',
             fillOpacity: 0.5
         }).addTo(map);
-        
+
+        var photoLayer = L.photo.cluster({ spiderfyDistanceMultiplier: 1.2 }).on('click', function (evt) {
+            evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><p>{caption}</p>', evt.layer.photo), {
+                className: 'leaflet-popup-photo',
+                minWidth: 400
+            }).openPopup();
+        });
+
     };
 
     $scope.afficheTransport = function (){
