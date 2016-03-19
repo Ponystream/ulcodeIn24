@@ -3,13 +3,12 @@
 // Le namespace pour etre importe tout seul pas l'autoloader
 namespace greatgrandnancy\api\controller;
 
-use greatgrandnancy\common\model\EquipementsServices;
+use greatgrandnancy\common\model\Loisirs;
 
-class EquipementsServicesController extends AbstractController
+class LoisirsController extends AbstractController
 {
-    public function getAllEquipment($data)
+    public function getAllLoisirs($data)
     {
-
         $router = $this->app->getContainer()->get('router');
 
         if (isset($data['ville'])) {
@@ -18,18 +17,18 @@ class EquipementsServicesController extends AbstractController
             $parsed = urldecode($data['ville']);
             $explode = explode(';', $parsed);
             // foreach sur le resultat
-            $equipment = EquipementsServices::select('*');
+            $loisirs = Loisirs::select('*');
 
             foreach ($explode as $e) {
-                $equipment->orWhere('LIBGEO', '=', $e);
+                $loisirs->orWhere('LIBGEO', '=', $e);
             }
-            $query = $equipment->get();
+            $query = $loisirs->get();
 
             if (empty($query[0])) {
 
                 $res = ['codeErreur' => 404,
                     'messageErreur' => "La ressource demandée n'a pas été trouvée",
-                    'ressourceDemandee' => $router->pathFor('getEquipmentsByCity', []) . '?ville=' . $data['ville']];
+                    'ressourceDemandee' => $router->pathFor('getLoisirsByCity', []) . '?ville=' . $data['ville']];
                 $encoded = json_encode($res);
 
                 //Ecriture du header
@@ -41,10 +40,10 @@ class EquipementsServicesController extends AbstractController
             }
 
             foreach ($query as $q) {
-                $res[] = ['equipement' => $q, 'links' => ['self' => ['href' => $router->pathFor('getEquipmentById', ['id' => $q->CODGEO])]]];
+                $res[] = ['loisir' => $q, 'links' => ['self' => ['href' => $router->pathFor('getLoisirsById', ['id' => $q->CODGEO])]]];
             }
 
-            $tab = ['equipements' => $res, 'links' => []];
+            $tab = ['loisirs' => $res, 'links' => []];
             $encoded = json_encode($tab);
 
             $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
@@ -55,17 +54,17 @@ class EquipementsServicesController extends AbstractController
         }
     }
 
-    public function getEquipmentById($id)
+    public function getLoisirsById($id)
     {
         $router = $this->app->getContainer()->get('router');
 
-        $equipment = EquipementsServices::find($id);
+        $loisirs = Loisirs::find($id);
 
-        if (empty($equipment)) {
+        if (empty($loisirs)) {
 
             $res = ['codeErreur' => 404,
                 'messageErreur' => "La ressource demandée n'a pas été trouvée",
-                'ressourceDemandee' => $router->pathFor('getEquipmentById', ['id' => $id])];
+                'ressourceDemandee' => $router->pathFor('getLoisirsById', ['id' => $id])];
             $encoded = json_encode($res);
 
             //Ecriture du header
@@ -76,7 +75,7 @@ class EquipementsServicesController extends AbstractController
             return $response;
         }
 
-        $res = ['equipement' => $equipment, 'Links' => []];
+        $res = ['loisirs' => $loisirs, 'Links' => []];
 
         $encoded = json_encode($res);
 
@@ -86,4 +85,5 @@ class EquipementsServicesController extends AbstractController
 
         return $response;
     }
+
 }

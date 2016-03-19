@@ -36,10 +36,10 @@
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
             <li>
-                <!--                <div class="range">
-                                    <input type="range" name="range" min="1" max="100" value="50" onchange="range.value=value">
-                                    <output id="range">50</output>
-                                </div>-->
+                <div class="range">
+                    <input type="range" name="range" min="1" max="100" value="50" onchange="range.value=value">
+                    <output id="range">50 Km</output>
+                </div>
             </li>
             <li>
 
@@ -66,8 +66,8 @@
             <ul class="nav navbar-nav side-nav">
                 <li class="input-search">
                     <form role="searchThematique">
-                        <input ng-model="theme" type="search" id="inputTheme" placeholder="Search..."/>
-                        <button type="submit" id="submitTheme"><i class="fa fa-search"></i></button>
+                        <input ng-model="theme" type="search" id="inputTheme" placeholder="Recherche..."/>
+                        <button type="submit" class="icon" id="submitTheme"><i class="fa fa-search"></i></button>
 
                     </form>
                 </li>
@@ -80,19 +80,19 @@
                                     class="badge">{{restaurants}}</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bus"></i> Transport</a>
+                            <a href="#"><i class="fa fa-bus"></i> Santé <span class="badge">{{santes}}</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-graduation-cap"></i> Education</a>
+                            <a href="#"><i class="fa fa-graduation-cap"></i> Education <span class="badge">{{enseignements}}</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-suitcase"></i> Entreprise</a>
+                            <a href="#"><i class="fa fa-suitcase"></i> Entreprise <span class="badge">{{entreprises}}</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-futbol-o"></i> Sport</a>
+                            <a href="#"><i class="fa fa-futbol-o"></i> Sport <span class="badge">{{loisirs}}</span></a>
                         </li>
                         <li>
-                            <a><i class="fa fa-shopping-cart"></i> Commerce <span class="badge">{{commerces}}</span></a>
+                            <a href="#"><i class="fa fa-shopping-cart"></i> Commerce <span class="badge">{{commerces}}</span></a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-university"></i> Service Public <span
@@ -146,6 +146,10 @@
 <script src="web/js/thematique/commerces.js"></script>
 <script src="web/js/thematique/services_public.js"></script>
 <script src="web/js/thematique/restaurants.js"></script>
+<script src="web/js/thematique/loisirs.js"></script>
+<script src="web/js/thematique/enseignements.js"></script>
+<script src="web/js/thematique/santes.js"></script>
+<script src="web/js/thematique/entreprises.js"></script>
 <script src="web/lib/reqwest.min.js"></script>
 <script src="web/lib/cluster/leaflet.markercluster.js"></script>
 <script src="web/js/Leaflet.Photo.js"></script>

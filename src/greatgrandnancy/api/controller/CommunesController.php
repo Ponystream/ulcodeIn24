@@ -14,7 +14,7 @@ class CommunesController extends AbstractController
         $communes = Communes::all();
 
         foreach ($communes as $commune) {
-            $res[] = ['commune' => $commune, 'links' => ['self' => ['href' => $router->pathFor('communeById', ['id' => $commune->id])]]];
+            $res[] = ['commune' => $commune, 'links' => ['self' => ['href' => $router->pathFor('getCommuneById', ['id' => $commune->id])]]];
         }
 
         $tab = array('communes' => $res, 'Links' => []);
@@ -37,7 +37,7 @@ class CommunesController extends AbstractController
 
             $res = ['codeErreur' => 404,
                 'messageErreur' => "La ressource demandée n'a pas été trouvée",
-                'ressourceDemandee' => $router->pathFor('communeById', ['id' => $id])];
+                'ressourceDemandee' => $router->pathFor('getCommuneById', ['id' => $id])];
             $encoded = json_encode($res);
 
             //Ecriture du header
@@ -48,7 +48,7 @@ class CommunesController extends AbstractController
             return $response;
         }
 
-        $res = ['communes' => $communes, 'Links' => []];
+        $res = ['commune' => $communes, 'Links' => []];
 
         $encoded = json_encode($res);
 

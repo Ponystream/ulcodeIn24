@@ -6,9 +6,9 @@ namespace greatgrandnancy\common\model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Salaire extends Model
+class Enseignement extends Model
 {
-	protected $table = 'salaire';
+	protected $table = 'enseignement_premier_degree';
 	protected $primaryKey = 'CODGEO';
 	public $timestamps = false;
 }
