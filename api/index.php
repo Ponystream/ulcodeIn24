@@ -32,7 +32,16 @@ $app->group('/commerces', function () use ($app) {
     $app->get('', function ($req, $res) use ($app) {
         $controller = new Controller\CommerceController($req, $res, $app);
         return $controller->getAllCommerce($req->getQueryParams());
-    })->setName('index');
+    })->setName('getCommercesByCity');
+});
+
+$app->group('/salaires', function () use ($app) {
+
+    ///////////// Retourne la liste des photos /////////////
+    $app->get('', function ($req, $res) use ($app) {
+        $controller = new Controller\SalaireController($req, $res, $app);
+        return $controller->getAllSalaire($req->getQueryParams());
+    })->setName('getSalairesByCity');
 });
 
 $app->group('/communes', function () use ($app) {

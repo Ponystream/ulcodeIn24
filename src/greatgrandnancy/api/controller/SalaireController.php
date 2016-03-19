@@ -4,10 +4,11 @@
 namespace greatgrandnancy\api\controller;
 
 use \greatgrandnancy\common\model\CommerceDetail;
+use greatgrandnancy\common\model\Salaire;
 
-class CommerceController extends AbstractController
+class SalaireController extends AbstractController
 {
-    public function getAllCommerce($data) {
+    public function getAllSalaire($data) {
         $router = $this->app->getContainer()->get('router');
 //        $ville = ['Art-sur-Meurthe', 'Dommartemont', 'Laneuveville-devant-Nancy', 'Saulxures', 'Pulnoy', 'Seichamps', 'Essey-les-Nancy', 'Tomblaine', 'Jarville', 'Nancy', 'Fléville-devant-Nancy']
 
@@ -17,21 +18,20 @@ class CommerceController extends AbstractController
             $parsed = urldecode($data['ville']);
             $explode = explode(';', $parsed);
             // foreach sur le resultat
-            $commerce = CommerceDetail::select('*');
+            $salaire = Salaire::select('*');
 
             foreach($explode as $e) {
-                $commerce->orWhere('LIBGEO', '=', $e);
+                $salaire->orWhere('LIBGEO', '=', $e);
             }
-
-            $query = $commerce->get();
+            $query = $salaire->get();
 
             foreach ($query as $q) {
-                $res[] = ['commerce' => $q];
+                $res[] = ['salaire' => $q];
 //                    'links' => ['self' => ['href' => $router->pathFor('annonce', ['id' => $q->id]),
 //                    'annonceur' => $router->pathFor('annonceur', ['id' => $a->id])]]];
             }
 
-            $tab = ['commerces' => $res];
+            $tab = ['salaires' => $res];
             $encoded = json_encode($tab);
 
             $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');

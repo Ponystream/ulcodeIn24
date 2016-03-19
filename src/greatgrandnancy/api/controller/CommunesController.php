@@ -3,7 +3,6 @@
 // Le namespace pour etre importe tout seul pas l'autoloader
 namespace greatgrandnancy\api\controller;
 
-use \greatgrandnancy\common\model\CommerceDetail;
 use greatgrandnancy\common\model\Communes;
 
 class CommunesController extends AbstractController
@@ -36,10 +35,7 @@ class CommunesController extends AbstractController
 
 
         $res = ['communes' => $communes, 'Links' => []];
-//                    'links' => ['self' => ['href' => $router->pathFor('annonce', ['id' => $q->id]),
-//                    'annonceur' => $router->pathFor('a    nnonceur', ['id' => $a->id])]]];
 
-//        $tab = ['communes' => $res];
         $encoded = json_encode($res);
 
         $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
