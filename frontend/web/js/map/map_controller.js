@@ -33,15 +33,12 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
             attribution: '; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-        
         circle = L.circle([villeCurrent.lat, villeCurrent.lon], $scope.range*100, {
             color: 'red',
             fillColor: '#f03',
             fillOpacity: 0.5
         }).addTo(map);
-
-        L.control.locate().addTo(map);
-        //omnivore.kml('web/kml/Arrets.kml').addTo(map);
+        
     };
 
     $scope.afficheTransport = function (){
@@ -112,6 +109,10 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         }
     };
 
+    $scope.meLocaliser = function () {
+        var lc = L.control.locate().addTo(map);
+        lc.start();
+    }
     // on click on submit Place search button
     $('#submitTheme').click(getMarkers);
 
