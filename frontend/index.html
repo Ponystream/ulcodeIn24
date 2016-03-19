@@ -41,7 +41,7 @@
                     <output id="range">{{range}} Km</output>
                 </div>
             </li>
-            <li>
+            <li class="maxWidth">
                 <form class="navbar-form navbar-left" role="searchPlace">
                     <input ng-model="villeChoisie" type="text" id="inputPlace" class="input-custom"
                            placeholder="Lieu ...">
@@ -51,12 +51,12 @@
             </li>
             <li>
                 <div class="userBlock userPro">
-                    <i class="fa fa-user"></i><span class="userType"> Professionnel</span>
+                    <i class="fa fa-user"></i><span class="userType" value="pro"> Professionnel</span>
                 </div>
             </li>
             <li>
                 <div class="userBlock userPart selected">
-                    <i class="fa fa-user"></i><span class="userType"> Particulier</span>
+                    <i class="fa fa-user"></i><span class="userType" value="part"> Particulier</span>
                 </div>
             </li>
         </ul>
@@ -70,9 +70,10 @@
 
                     </form>
                 </li>
+
                 <li>
                     <a href="#" data-toggle="collapse" data-target="#demo"><i class="fa fa-star"></i>
-                        Thèmatique
+                        Thématique
                         <i class="fa fa-fw fa-caret-down"></i>
                     </a>
 
@@ -103,6 +104,7 @@
                         </li>
                     </ul>
                 </li>
+
             </ul>
 
         </div>
@@ -153,6 +155,7 @@
 <script src="web/js/thematique/enseignements.js"></script>
 <script src="web/js/thematique/santes.js"></script>
 <script src="web/js/thematique/entreprises.js"></script>
+<script src="web/js/thematique/particulier_directive.js"></script>
 <script src="web/lib/reqwest.min.js"></script>
 <script src="web/lib/cluster/leaflet.markercluster.js"></script>
 <script src="web/js/Leaflet.Photo.js"></script>

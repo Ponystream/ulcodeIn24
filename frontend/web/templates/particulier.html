@@ -1,0 +1,47 @@
+<div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="ThematiqueController">
+    <ul class="nav navbar-nav side-nav">
+        <li class="input-search">
+            <form role="searchThematique">
+                <input ng-model="theme" type="search" id="inputTheme" placeholder="Recherche..."/>
+                <button type="submit" class="icon" id="submitTheme"><i class="fa fa-search"></i></button>
+
+            </form>
+        </li>
+
+        <li>
+            <a href="#" data-toggle="collapse" data-target="#demo"><i class="fa fa-star"></i>
+                Thématique
+                <i class="fa fa-fw fa-caret-down"></i>
+            </a>
+
+            <ul id="demo" class="collapse">
+                <li>
+                    <a href="#"><i class="fa fa-cutlery"></i> Restauration <span
+                            class="badge">{{restaurants}}</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-bus"></i> Santé <span class="badge">{{santes}}</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-graduation-cap"></i> Education <span
+                            class="badge">{{enseignements}}</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-suitcase"></i> Entreprise <span class="badge">{{entreprises}}</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-futbol-o"></i> Sport <span class="badge">{{loisirs}}</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-shopping-cart"></i> Commerce <span
+                            class="badge">{{commerces}}</span></a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-university"></i> Service Public <span
+                            class="badge">{{services}}</span></a>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+</div>

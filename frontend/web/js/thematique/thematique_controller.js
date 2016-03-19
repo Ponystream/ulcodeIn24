@@ -1,5 +1,7 @@
 ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', 'Sante', 'Loisir', 'Enseignement', 'Entreprise', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent, Sante, Loisir, Enseignement, Entreprise) {
     $scope.theme = "";
+    if($('.userPart').hasClass('selected'))
+        console.log("testestes");
     //get sur les series pour initialiser les variables dans serie.js
     $scope.range = 50;
     var GetCommerce = function (ville) {
@@ -15,7 +17,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
             .then(function (response) {
                     response.data.commerces.forEach(function (data) {
                         var newThematique = new Commerce(data.commerce);
-
+                        console.log($scope.pro);
                         $.each(newThematique, function (key, value) {
                             $scope.commerces += parseInt(value);
                         });
@@ -27,6 +29,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
     };
 
     $scope.villeCurrent = villeCurrent;
+
 
     var GetService = function (ville) {
         $http.get('../api/equipements?ville=' + ville)
