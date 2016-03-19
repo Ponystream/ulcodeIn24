@@ -3,7 +3,6 @@
 // Le namespace pour etre importe tout seul pas l'autoloader
 namespace greatgrandnancy\api\controller;
 
-use \greatgrandnancy\common\model\CommerceDetail;
 use greatgrandnancy\common\model\Communes;
 
 class CommunesController extends AbstractController
@@ -34,12 +33,23 @@ class CommunesController extends AbstractController
 
         $communes = Communes::find($id);
 
+        if (empty($communes)) {
+
+            $res = ['codeErreur' => 404,
+                'messageErreur' => "La ressource demandée n'a pas été trouvée",
+                'ressourceDemandee' => $router->pathFor('communeById', ['id' => $id])];
+            $encoded = json_encode($res);
+
+            //Ecriture du header
+            $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
+            $response = $this->Status($response, 404);
+            $response = $this->Write($response, $encoded);
+
+            return $response;
+        }
 
         $res = ['communes' => $communes, 'Links' => []];
-//                    'links' => ['self' => ['href' => $router->pathFor('annonce', ['id' => $q->id]),
-//                    'annonceur' => $router->pathFor('a    nnonceur', ['id' => $a->id])]]];
 
-//        $tab = ['communes' => $res];
         $encoded = json_encode($res);
 
         $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');

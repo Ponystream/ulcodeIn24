@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta property="og:image" content="route.png"/>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/sb-admin.css">
-    <link rel="stylesheet" href="lib/cluster/MarkerCluster.css"/>
-    <link rel="stylesheet" href="css/Leaflet.Photo.css"/>
-    <link rel="stylesheet" href="css/map.css"/>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:image" content="route.png" />
+    <link rel="stylesheet" href="web/css/bootstrap.min.css">
+    <link rel="stylesheet" href="web/css/sb-admin.css">
+    <link rel="stylesheet" href="web/lib/cluster/MarkerCluster.css" />
+    <link rel="stylesheet" href="web/css/Leaflet.Photo.css" />
+    <link rel="stylesheet" href="web/css/map.css" />
+    <link rel="stylesheet" href="web/css/style.css">
+    <link href="web/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css"/>
     <title>GreatGrandNancy</title>
 </head>
@@ -23,14 +23,13 @@
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle menu-resp" data-toggle="collapse"
-                    data-target=".navbar-ex1-collapse">
+            <button type="button" class="navbar-toggle menu-resp" data-toggle="collapse" data-target=".navbar-ex1-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand animate" href="index.html"><img src="img/logo.png" class="logo">GreatGrandNancy</a>
+            <a class="navbar-brand animate" href="index.html"><img src="web/img/logo.png" class="logo">GreatGrandNancy</a>
         </div>
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
@@ -71,7 +70,7 @@
                             <a href="#"><i class="fa fa-futbol-o"></i> Sport</a>
                         </li>
                         <li>
-                            <a><i class="fa fa-shopping-cart"></i> Commerce <span class="badge">{{commerces}}</span></a>
+                            <a ><i class="fa fa-shopping-cart"></i> Commerce <span class="badge">{{commerces}}</span></a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-university"></i> Institution</a>
@@ -101,8 +100,17 @@
                     <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
                 </li>
             </ul>
+            <div class="">
+                <div class="input-group">
+                    <input type="text" class="form-control" id="inputPlace" placeholder="Lieu...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" id="submitPlace" type="button">Go!</button>
+                </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
         </div>
         <!-- /.navbar-collapse -->
+
     </nav>
 
     <div ng-controller="MapController">
@@ -115,6 +123,7 @@
 
             <div class="mat-btn">
                 <ul>
+                    <!--<li><a class="spin-btn" href="#"><i class="fa fa-2x fa-ellipsis-v"></i></a>-->
                     <li><a class="spin-btn" href="#"></a>
                         <ul>
                             <li><a href="#"><i class="fa fa-print"></i></a></li>
@@ -126,22 +135,22 @@
             </div>
 
         </div>
+        <!-- /.container-fluid -->
     </div>
 
 </div>
 <!-- /#wrapper -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
-<script src="lib/jquery-2.2.2.min.js"></script>
-<script src="lib/angular.min.js"></script>
-<script src="lib/bootstrap.min.js"></script>
-<script src="js/app.js"></script>
-<script src="js/map/map_controller.js"></script>
-<script src="js/thematique/thematique_controller.js"></script>
-<script src="js/thematique/thematique.js"></script>
-<script src="js/main.js"></script>
-<script src="lib/reqwest.min.js"></script>
-<script src="lib/cluster/leaflet.markercluster.js"></script>
-<script src="js/Leaflet.Photo.js"></script>
+<script src="web/lib/jquery-2.2.2.min.js"></script>
+<script src="web/lib/angular.min.js"></script>
+<script src="web/lib/bootstrap.min.js"></script>
+<script src="web/js/app.js"></script>
+<script src="web/js/map/map_controller.js"></script>
+<script src="web/js/thematique/thematique_controller.js"></script>
+
+<script src="web/lib/reqwest.min.js"></script>
+<script src="web/lib/cluster/leaflet.markercluster.js"></script>
+<script src="web/js/Leaflet.Photo.js"></script>
 </body>
 </html>
