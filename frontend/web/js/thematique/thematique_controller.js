@@ -1,5 +1,7 @@
 ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', 'Sante', 'Loisir', 'Enseignement', 'Entreprise', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent, Sante, Loisir, Enseignement, Entreprise) {
     $scope.theme = "";
+    if($('.userPart').hasClass('selected'))
+        console.log("testestes");
     //get sur les series pour initialiser les variables dans serie.js
     var GetCommerce = function (ville) {
         $scope.commerces = 0;
@@ -32,8 +34,6 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
     //        console.log(newValue);
     //    }
     //});
-
-    if(getElementsByClassName('selected'))
 
 
     var GetService = function (ville) {
