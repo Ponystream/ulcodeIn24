@@ -3,7 +3,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
 
 
     //get sur les series pour initialiser les variables dans serie.js
-    $scope.range = 50;
+    $scope.range = 25;
     var GetCommerce = function (ville) {
         $scope.commerces = 0;
         $scope.services = 0;
