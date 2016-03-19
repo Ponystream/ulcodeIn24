@@ -42,7 +42,12 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
 
     };
 
+<<<<<<< HEAD
     $scope.afficheTransport = function () {
+=======
+    $scope.afficheTransport = function (){
+
+>>>>>>> 8086cd678137881be3ec1063480e4ef7c5f00c88
         omnivore.kml('web/kml/Arrets.kml').addTo(map);
     };
 
