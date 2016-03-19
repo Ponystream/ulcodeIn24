@@ -1,8 +1,7 @@
 ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', 'Sante', 'Loisir', 'Enseignement', 'Entreprise', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent, Sante, Loisir, Enseignement, Entreprise) {
     $scope.theme = "";
 
-    if($('.userPart').hasClass('selected'))
-        
+
     //get sur les series pour initialiser les variables dans serie.js
     $scope.range = 50;
     var GetCommerce = function (ville) {

@@ -11,6 +11,10 @@ body {
     height: 100%;
 }
 
+#professionnel{
+    display: none;
+}
+
 .container-body {
     position: fixed;
     height: 100%;
