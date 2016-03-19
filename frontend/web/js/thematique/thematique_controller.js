@@ -1,9 +1,11 @@
-ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent) {
+ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', 'Sante', 'Loisir', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent, Sante, Loisir) {
     $scope.theme = "";
     //get sur les series pour initialiser les variables dans serie.js
     var GetCommerce = function (ville) {
         $scope.commerces = 0;
         $scope.services = 0;
+        $scope.loisirs = 0;
+        $scope.santes = 0;
         $scope.restaurants = 0;
 
         $http.get('../api/commerces?ville=' + ville)
@@ -62,6 +64,41 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
                 });
 
     };
+    var GetSante = function (ville) {
+        $http.get('../api/sante?ville=' + ville)
+            .then(function (response) {
+                console.log(response);
+                    response.data.santes.forEach(function (data) {
+                        var newSante = new Sante(data.sante);
+                        console.log(newSante);
+                        $.each(newSante, function (key, value) {
+                            $scope.santes += parseInt(value);
+                        });
+                    });
+                },
+                function (error) {
+
+                });
+
+    };
+    var GetLoisir = function (ville) {
+        $http.get('../api/loisirs?ville=' + ville)
+            .then(function (response) {
+                console.log(response);
+                    response.data.loisirs.forEach(function (data) {
+                        var newLoisir = new Loisir(data.loisir);
+
+                        $.each(newLoisir, function (key, value) {
+                            $scope.loisirs += parseInt(value);
+                        });
+                    });
+                },
+                function (error) {
+
+                });
+
+    };
+
 
 
 
@@ -69,6 +106,8 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         GetCommerce(ville);
         GetService(ville);
         GetRestaurant(ville);
+        GetLoisir(ville);
+        GetSante(ville);
     };
 
 }]);
