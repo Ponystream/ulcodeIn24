@@ -2,9 +2,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
     $scope.theme = "";
 
     if($('.userPart').hasClass('selected'))
-        console.log("testestes");
-
-
+        
     //get sur les series pour initialiser les variables dans serie.js
     $scope.range = 50;
     var GetCommerce = function (ville) {
@@ -20,7 +18,6 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
             .then(function (response) {
                     response.data.commerces.forEach(function (data) {
                         var newThematique = new Commerce(data.commerce);
-                        console.log($scope.pro);
                         $.each(newThematique, function (key, value) {
                             $scope.commerces += parseInt(value);
                         });
@@ -71,10 +68,8 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
     var GetSante = function (ville) {
         $http.get('../api/sante?ville=' + ville)
             .then(function (response) {
-                console.log(response);
                     response.data.santes.forEach(function (data) {
                         var newSante = new Sante(data.sante);
-                        console.log(newSante);
                         $.each(newSante, function (key, value) {
                             $scope.santes += parseInt(value);
                         });
@@ -88,7 +83,6 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
     var GetLoisir = function (ville) {
         $http.get('../api/loisirs?ville=' + ville)
             .then(function (response) {
-                console.log(response);
                     response.data.loisirs.forEach(function (data) {
                         var newLoisir = new Loisir(data.loisir);
 
@@ -105,7 +99,6 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
     var GetEnseignement = function (ville) {
         $http.get('../api/enseignement?ville=' + ville)
             .then(function (response) {
-                console.log(response);
                     response.data.enseignements.forEach(function (data) {
                         var newEnseignement = new Enseignement(data.enseignement);
 
