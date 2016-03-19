@@ -1,6 +1,6 @@
-ulcodeIn24.controller('MapController', ['$scope', '$http', function($scope, $http){
+ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', function($scope, $http, villeCurrent){
 
-    $scope.ville = "";
+    villeCurrent.ville = "";
     var map = L.map('map').setView([48.6880756,6.1384176], 13);
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -27,15 +27,12 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', function($scope, $htt
     var getCoord = function(){
         // on récupère la position de la ville souhaitée
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address="+$scope.ville, false);
+        xhr.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address="+villeCurrent.ville, false);
         xhr.send();
         var response = JSON.parse(xhr.response);
-        console.log(response);
         if(response.status == "OK"){
             lat_nantes = response.results[0].geometry.location.lat;
             lon_nantes = response.results[0].geometry.location.lng;
-            console.log(lat_nantes);
-            console.log(lon_nantes);
             return true;
         }else{
             return false;
@@ -46,7 +43,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', function($scope, $htt
         // on affiche la carte
         map = L.map('map').setView([lat_nantes, lon_nantes], 12);
         marker = L.marker([lat_nantes, lon_nantes]).addTo(map);
-        marker.bindPopup($scope.ville).openPopup();
+        marker.bindPopup(villeCurrent.ville).openPopup();
 
         //Ajout d'un layer de carte
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -57,8 +54,8 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', function($scope, $htt
     // on click on submit Place search button
     var submit = document.getElementById("submitPlace");
     submit.onclick = function(){
-        $scope.ville = document.getElementById("inputPlace").value;
-        if($scope.ville == ""){
+        villeCurrent.ville = document.getElementById("inputPlace").value;
+        if(villeCurrent.ville == ""){
             alert("Veuillez saisir un nom de ville");
         }else{
             if(getCoord()){
