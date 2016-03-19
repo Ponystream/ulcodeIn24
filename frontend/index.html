@@ -151,39 +151,39 @@
                 <!--==========================PROFESSIONNEL=======================================-->
                     <ul class="nav navbar-nav side-nav" id="professionnel">
                         <li>
-                            <a href="#" data-toggle="collapse" data-target="#restaurant"><i class="fa fa-cutlery"></i>
+                            <a href="#" data-toggle="collapse" data-target="#restaurantPro"><i class="fa fa-cutlery"></i>
                                 Restauration <span
                                         class="badge">{{restaurants}}</span></a>
-                            <ul class="collapse" id="restaurant2">
+                            <ul class="collapse" id="restaurantPro">
                                 <li ng-repeat="restaurant in cleRestaurant" value="restaurant">
                                     <a href="#">{{restaurant.nom}} <span class="badge">{{restaurant.valeur}}</span></a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#" data-toggle="collapse" data-target="#entreprise"><i class="fa fa-suitcase"></i>
+                            <a href="#" data-toggle="collapse" data-target="#entreprisePro"><i class="fa fa-suitcase"></i>
                                 Entreprise <span
                                         class="badge">{{entreprises}}</span></a>
-                            <ul class="collapse" id="entreprise2">
+                            <ul class="collapse" id="entreprisePro">
                                 <li ng-repeat="entreprise in cleEntreprise" value="entreprise">
                                     <a href="#">{{entreprise.nom}} <span class="badge">{{entreprise.valeur}}</span></a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#" data-toggle="collapse" data-target="#commerce"><i class="fa fa-shopping-cart"></i>
+                            <a href="#" data-toggle="collapse" data-target="#commercePro"><i class="fa fa-shopping-cart"></i>
                                 Commerce <span
                                         class="badge">{{commerces}}</span></a>
-                            <ul class="collapse" id="commerce2">
+                            <ul class="collapse" id="commercePro">
                                 <li ng-repeat="commerce in cleCommerce" value="commerce">
                                     <a href="#">{{commerce.nom}} <span class="badge">{{commerce.valeur}}</span></a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#" data-toggle="collapse" data-target="#salaire"><i class="fa fa-cutlery"></i>
+                            <a href="#" data-toggle="collapse" data-target="#salairePro"><i class="fa fa-cutlery"></i>
                                 Salaire </a>
-                            <ul class="collapse" id="salaire">
+                            <ul class="collapse" id="salairePro">
                                 <li ng-repeat="salaire in cleSalaire" value="salaire">
                                     <a href="#">{{salaire.nom}} <span class="badge">{{salaire.valeur}}</span></a>
                                 </li>
