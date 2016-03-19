@@ -3,11 +3,11 @@
 // Le namespace pour etre importe tout seul pas l'autoloader
 namespace greatgrandnancy\api\controller;
 
-use greatgrandnancy\common\model\Enseignement;
+use greatgrandnancy\common\model\Entreprise;
 
-Class EnseignementController extends AbstractController
+Class EntreprisesController extends AbstractController
 {
-    public function getAllEducation($data)
+    public function getAllCompanies($data)
     {
         $router = $this->app->getContainer()->get('router');
 
@@ -17,18 +17,18 @@ Class EnseignementController extends AbstractController
             $parsed = urldecode($data['ville']);
             $explode = explode(';', $parsed);
             // foreach sur le resultat
-            $education = Enseignement::select('*');
+            $company = Entreprise::select('*');
 
             foreach ($explode as $e) {
-                $education->orWhere('LIBGEO', '=', $e);
+                $company->orWhere('LIBGEO', '=', $e);
             }
-            $query = $education->get();
+            $query = $company->get();
 
             if (empty($query[0])) {
 
                 $res = ['codeErreur' => 404,
                     'messageErreur' => "La ressource demandée n'a pas été trouvée",
-                    'ressourceDemandee' => $router->pathFor('getEducationByCity', []) . '?ville=' . $data['ville']];
+                    'ressourceDemandee' => $router->pathFor('getCompaniesByCity', []) . '?ville=' . $data['ville']];
                 $encoded = json_encode($res);
 
                 //Ecriture du header
@@ -40,10 +40,10 @@ Class EnseignementController extends AbstractController
             }
 
             foreach ($query as $q) {
-                $res[] = ['enseignement' => $q, 'links' => ['self' => ['href' => $router->pathFor('getEducationById', ['id' => $q->CODGEO])]]];
+                $res[] = ['entreprise' => $q, 'links' => ['self' => ['href' => $router->pathFor('getCompaniesById', ['id' => $q->CODGEO])]]];
             }
 
-            $tab = ['enseignements' => $res, 'links' => []];
+            $tab = ['entreprises' => $res, 'links' => []];
             $encoded = json_encode($tab);
 
             $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
@@ -54,17 +54,17 @@ Class EnseignementController extends AbstractController
         }
     }
 
-    public function getEducationById($id)
+    public function getCompaniesById($id)
     {
         $router = $this->app->getContainer()->get('router');
 
-        $education = Enseignement::find($id);
+        $company = Entreprise::find($id);
 
-        if (empty($education)) {
+        if (empty($company)) {
 
             $res = ['codeErreur' => 404,
                 'messageErreur' => "La ressource demandée n'a pas été trouvée",
-                'ressourceDemandee' => $router->pathFor('getEducationById', ['id' => $id])];
+                'ressourceDemandee' => $router->pathFor('getCompaniesById', ['id' => $id])];
             $encoded = json_encode($res);
 
             //Ecriture du header
@@ -75,7 +75,7 @@ Class EnseignementController extends AbstractController
             return $response;
         }
 
-        $res = ['enseignement' => $education, 'Links' => []];
+        $res = ['companies' => $company, 'Links' => []];
 
         $encoded = json_encode($res);
 
