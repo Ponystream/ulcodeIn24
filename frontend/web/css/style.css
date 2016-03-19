@@ -111,9 +111,17 @@ input#inputPlace:hover, input#inputPlace:focus, input#inputTheme:hover, input#in
     position: absolute;
     border: none;
     background: transparent;
-    top: 24px;
+    top: 18px;
     left: 10px;
     cursor: text;
+}
+
+input#inputTheme {
+    width: 180px;
+    margin-top: 9px;
+    margin-right: 10px;
+    height: 32px;
+    background-color: #F2F2F2;
 }
 
 input#inputPlace::-webkit-input-placeholder {
@@ -499,14 +507,6 @@ input#inputTheme:focus, input#inputTheme:active {
 }
 
 @media screen and (min-width: 1100px) {
-    input#inputTheme {
-        width: 180px;
-        margin-top: 9px;
-        margin-right: 10px;
-        height: 32px;
-        background-color: #F2F2F2;
-    }
-
     .container-body {
         top: 50px;
     }
@@ -517,7 +517,7 @@ input#inputTheme:focus, input#inputTheme:active {
     }
 
     #submitPlace {
-        top: 9px;
+        top: 10px;
         left: 22px;
     }
 
