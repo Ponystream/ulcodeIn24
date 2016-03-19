@@ -49,7 +49,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
     var init = function(){
         // on affiche la carte
         map.remove();
-        map = L.map('map').setView([villeCurrent.lat, villeCurrent.lon], 20);
+        map = L.map('map').setView([villeCurrent.lat, villeCurrent.lon], 15);
         marker = L.marker([villeCurrent.lat, villeCurrent.lon]).addTo(map);
         marker.bindPopup(villeCurrent.ville).openPopup();
 
