@@ -33,6 +33,20 @@ class CommunesController extends AbstractController
 
         $communes = Communes::find($id);
 
+        if (empty($communes)) {
+
+            $res = ['codeErreur' => 404,
+                'messageErreur' => "La ressource demandée n'a pas été trouvée",
+                'ressourceDemandee' => $router->pathFor('communeById', ['id' => $id])];
+            $encoded = json_encode($res);
+
+            //Ecriture du header
+            $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
+            $response = $this->Status($response, 404);
+            $response = $this->Write($response, $encoded);
+
+            return $response;
+        }
 
         $res = ['communes' => $communes, 'Links' => []];
 
