@@ -52,82 +52,17 @@
                 </li>
                 <li>
                     <div class="userBlock userPro">
-                        <i class="fa fa-user"></i><span class="userType"> Professionnel</span>
+                        <i class="fa fa-user"></i><span class="userType" > Professionnel</span>
                     </div>
-
-                    <ul id="demo" class="collapse">
-                        <li>
-                            <a href="#"><i class="fa fa-cutlery"></i> Restauration <span
-                                    class="badge">{{restaurants}}</span></a>
-                            <ul>
-                                <li ng-repeat="restaurant in cleRestaurant" value="loisir">
-                                    <a>{{restaurant.nom}}  <span class="badge">{{restaurant.valeur}}</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-heart"></i> Santé <span class="badge">{{santes}}</span></a>
-                            <ul>
-                                <li ng-repeat="sante in cleSante" value="loisir">
-                                    <a>{{sante.nom}}  <span class="badge">{{sante.valeur}}</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-graduation-cap"></i> Education <span class="badge">{{enseignements}}</span></a>
-                            <ul>
-                                <li ng-repeat="education in cleEnseignement" value="loisir">
-                                    <a>{{education.nom}}  <span class="badge">{{education.valeur}}</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-suitcase"></i> Entreprise <span
-                                    class="badge">{{entreprises}}</span></a>
-                            <ul>
-                                <li ng-repeat="entreprise in cleEntreprise" value="loisir">
-                                    <a>{{entreprise.nom}}  <span class="badge">{{entreprise.valeur}}</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-futbol-o"></i> Sport <span class="badge">{{loisirs}}</span></a>
-                            <ul>
-                                <li ng-repeat="loisir in cleLoisir" value="loisir">
-                                    <a>{{loisir.nom}}  <span class="badge">{{loisir.valeur}}</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-shopping-cart"></i> Commerce <span
-                                    class="badge">{{commerces}}</span></a>
-                            <ul>
-                                <li ng-repeat="commerce in cleCommerce" value="commerce">
-                                    <a>{{commerce.nom}}  <span class="badge">{{commerce.valeur}}</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-university"></i> Service Public <span
-                                    class="badge">{{services}}</span></a>
-                            <ul>
-                                <li ng-repeat="service in cleServicePublic" value="service">
-                                    <a>{{service.nom}}  <span class="badge">{{service.valeur}}</span></a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" ng-click="afficheTransport()"><i class=""></i> Transport  </a>
-                        </li>
-                    </ul>
+                </li>
                 <li>
                     <div class="userBlock userPart selected">
-                        <i class="fa fa-user"></i><span class="userType"> Particulier</span>
+                        <i class="fa fa-user"></i><span class="userType" > Particulier</span>
                     </div>
                 </li>
             </ul>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="ThematiqueController">
+            <div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="ThematiqueController" >
                 <ul class="nav navbar-nav side-nav">
                     <li class="input-search">
                         <form role="searchThematique">
@@ -136,42 +71,78 @@
 
                         </form>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-cutlery"></i> Restauration <span
-                                class="badge">{{restaurants}}</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-heart"></i> Santé <span class="badge">{{santes}}</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-graduation-cap"></i> Education <span
-                                class="badge">{{enseignements}}</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-suitcase"></i> Entreprise <span
-                                class="badge">{{entreprises}}</span></a>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-futbol-o"></i> Sport <span class="badge">{{loisirs}}</span></a>
-                    </li>
-                    <li>
-                        <a href="#" data-toggle="collapse" data-target="#commerce" aria-expanded="false">
-                            <i class="fa fa-shopping-cart"></i>
-                            Commerce
-                                <i class="fa fa-fw fa-caret-down"></i>
-                            <span class="badge">{{commerces}}</span></a>
-                        <ul id="commerce" class="collapse">
-                            <li ng-repeat="commerce in cle" value="commerce">
-                                <a href="#">{{commerce.nom}} <span class="badge">{{commerce.valeur}}</span></a>
+
+                    <li id="particulier" >
+                        <a href="#" data-toggle="collapse" data-target="#demo"><i class="fa fa-star"></i>
+                            Thématiques
+                            <i class="fa fa-fw fa-caret-down"></i>
+                        </a>
+
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="#"><i class="fa fa-cutlery"></i> Restauration <span
+                                        class="badge">{{restaurants}}</span></a>
+                                <ul>
+                                    <li ng-repeat="restaurant in cleRestaurant" value="loisir">
+                                        <a>{{restaurant.nom}}  <span class="badge">{{restaurant.valeur}}</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-heart"></i> Santé <span class="badge">{{santes}}</span></a>
+                                <ul>
+                                    <li ng-repeat="sante in cleSante" value="loisir">
+                                        <a>{{sante.nom}}  <span class="badge">{{sante.valeur}}</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-graduation-cap"></i> Education <span class="badge">{{enseignements}}</span></a>
+                                <ul>
+                                    <li ng-repeat="education in cleEnseignement" value="loisir">
+                                        <a>{{education.nom}}  <span class="badge">{{education.valeur}}</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-suitcase"></i> Entreprise <span
+                                        class="badge">{{entreprises}}</span></a>
+                                <ul>
+                                    <li ng-repeat="entreprise in cleEntreprise" value="loisir">
+                                        <a>{{entreprise.nom}}  <span class="badge">{{entreprise.valeur}}</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-futbol-o"></i> Sport <span class="badge">{{loisirs}}</span></a>
+                                <ul>
+                                    <li ng-repeat="loisir in cleLoisir" value="loisir">
+                                        <a>{{loisir.nom}}  <span class="badge">{{loisir.valeur}}</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-shopping-cart"></i> Commerce <span
+                                        class="badge">{{commerces}}</span></a>
+                                <ul>
+                                    <li ng-repeat="commerce in cleCommerce" value="commerce">
+                                        <a>{{commerce.nom}}  <span class="badge">{{commerce.valeur}}</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-university"></i> Service Public <span
+                                        class="badge">{{services}}</span></a>
+                                <ul>
+                                    <li ng-repeat="service in cleServicePublic" value="service">
+                                        <a>{{service.nom}}  <span class="badge">{{service.valeur}}</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" ng-click="afficheTransport()"><i class=""></i> Transport  </a>
                             </li>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-university"></i> Service Public <span
-                                class="badge">{{services}}</span></a>
-                    </li>
-                    <li>
-                        <a href="#" ng-click="afficheTransport()"><i class="fa fa-bus"></i> Transport </a>
                     </li>
 
                     <li id="professionnel">
