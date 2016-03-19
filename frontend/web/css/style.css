@@ -15,7 +15,18 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
-    top: 120px;
+    top: 161px;
+}
+
+.userBlock{
+    padding: 14px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.selected{
+    border-bottom: 3px solid #00d0d0;
+    background-color: #eef4f4;
 }
 
 .logo {
