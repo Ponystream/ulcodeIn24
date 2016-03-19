@@ -1,6 +1,7 @@
 ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', 'Sante', 'Loisir', 'Enseignement', 'Entreprise', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent, Sante, Loisir, Enseignement, Entreprise) {
     $scope.theme = "";
     //get sur les series pour initialiser les variables dans serie.js
+    $scope.range = 50;
     var GetCommerce = function (ville) {
         $scope.commerces = 0;
         $scope.services = 0;
@@ -9,7 +10,6 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         $scope.restaurants = 0;
         $scope.enseignements = 0;
         $scope.entreprises = 0;
-        $scope.range = 50;
 
         $http.get('../api/commerces?ville=' + ville)
             .then(function (response) {
@@ -27,11 +27,6 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
     };
 
     $scope.villeCurrent = villeCurrent;
-    //$scope.$watch('theme', function (newValue) {
-    //    if (newValue != 0 && newValue != undefined) {
-    //        console.log(newValue);
-    //    }
-    //});
 
     var GetService = function (ville) {
         $http.get('../api/equipements?ville=' + ville)
@@ -143,7 +138,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         GetLoisir(ville);
         GetSante(ville);
         GetEnseignement(ville);
-        GetEntreprise(ville);
+        GetEntrepriseetRestaurant(ville);
     };
 
 }]);

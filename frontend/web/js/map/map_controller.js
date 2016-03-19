@@ -1,30 +1,31 @@
 ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', function($scope, $http, villeCurrent){
 
-    villeCurrent.ville = "";
+    villeCurrent.ville = "Nancy";
     $scope.theme = "";
     $scope.markers = [];
-    var map = L.map('map').setView([48.6880756,6.1384176], 13);
+    var map = L.map('map');
+    var circle = L.circle();
+    //var map = L.map('map').setView([48.6880756,6.1384176], 13);
 
-    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+    //L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    //    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    //}).addTo(map);
 
-    var photoLayer = L.photo.cluster({ spiderfyDistanceMultiplier: 1.2 }).on('click', function (evt) {
-        evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><p>{caption}</p>', evt.layer.photo), {
-            className: 'leaflet-popup-photo',
-            minWidth: 400
-        }).openPopup();
-    });
-    var photos = [];
+    //var photoLayer = L.photo.cluster({ spiderfyDistanceMultiplier: 1.2 }).on('click', function (evt) {
+    //    evt.layer.bindPopup(L.Util.template('<img src="{url}"/></a><p>{caption}</p>', evt.layer.photo), {
+    //        className: 'leaflet-popup-photo',
+    //        minWidth: 400
+    //    }).openPopup();
+    //});
+    //var photos = [];
 
-    photos.push({
-        lat: 48.692514,
-        lng: 6.183341,
-        url: "http://maps.googleapis.com/maps/api/streetview?size=600x300&location=48.692514,6.183341&heading=-13&fov=90&pitch=1&sensor=false",
-        caption: "légende test",
-        thumbnail: "http://maps.googleapis.com/maps/api/streetview?size=600x300&location=48.692514,6.183341&heading=-13&fov=90&pitch=1&sensor=false"
-
-    });
+    //photos.push({
+    //    lat: 48.692514,
+    //    lng: 6.183341,
+    //    url: "http://maps.googleapis.com/maps/api/streetview?size=600x300&location=48.692514,6.183341&heading=-13&fov=90&pitch=1&sensor=false",
+    //    caption: "légende test",
+    //    thumbnail: "http://maps.googleapis.com/maps/api/streetview?size=600x300&location=48.692514,6.183341&heading=-13&fov=90&pitch=1&sensor=false"
+    //});
 
     var getCoord = function(){
         // on récupère la position de la ville souhaitée
@@ -34,9 +35,11 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         var response = JSON.parse(xhr.response);
         if(response.status == "OK"){
             console.log(response);
-            villeCurrent.ville = response.results[0].address_components[2].short_name;
+            //villeCurrent.ville = response.results[0].address_components[2].short_name;
             villeCurrent.lat = response.results[0].geometry.location.lat;
+            console.log(villeCurrent.lat);
             villeCurrent.lon = response.results[0].geometry.location.lng;
+            console.log(villeCurrent.lon);
             return true;
         }else{
             return false;
@@ -45,7 +48,8 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
 
     var init = function(){
         // on affiche la carte
-        map = L.map('map').setView([villeCurrent.lat, villeCurrent.lon], 12);
+        map.remove();
+        map = L.map('map').setView([villeCurrent.lat, villeCurrent.lon], 20);
         marker = L.marker([villeCurrent.lat, villeCurrent.lon]).addTo(map);
         marker.bindPopup(villeCurrent.ville).openPopup();
 
@@ -54,6 +58,16 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
             attribution: '; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
     };
+
+
+    $scope.$watch('range', function(newvalue){
+        map.removeLayer(circle);
+        circle = L.circle([villeCurrent.lat, villeCurrent.lon], $scope.range, {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5
+        }).addTo(map);
+    });
 
     // on click on submit Place search button
     var submit = document.getElementById("submitPlace");
@@ -89,7 +103,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         }else{
             if(villeCurrent.ville != []){
                 console.log(villeCurrent.ville);
-                $http.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+villeCurrent.lat+"%2C"+villeCurrent.lon+"&radius="+$scope.range+"&name="+$scope.theme+"&key=AIzaSyD1Lsn0Qz9Tmaij6ET1yukF5vhEXC5FQVM").
+                $http.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+villeCurrent.lat+"%2C"+villeCurrent.lon+"&radius="+$scope.range*10+"&name="+$scope.theme+"&key=AIzaSyD1Lsn0Qz9Tmaij6ET1yukF5vhEXC5FQVM").
                 success(function(data, status, headers, config) {
                     data.results.forEach(function(value) {
                         $scope.markers.push(value);
@@ -106,7 +120,9 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         }
     };
 
-    photoLayer.add(photos).addTo(map);
-    map.fitBounds(photoLayer.getBounds());
+    getCoord();
+    init();
+    //photoLayer.add(photos).addTo(map);
+    //map.fitBounds(photoLayer.getBounds());
 
 }]);
