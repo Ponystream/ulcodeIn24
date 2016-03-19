@@ -15,7 +15,7 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
-    top: 161px;
+    top: 209px;
 }
 
 .userBlock{
@@ -52,6 +52,7 @@ body {
     color: #262626;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
     border: none;
+    text-align: center;
 }
 
 .menu-resp {
@@ -86,7 +87,7 @@ input#inputTheme, input#inputPlace {
 
 input#inputPlace{
     height: 33px;
-    width: 200px;
+    width: 100%px;
     background: #f4f4f4;
     color: #606061;
     outline: none;
@@ -96,7 +97,9 @@ input#inputPlace:hover, input#inputPlace:focus {
     transition: 0.3s;
 }
 
-
+.maxWidth{
+    width: 100%;
+}
 
 #submitPlace{
     position: absolute;
@@ -298,7 +301,7 @@ input#inputTheme:focus, input#inputTheme:active {
 }
 
 .range {
-    width: 370px;
+    width: 100%;
     display: table;
     height: 25px;
     margin-top: 12px;
@@ -452,7 +455,7 @@ input#inputTheme:focus, input#inputTheme:active {
     outline-color: rgb(217, 83, 79);
 }
 
-@media screen and (min-width: 640px) {
+@media screen and (min-width: 1100px) {
     input#inputTheme {
         width: 225px;
     }
@@ -469,5 +472,13 @@ input#inputTheme:focus, input#inputTheme:active {
     #submitPlace{
         top: 14px;
         left: 27px;
+    }
+
+    .range{
+        width: 300px;
+    }
+
+    .maxWidth{
+        width: 250px;
     }
 }

@@ -41,7 +41,7 @@
                     <output id="range">{{range}} Km</output>
                 </div>
             </li>
-            <li>
+            <li class="maxWidth">
                 <form class="navbar-form navbar-left" role="searchPlace">
                     <input ng-model="villeChoisie" type="text" id="inputPlace" class="input-custom"
                            placeholder="Lieu ...">
@@ -51,12 +51,12 @@
             </li>
             <li>
                 <div class="userBlock userPro">
-                    <i class="fa fa-user"></i><span class="userType"> Professionnel</span>
+                    <i class="fa fa-user"></i><span class="userType" value="pro"> Professionnel</span>
                 </div>
             </li>
             <li>
                 <div class="userBlock userPart selected">
-                    <i class="fa fa-user"></i><span class="userType"> Particulier</span>
+                    <i class="fa fa-user"></i><span class="userType" value="part"> Particulier</span>
                 </div>
             </li>
         </ul>
