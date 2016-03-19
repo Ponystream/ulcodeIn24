@@ -17,3 +17,7 @@ $(document).ready(function () {
 
     });
 });
+
+$('.leaflet-bar-part-single').hover(function () {
+    $(this).children().detach();
+});

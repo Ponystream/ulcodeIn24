@@ -308,6 +308,15 @@ input#inputTheme:focus, input#inputTheme:active {
     background-color: darkgrey!important;
 }
 
+.leaflet-bar-part-single{
+    border-radius: 50px!important;
+    height: 39px!important;
+    width: 39px!important;
+    background-color: #6BD0DA!important;
+    color: white!important;
+    padding-top: 5px!important;
+}
+
 .range {
     width: 100%;
     display: table;
