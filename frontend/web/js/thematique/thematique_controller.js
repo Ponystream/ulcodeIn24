@@ -18,7 +18,6 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Thematique', 
                     console.log(error);
                 });
     };
-    // GetCommerce(ville);
 
     $scope.localiser = function (ville){
         GetCommerce(ville);
