@@ -11,11 +11,15 @@ body {
     height: 100%;
 }
 
+#professionnel{
+    display: none;
+}
+
 .container-body {
     position: fixed;
     height: 100%;
     width: 100%;
-    top: 209px;
+    top: 260px;
 }
 
 .userBlock{
@@ -265,6 +269,10 @@ input#inputTheme:focus, input#inputTheme:active {
     transition-delay: 0.01s;
 }
 
+.leaflet-bar a{
+    border-bottom: none!important;
+}
+
 .leaflet-control-zoom-in {
     box-shadow: 2px 2px 8px -3px #000;
     border-radius: 55px !important;
@@ -280,6 +288,7 @@ input#inputTheme:focus, input#inputTheme:active {
 }
 
 .leaflet-control-zoom-out {
+    border-bottom: none!important;
     box-shadow: 2px 2px 8px -3px #000 !important;
     border-radius: 55px !important;
     background-color: #f44336 !important;
@@ -302,6 +311,15 @@ input#inputTheme:focus, input#inputTheme:active {
 }
 .leaflet-disabled:hover{
     background-color: darkgrey!important;
+}
+
+.leaflet-bar-part-single{
+    border-radius: 50px!important;
+    height: 39px!important;
+    width: 39px!important;
+    background-color: #6BD0DA!important;
+    color: white!important;
+    padding-top: 5px!important;
 }
 
 .range {
