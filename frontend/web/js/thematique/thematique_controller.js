@@ -2,12 +2,13 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', function($scop
 
     //get sur les series pour initialiser les variables dans serie.js
     var GetCommerce = function () {
-        $http.get('../../api/commerce?ville=Nancy')
+        $http.get('../api/commerces?ville=Nancy')
             .then(function (response) {
                     // console.log(response.data.villes[0].ville);
                     // $scope.commerces = [];
-                       response.data.villes.forEach(function (data) {
-                           console.log(data.ville);
+                    console.log(response);
+                       response.data.commerces.forEach(function (data) {
+                           console.log(data.commerce.LIBGEO);
                     });
                              },
                 function (error) {
