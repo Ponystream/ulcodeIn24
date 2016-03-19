@@ -62,7 +62,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
 
     $scope.$watch('range', function(newvalue){
         map.removeLayer(circle);
-        circle = L.circle([villeCurrent.lat, villeCurrent.lon], $scope.range, {
+        circle = L.circle([villeCurrent.lat, villeCurrent.lon], $scope.range*10, {
             color: 'red',
             fillColor: '#f03',
             fillOpacity: 0.5
