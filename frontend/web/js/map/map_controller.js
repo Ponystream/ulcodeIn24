@@ -2,6 +2,8 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
 
     villeCurrent.ville = "";
     $scope.theme = "";
+    $scope.radius=500;
+    $scope.markers = [];
     var map = L.map('map').setView([48.6880756,6.1384176], 13);
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -15,7 +17,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         }).openPopup();
     });
     var photos = [];
-    
+
     photos.push({
         lat: 48.692514,
         lng: 6.183341,
@@ -32,8 +34,10 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         xhr.send();
         var response = JSON.parse(xhr.response);
         if(response.status == "OK"){
-            lat_nantes = response.results[0].geometry.location.lat;
-            lon_nantes = response.results[0].geometry.location.lng;
+            console.log(response);
+            villeCurrent.ville = response.results[0].address_components[2].short_name;
+            villeCurrent.lat = response.results[0].geometry.location.lat;
+            villeCurrent.lon = response.results[0].geometry.location.lng;
             return true;
         }else{
             return false;
@@ -42,8 +46,8 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
 
     var init = function(){
         // on affiche la carte
-        map = L.map('map').setView([lat_nantes, lon_nantes], 12);
-        marker = L.marker([lat_nantes, lon_nantes]).addTo(map);
+        map = L.map('map').setView([villeCurrent.lat, villeCurrent.lon], 12);
+        marker = L.marker([villeCurrent.lat, villeCurrent.lon]).addTo(map);
         marker.bindPopup(villeCurrent.ville).openPopup();
 
         //Ajout d'un layer de carte
@@ -65,7 +69,15 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
             }else{
                 alert("ville inconnue");
             }
+        }
+    };
 
+    var addMarkers = function(){
+        if($scope.markers != []){
+            $scope.markers.forEach(function(mark){
+                marker = L.marker([mark.geometry.location.lat, mark.geometry.location.lng]).addTo(map);
+                marker.bindPopup(mark.name).openPopup();
+            })
         }
     };
 
@@ -76,12 +88,22 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         if($scope.theme == ""){
             alert("Veuillez saisir un theme");
         }else{
-            if(true){
-                console.log($scope.theme);
+            if(villeCurrent.ville != []){
+                console.log(villeCurrent.ville);
+                $http.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+villeCurrent.lat+"%2C"+villeCurrent.lon+"&radius="+$scope.radius+"&name="+$scope.theme+"&key=AIzaSyD1Lsn0Qz9Tmaij6ET1yukF5vhEXC5FQVM").
+                success(function(data, status, headers, config) {
+                    data.results.forEach(function(value) {
+                        $scope.markers.push(value);
+                    });
+                    console.log($scope.markers);
+                    addMarkers();
+                }).
+                error(function(data, status, headers, config) {
+                    $scope.error = true;
+                });
             }else{
-                alert("theme inconnue");
+                alert("Veuillez renseigner une ville");
             }
-
         }
     };
 
