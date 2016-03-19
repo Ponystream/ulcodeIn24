@@ -43,7 +43,7 @@
             </li>
             <li>
 
-                <form class="navbar-form navbar-left" role="search">
+                <form class="navbar-form navbar-left" role="searchPlace">
                     <input ng-model="villeChoisie" type="text" id="inputPlace" class="input-custom"
                            placeholder="Lieu ...">
                     <button ng-click="localiser(villeChoisie)" type="submit" id="submitPlace"><i
@@ -65,9 +65,10 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="ThematiqueController">
             <ul class="nav navbar-nav side-nav">
                 <li class="input-search">
-                    <form role="search">
-                        <span type="submit" class="icon"><i class="fa fa-search"></i></span>
-                        <input type="search" id="search" placeholder="Search..."/>
+                    <form role="searchThematique">
+                        <input ng-model="theme" type="search" id="inputTheme" placeholder="Search..."/>
+                        <button type="submit" id="submitTheme"><i class="fa fa-search"></i></button>
+
                     </form>
                 </li>
                 <li>
