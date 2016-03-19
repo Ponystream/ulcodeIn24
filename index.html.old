@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta property="og:image" content="route.png"/>
+    <link rel="stylesheet" href="web/css/bootstrap.min.css">
+    <link rel="stylesheet" href="web/css/sb-admin.css">
+    <link rel="stylesheet" href="web/lib/cluster/MarkerCluster.css"/>
+    <link rel="stylesheet" href="web/css/Leaflet.Photo.css"/>
+    <link rel="stylesheet" href="web/css/map.css"/>
+    <link rel="stylesheet" href="web/css/style.css">
+    <link href="web/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css"/>
+    <link rel="stylesheet" href="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.css"/>
+</head>
+<body ng-app="ulcodeIn24">
+
+<div id="wrapper" ng-controller="ThematiqueController">
+    <div ng-controller="MapController">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle menu-resp" data-toggle="collapse"
+                        data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand animate" href="index.html"><img src="web/img/logo.png"
+                                                                       class="logo">GreatGrandNancy</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li>
+                    <div class="range">
+                        <input type="range" name="range" min="1" max="100" value="50" ng-model="range">
+                        <output id="range">{{range}} Km</output>
+                    </div>
+                </li>
+                <li class="maxWidth">
+                    <form class="navbar-form navbar-left" role="searchPlace">
+                        <input ng-model="villeChoisie" type="text" id="inputPlace" class="input-custom"
+                               placeholder="Lieu ...">
+                        <button ng-click="localiser(villeChoisie)" type="submit" id="submitPlace"><i
+                                class="fa fa-map-marker"></i></button>
+                    </form>
+                </li>
+                <li>
+                    <div class="userBlock userPro">
+                        <i class="fa fa-user"></i><span class="userType"> Professionnel</span>
+                    </div>
+
+                    <ul id="demo" class="collapse">
+                        <li>
+                            <a href="#" data-toggle="collapse" data-target="#restaurant"><i class="fa fa-cutlery"></i>
+                                Restauration <span
+                                        class="badge">{{restaurants}}</span></a>
+                            <ul id="restaurant" class="collapse" aria-expanded="true">
+                                <li ng-repeat="restaurant in cleRestaurant" value="loisir">
+                                    <a>{{restaurant.nom}} <span class="badge">{{restaurant.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-heart"></i> Santé <span class="badge">{{santes}}</span></a>
+                            <ul>
+                                <li ng-repeat="sante in cleSante" value="loisir">
+                                    <a>{{sante.nom}} <span class="badge">{{sante.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-graduation-cap"></i> Education <span class="badge">{{enseignements}}</span></a>
+                            <ul>
+                                <li ng-repeat="education in cleEnseignement" value="loisir">
+                                    <a>{{education.nom}} <span class="badge">{{education.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-suitcase"></i> Entreprise <span
+                                    class="badge">{{entreprises}}</span></a>
+                            <ul>
+                                <li ng-repeat="entreprise in cleEntreprise" value="loisir">
+                                    <a>{{entreprise.nom}} <span class="badge">{{entreprise.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-futbol-o"></i> Sport <span class="badge">{{loisirs}}</span></a>
+                            <ul>
+                                <li ng-repeat="loisir in cleLoisir" value="loisir">
+                                    <a>{{loisir.nom}} <span class="badge">{{loisir.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i> Commerce <span
+                                    class="badge">{{commerces}}</span></a>
+                            <ul>
+                                <li ng-repeat="commerce in cleCommerce" value="commerce">
+                                    <a>{{commerce.nom}} <span class="badge">{{commerce.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-university"></i> Service Public <span
+                                    class="badge">{{services}}</span></a>
+                            <ul>
+                                <li ng-repeat="service in cleServicePublic" value="service">
+                                    <a>{{service.nom}} <span class="badge">{{service.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" ng-click="afficheTransport()"><i class=""></i> Transport </a>
+                        </li>
+                    </ul>
+                <li>
+                    <div class="userBlock userPart selected">
+                        <i class="fa fa-user"></i><span class="userType"> Particulier</span>
+                    </div>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="ThematiqueController">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="input-search">
+                        <form role="searchThematique">
+                            <input ng-model="theme" type="search" id="inputTheme" placeholder="Recherche..."/>
+                            <button type="submit" class="icon" id="submitTheme"><i class="fa fa-search"></i></button>
+
+                        </form>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cutlery"></i> Restauration <span
+                                class="badge">{{restaurants}}</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-heart"></i> Santé <span class="badge">{{santes}}</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-graduation-cap"></i> Education <span
+                                class="badge">{{enseignements}}</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-suitcase"></i> Entreprise <span
+                                class="badge">{{entreprises}}</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-futbol-o"></i> Sport <span class="badge">{{loisirs}}</span></a>
+                    </li>
+                    <li>
+                        <a href="#" data-toggle="collapse" data-target="#commerce" aria-expanded="false">
+                            <i class="fa fa-shopping-cart"></i>
+                            Commerce
+                            <i class="fa fa-fw fa-caret-down"></i>
+                            <span class="badge">{{commerces}}</span></a>
+                        <ul id="commerce" class="collapse">
+                            <li ng-repeat="commerce in cle" value="commerce">
+                                <a href="#">{{commerce.nom}} <span class="badge">{{commerce.valeur}}</span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-university"></i> Service Public <span
+                                class="badge">{{services}}</span></a>
+                    </li>
+                    <li>
+                        <a href="#" ng-click="afficheTransport()"><i class="fa fa-bus"></i> Transport </a>
+                    </li>
+
+                    <li id="professionnel">
+                        <a href="#" data-toggle="collapse" data-target="#demo2"><i class="fa fa-star"></i>
+                            Thématique
+                            <i class="fa fa-fw fa-caret-down"></i>
+                        </a>
+
+                        <ul id="demo2" class="collapse">
+                            <li>
+                                <a href="#"><i class="fa fa-cutlery"></i> Restauration rapide <span
+                                        class="badge">{{restaurants}}</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-bus"></i> Santé <span class="badge">{{santes}}</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-graduation-cap"></i> Education <span class="badge">{{enseignements}}</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-suitcase"></i> Entreprise <span class="badge">{{entreprises}}</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-futbol-o"></i> Sport <span class="badge">{{loisirs}}</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-shopping-cart"></i> Commerce <span class="badge">{{commerces}}</span></a>
+                            </li>
+                            <li>
+                                <a href="#"><i class="fa fa-university"></i> Service Public <span class="badge">{{services}}</span></a>
+                            </li>
+                            <li ng-click="afficheTransport()">
+                                <a href="#"><i class="fa fa-bus"></i> Transport</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="">{{cle[0][0]}}</a></li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+
+        </nav>
+
+
+        <div class="container-body">
+
+            <div id="maps">
+                <div id="map"></div>
+            </div>
+
+            <div class="mat-btn">
+                <ul>
+                    <!--<li><a class="spin-btn" href="#"><i class="fa fa-2x fa-ellipsis-v"></i></a>-->
+                    <li><a class="spin-btn" href="#"></a>
+                        <ul>
+                            <li ng-click="print()"><a href="#"><i class="fa fa-print"></i></a></li>
+                            <li><a href="#"><i class="fa fa-save"></i></a></li>
+                            <li ng-click="meLocaliser()"><a href="#"><i class="fa fa-child"></i></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!-- /.container-fluid -->
+    </div>
+
+</div>
+<!-- /#wrapper -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+<script src="web/lib/jquery-2.2.2.min.js"></script>
+<script src="web/lib/angular.min.js"></script>
+<script src="web/lib/bootstrap.min.js"></script>
+<script src="web/js/app.js"></script>
+<script src="web/js/map/map_controller.js"></script>
+<script src="web/js/map/ville_current.js"></script>
+<script src="web/js/thematique/thematique_controller.js"></script>
+<script src="web/js/thematique/commerces.js"></script>
+<script src="web/js/thematique/services_public.js"></script>
+<script src="web/js/thematique/restaurants.js"></script>
+<script src="web/js/thematique/loisirs.js"></script>
+<script src="web/js/thematique/enseignements.js"></script>
+<script src="web/js/thematique/santes.js"></script>
+<script src="web/js/thematique/entreprises.js"></script>
+<script src="web/js/thematique/particulier_directive.js"></script>
+<script src="web/lib/reqwest.min.js"></script>
+<script src="web/lib/cluster/leaflet.markercluster.js"></script>
+<script src="web/js/Leaflet.Photo.js"></script>
+<script src="web/js/map/L.Control.Locate.min.js"></script>
+<script src="web/js/main.js"></script>
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
+</body>
+</html>

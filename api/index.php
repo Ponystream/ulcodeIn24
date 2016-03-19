@@ -7,6 +7,26 @@ use greatgrandnancy\api\controller as Controller;
 $app = new \Slim\App();
 $c = $app->getContainer();
 
+//Override the default Not Found Handler
+$c['notFoundHandler'] = function ($c) {
+    return function ($request, $response) use ($c) {
+
+        $res = ['codeErreur' => 404,
+            'messageErreur' => "La ressource demandée n'a pas été trouvée"];
+        $encoded = json_encode($res);
+
+        //Ecriture du header
+
+
+        return $c['response']
+            ->withStatus(404)
+            ->withHeader('Content-Type', 'application/json')
+            ->write(json_encode($res));
+    };
+};
+
+//Create Slim
+
 $c['errorHandler'] = function ($c) {
     return function ($request, $response, $exception) use ($c) {
         $data = [
@@ -157,6 +177,23 @@ $app->group('/entreprises', function () use ($app) {
         $controller = new Controller\EntreprisesController($req, $res, $app);
         return $controller->getCompaniesById($id);
     })->setName('getCompaniesById');
+});
+
+$app->group('/pauvrete', function () use ($app) {
+
+    ///////////// Retourne la liste des photos /////////////
+    $app->get('', function ($req, $res) use ($app) {
+        $controller = new Controller\PauvreteController($req, $res, $app);
+        return $controller->getAllPauvrete($req->getQueryParams());
+    })->setName('getPovertyByCity');
+
+    ///////////// Retourne la liste des photos /////////////
+    $app->get('/{id}', function ($req, $res, $args) use ($app) {
+
+        $id = $args['id'];
+        $controller = new Controller\PauvreteController($req, $res, $app);
+        return $controller->getPauvreteById($id);
+    })->setName('getPovertyById');
 });
 
 // On lance slim, et voila !
