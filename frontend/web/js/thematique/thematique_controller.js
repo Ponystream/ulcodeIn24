@@ -141,7 +141,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         GetLoisir(ville);
         GetSante(ville);
         GetEnseignement(ville);
-        GetEntrepriseetRestaurant(ville);
+        GetEntreprise(ville);
     };
 
 }]);
