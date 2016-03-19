@@ -57,6 +57,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
             attribution: '; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
         L.control.locate().addTo(map);
+        omnivore.kml('web/kml/Arrets.kml').addTo(map);
     };
 
 
