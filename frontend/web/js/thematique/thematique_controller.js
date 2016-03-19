@@ -37,7 +37,8 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
 
                 });
 
-    };    var GetRestaurant = function (ville) {
+    };
+    var GetRestaurant = function (ville) {
         $http.get('../api/equipements?ville=' + ville)
             .then(function (response) {
                 console.log(response);
