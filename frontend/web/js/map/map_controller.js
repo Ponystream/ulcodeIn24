@@ -29,7 +29,6 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         map = L.map('map').setView([villeCurrent.lat, villeCurrent.lon], 13);
         marker = L.marker([villeCurrent.lat, villeCurrent.lon]).addTo(map);
         marker.bindPopup(villeCurrent.ville).openPopup();
-
         //Ajout d'un layer de carte
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
             attribution: '; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -41,6 +40,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
             fillOpacity: 0.5
         }).addTo(map);
 
+        L.control.locate().addTo(map);
         //omnivore.kml('web/kml/Arrets.kml').addTo(map);
     };
 
