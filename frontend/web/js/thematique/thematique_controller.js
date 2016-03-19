@@ -1,9 +1,10 @@
 ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Thematique', function($scope, $http, Thematique) {
-$scope.commerces = 0;
 
     //get sur les series pour initialiser les variables dans serie.js
-    var GetCommerce = function () {
-        $http.get('../api/commerces?ville=Nancy')
+    var GetCommerce = function (ville) {
+        $scope.commerces = 0;
+
+        $http.get('../api/commerces?ville=' + ville)
             .then(function (response) {
                        response.data.commerces.forEach(function (data) {
                            var newThematique = new Thematique(data.commerce);
@@ -17,10 +18,10 @@ $scope.commerces = 0;
                     console.log(error);
                 });
     };
-    GetCommerce();
+    // GetCommerce(ville);
 
-    var nbCommerce = function(){
-        console.log('test');
-      GetCommerce();
+    $scope.localiser = function (ville){
+        GetCommerce(ville);
     };
+
 }]);
