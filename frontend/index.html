@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="web/css/style.css">
     <link href="web/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css"/>
-    <title>GreatGrandNancy</title>
+    <link rel="stylesheet" href="https://domoritz.github.io/leaflet-locatecontrol/dist/L.Control.Locate.min.css" />
 </head>
 <body ng-app="ulcodeIn24">
 
@@ -83,7 +83,7 @@
                                     class="badge">{{restaurants}}</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-bus"></i> Santé <span class="badge">{{santes}}</span></a>
+                            <a href="#"><i class="fa fa-heart"></i> Santé <span class="badge">{{santes}}</span></a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-graduation-cap"></i> Education <span class="badge">{{enseignements}}</span></a>
@@ -95,12 +95,13 @@
                             <a href="#"><i class="fa fa-futbol-o"></i> Sport <span class="badge">{{loisirs}}</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-shopping-cart"></i> Commerce <span
-                                    class="badge">{{commerces}}</span></a>
+                            <a href="#"><i class="fa fa-shopping-cart"></i> Commerce <span class="badge">{{commerces}}</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-university"></i> Service Public <span
-                                    class="badge">{{services}}</span></a>
+                            <a href="#"><i class="fa fa-university"></i> Service Public <span class="badge">{{services}}</span></a>
+                        </li>
+                        <li ng-click="afficheTransport()">
+                            <a href="#"><i class=""></i> Tranport  </a>
                         </li>
                     </ul>
                 </li>
@@ -125,9 +126,9 @@
                     <!--<li><a class="spin-btn" href="#"><i class="fa fa-2x fa-ellipsis-v"></i></a>-->
                     <li><a class="spin-btn" href="#"></a>
                         <ul>
-                            <li><a href="#"><i class="fa fa-print"></i></a></li>
+                            <li ng-click="print()"><a href="#"><i class="fa fa-print"></i></a></li>
                             <li><a href="#"><i class="fa fa-save"></i></a></li>
-                            <li><a href="#"><i class="fa fa-"></i> </a></li>
+                            <li ng-click="meLocaliser()"><a href="#"><i class="fa fa-child"></i></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -159,6 +160,8 @@
 <script src="web/lib/reqwest.min.js"></script>
 <script src="web/lib/cluster/leaflet.markercluster.js"></script>
 <script src="web/js/Leaflet.Photo.js"></script>
+<script src="web/js/map/L.Control.Locate.min.js"></script>
 <script src="web/js/main.js"></script>
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>
 </body>
 </html>
