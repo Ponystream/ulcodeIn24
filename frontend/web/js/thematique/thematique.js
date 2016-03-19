@@ -1,31 +1,29 @@
-photolocate.service('Thematique', [function() {
-
+ulcodeIn24.service('Thematique', [function() {
     //initialisation des variables
     var Thematique = function (data) {
-        //var name = [];
-        this.Hypermarche = data.ville.NB_B101;
-        this.Supermarche = data.ville.NB_B102;
-        this.Bricolage = data.ville.NB_B103;
-        this.Superette = data.ville.NB_B201;
-        this.Epicerie = data.ville.NB_B202;
-        this.Boulangerie = data.ville.NB_B203;
-        this.boucherie = data.ville.NB_B204;
-        this.Surgele = data.ville.NB_B205;
-        this.Poisonnerie = data.ville.NB_B206;
-        this.Librairie = data.ville.NB_B301;
-        this.Vetement = data.ville.NB_B302;
-        this.Foyer = data.ville.NB_B303;
-        this.Chaussures = data.ville.NB_B304;
-        this.Electromenager = data.ville.NB_B305;
-        this.Meuble = data.ville.NB_B306;
-        this.Sport = data.ville.NB_B307;
-        this.Maconerie = data.ville.NB_B308;
-        this.Droguerie = data.ville.NB_B309;
-        this.Parfumerie = data.ville.NB_B310;
-        this.Bijouterie = data.ville.NB_B311;
-        this.Fleuriste = data.ville.NB_B312;
-        this.Optique = data.ville.NB_B313;
-        this.Station_Service = data.ville.NB_B314;
+        this.Hypermarche = data['NB_B101'];
+        this.Supermarche = data['NB_B102'];
+        this.Bricolage = data['NB_B103'];
+        this.Superette = data['NB_B201'];
+        this.Epicerie = data['NB_B202'];
+        this.Boulangerie = data['NB_B203'];
+        this.boucherie = data['NB_B204'];
+        this.Surgele = data['NB_B205'];
+        this.Poisonnerie = data['NB_B206'];
+        this.Librairie = data['NB_B301'];
+        this.Vetement = data['NB_B302'];
+        this.Foyer = data['NB_B303'];
+        this.Chaussures = data['NB_B304'];
+        this.Electromenager = data['NB_B305'];
+        this.Meuble = data['NB_B306'];
+        this.Sport = data['NB_B307'];
+        this.Maconerie = data['NB_B308'];
+        this.Droguerie = data['NB_B309'];
+        this.Parfumerie = data['NB_B310'];
+        this.Bijouterie = data['NB_B311'];
+        this.Fleuriste = data['NB_B312'];
+        this.Optique = data['NB_B313'];
+        this.Station_Service = data['NB_B314'];
     };
-    return Serie;
+    return Thematique;
 }]);
