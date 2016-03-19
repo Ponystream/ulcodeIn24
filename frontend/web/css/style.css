@@ -284,6 +284,7 @@ input#inputTheme:focus, input#inputTheme:active {
 }
 
 .leaflet-control-zoom-out {
+    border-bottom: none!important;
     box-shadow: 2px 2px 8px -3px #000 !important;
     border-radius: 55px !important;
     background-color: #f44336 !important;
