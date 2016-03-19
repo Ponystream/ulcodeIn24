@@ -1,4 +1,4 @@
-ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', 'Sante', 'Loisir', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent, Sante, Loisir) {
+ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', 'Sante', 'Loisir', 'Enseignement', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent, Sante, Loisir, Enseignement) {
     $scope.theme = "";
     //get sur les series pour initialiser les variables dans serie.js
     var GetCommerce = function (ville) {
@@ -7,6 +7,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         $scope.loisirs = 0;
         $scope.santes = 0;
         $scope.restaurants = 0;
+        $scope.enseignements = 0;
 
         $http.get('../api/commerces?ville=' + ville)
             .then(function (response) {
@@ -98,9 +99,23 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
                 });
 
     };
+    var GetEnseignement = function (ville) {
+        $http.get('../api/enseignement?ville=' + ville)
+            .then(function (response) {
+                console.log(response);
+                    response.data.enseignements.forEach(function (data) {
+                        var newEnseignement = new Enseignement(data.enseignement);
 
+                        $.each(newEnseignement, function (key, value) {
+                            $scope.enseignements += parseInt(value);
+                        });
+                    });
+                },
+                function (error) {
 
+                });
 
+    };
 
     $scope.localiser = function (ville) {
         GetCommerce(ville);
@@ -108,6 +123,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         GetRestaurant(ville);
         GetLoisir(ville);
         GetSante(ville);
+        GetEnseignement(ville);
     };
 
 }]);
