@@ -19,7 +19,7 @@ body {
     position: fixed;
     height: 100%;
     width: 100%;
-    top: 209px;
+    top: 260px;
 }
 
 .userBlock{
@@ -267,6 +267,10 @@ input#inputTheme:focus, input#inputTheme:active {
 .mat-btn:hover ul li ul li:nth-child(3) {
     opacity: 1;
     transition-delay: 0.01s;
+}
+
+.leaflet-bar a{
+    border-bottom: none!important;
 }
 
 .leaflet-control-zoom-in {
