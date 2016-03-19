@@ -12,7 +12,13 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         $scope.restaurants = 0;
         $scope.enseignements = 0;
         $scope.entreprises = 0;
-        $scope.cle = [];
+        $scope.cleCommerce = [];
+        $scope.cleLoisir = [];
+        $scope.cleSante = [];
+        $scope.cleRestaurant = [];
+        $scope.cleEnseignement = [];
+        $scope.cleEntreprise = [];
+        $scope.cleServicePublic = [];
 
 
         $http.get('../api/commerces?ville=' + ville)
@@ -21,9 +27,8 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
                         var newThematique = new Commerce(data.commerce);
                         $.each(newThematique, function (key, value) {
                             $scope.commerces += parseInt(value);
-                            $scope.cle.push({'nom' : key, 'valeur' : value});
+                            $scope.cleCommerce.push({'nom' : key, 'valeur' : value});
                         });
-                        console.log($scope.cle[0].nom);
                     });
                 },
                 function (error) {
@@ -43,6 +48,8 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
 
                         $.each(newService, function (key, value) {
                             $scope.services += parseInt(value);
+                            $scope.cleServicePublic.push({'nom' : key, 'valeur' : value});
+
                         });
                     });
                 },
@@ -60,6 +67,8 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
 
                         $.each(newRestaurant, function (key, value) {
                             $scope.restaurants += parseInt(value);
+                            $scope.cleRestaurant.push({'nom' : key, 'valeur' : value});
+
                         });
                     });
                 },
@@ -75,6 +84,8 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
                         var newSante = new Sante(data.sante);
                         $.each(newSante, function (key, value) {
                             $scope.santes += parseInt(value);
+                            $scope.cleSante.push({'nom' : key, 'valeur' : value});
+
                         });
                     });
                 },
@@ -91,6 +102,8 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
 
                         $.each(newLoisir, function (key, value) {
                             $scope.loisirs += parseInt(value);
+                            $scope.cleLoisir.push({'nom' : key, 'valeur' : value});
+
                         });
                     });
                 },
@@ -107,6 +120,8 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
 
                         $.each(newEnseignement, function (key, value) {
                             $scope.enseignements += parseInt(value);
+                            $scope.cleEnseignement.push({'nom' : key, 'valeur' : value});
+
                         });
                     });
                 },
@@ -124,6 +139,8 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
 
                         $.each(newEntreprise, function (key, value) {
                             $scope.entreprises += parseInt(value);
+                            $scope.cleEntreprise.push({'nom' : key, 'valeur' : value});
+
                         });
                     });
                 },

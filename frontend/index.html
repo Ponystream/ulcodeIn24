@@ -54,7 +54,72 @@
                     <div class="userBlock userPro">
                         <i class="fa fa-user"></i><span class="userType"> Professionnel</span>
                     </div>
-                </li>
+
+                    <ul id="demo" class="collapse">
+                        <li>
+                            <a href="#"><i class="fa fa-cutlery"></i> Restauration <span
+                                    class="badge">{{restaurants}}</span></a>
+                            <ul>
+                                <li ng-repeat="restaurant in cleRestaurant" value="loisir">
+                                    <a>{{restaurant.nom}}  <span class="badge">{{restaurant.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-heart"></i> Santé <span class="badge">{{santes}}</span></a>
+                            <ul>
+                                <li ng-repeat="sante in cleSante" value="loisir">
+                                    <a>{{sante.nom}}  <span class="badge">{{sante.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-graduation-cap"></i> Education <span class="badge">{{enseignements}}</span></a>
+                            <ul>
+                                <li ng-repeat="education in cleEnseignement" value="loisir">
+                                    <a>{{education.nom}}  <span class="badge">{{education.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-suitcase"></i> Entreprise <span
+                                    class="badge">{{entreprises}}</span></a>
+                            <ul>
+                                <li ng-repeat="entreprise in cleEntreprise" value="loisir">
+                                    <a>{{entreprise.nom}}  <span class="badge">{{entreprise.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-futbol-o"></i> Sport <span class="badge">{{loisirs}}</span></a>
+                            <ul>
+                                <li ng-repeat="loisir in cleLoisir" value="loisir">
+                                    <a>{{loisir.nom}}  <span class="badge">{{loisir.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-shopping-cart"></i> Commerce <span
+                                    class="badge">{{commerces}}</span></a>
+                            <ul>
+                                <li ng-repeat="commerce in cleCommerce" value="commerce">
+                                    <a>{{commerce.nom}}  <span class="badge">{{commerce.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-university"></i> Service Public <span
+                                    class="badge">{{services}}</span></a>
+                            <ul>
+                                <li ng-repeat="service in cleServicePublic" value="service">
+                                    <a>{{service.nom}}  <span class="badge">{{service.valeur}}</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" ng-click="afficheTransport()"><i class=""></i> Transport  </a>
+                        </li>
+                    </ul>
                 <li>
                     <div class="userBlock userPart selected">
                         <i class="fa fa-user"></i><span class="userType"> Particulier</span>
