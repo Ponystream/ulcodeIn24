@@ -36,6 +36,13 @@
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
+                <li class="input-search">
+                    <form role="searchThematique">
+                        <input ng-model="theme" type="search" id="inputTheme" placeholder="Recherche..."/>
+                        <button type="submit" class="icon" id="submitTheme"><i class="fa fa-search"></i></button>
+
+                    </form>
+                </li>
                 <li>
                     <div class="range">
                         <input type="range" name="range" min="1" max="100" value="25" ng-model="range">
@@ -65,13 +72,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="ThematiqueController">
                 <!--==============================PARTICULIER=====================-->
                 <ul class="nav navbar-nav side-nav" id="particulier">
-                    <li class="input-search">
-                        <form role="searchThematique">
-                            <input ng-model="theme" type="search" id="inputTheme" placeholder="Recherche..."/>
-                            <button type="submit" class="icon" id="submitTheme"><i class="fa fa-search"></i></button>
 
-                        </form>
-                    </li>
                     <li>
                         <a href="#" data-toggle="collapse" data-target="#restaurant"><i class="fa fa-cutlery"></i>
                             Restauration <span
@@ -151,6 +152,9 @@
                 <!--==========================PROFESSIONNEL=======================================-->
 
                     <ul class="nav navbar-nav side-nav" id="professionnel">
+                        <li class="input-search">
+
+                        </li>
                         <li>
                             <a href="#" data-toggle="collapse" data-target="#restaurantPro"><i class="fa fa-cutlery"></i>
                                 Restauration <span

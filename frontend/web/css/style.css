@@ -84,7 +84,6 @@ input#inputTheme, input#inputPlace {
     border: none;
     color: #262626;
     padding-left: 35px;
-    color: #fff;
 }
 
 input#inputPlace {
@@ -99,7 +98,7 @@ input#inputPlace {
     font-size: 20px;
 }
 
-input#inputPlace:hover, input#inputPlace:focus {
+input#inputPlace:hover, input#inputPlace:focus, input#inputTheme:hover, input#inputTheme:focus {
     box-shadow: 3px 3px 15px -3px #000;
     transition: 0.3s;
 }
@@ -143,7 +142,7 @@ input#inputTheme:-ms-input-placeholder {
 
 .icon {
     position: absolute;
-    top: 8px;
+    top: 12px;
     left: 2px;
     background: none;
     border: none;
@@ -501,7 +500,11 @@ input#inputTheme:focus, input#inputTheme:active {
 
 @media screen and (min-width: 1100px) {
     input#inputTheme {
-        width: 225px;
+        width: 180px;
+        margin-top: 9px;
+        margin-right: 10px;
+        height: 32px;
+        background-color: #F2F2F2;
     }
 
     .container-body {
