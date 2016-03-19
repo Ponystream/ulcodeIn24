@@ -26,12 +26,10 @@ class CommerceController extends AbstractController
             $query = $commerce->get();
 
             foreach ($query as $q) {
-                $res[] = ['commerce' => $q];
-//                    'links' => ['self' => ['href' => $router->pathFor('annonce', ['id' => $q->id]),
-//                    'annonceur' => $router->pathFor('annonceur', ['id' => $a->id])]]];
+                $res[] = ['commerce' => $q, 'links' => ['self' => ['href' => $router->pathFor('getCommerceById', ['id' => $q->CODGEO])]]];
             }
 
-            $tab = ['commerces' => $res];
+            $tab = ['commerces' => $res, 'links' => []];
             $encoded = json_encode($tab);
 
             $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
@@ -41,4 +39,23 @@ class CommerceController extends AbstractController
             return $response;
         }
     }
+
+    public function getCommerceById($id)
+    {
+        $router = $this->app->getContainer()->get('router');
+
+        $commerces = CommerceDetail::find($id);
+
+
+        $res = ['commerces' => $commerces, 'Links' => []];
+
+        $encoded = json_encode($res);
+
+        $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
+        $response = $this->Status($response, 200);
+        $response = $this->Write($response, $encoded);
+
+        return $response;
+    }
+
 }

@@ -4,11 +4,13 @@
 namespace greatgrandnancy\api\controller;
 
 use \greatgrandnancy\common\model\CommerceDetail;
+use greatgrandnancy\common\model\EquipementParticuliers;
+use greatgrandnancy\common\model\EquipementsServices;
 use greatgrandnancy\common\model\Salaire;
 
-class SalaireController extends AbstractController
+class EquipementsServicesController extends AbstractController
 {
-    public function getAllSalaries($data) {
+    public function getAllEquipment($data) {
         $router = $this->app->getContainer()->get('router');
 //        $ville = ['Art-sur-Meurthe', 'Dommartemont', 'Laneuveville-devant-Nancy', 'Saulxures', 'Pulnoy', 'Seichamps', 'Essey-les-Nancy', 'Tomblaine', 'Jarville', 'Nancy', 'Fléville-devant-Nancy']
 
@@ -18,18 +20,18 @@ class SalaireController extends AbstractController
             $parsed = urldecode($data['ville']);
             $explode = explode(';', $parsed);
             // foreach sur le resultat
-            $salaries = Salaire::select('*');
+            $equipment = EquipementsServices::select('*');
 
             foreach ($explode as $e) {
-                $salaries->orWhere('LIBGEO', '=', $e);
+                $equipment->orWhere('LIBGEO', '=', $e);
             }
-            $query = $salaries->get();
+            $query = $equipment->get();
 
             foreach ($query as $q) {
-                $res[] = ['salaire' => $q, 'links' => ['self' => ['href' => $router->pathFor('getSalaireById', ['id' => $q->CODGEO])]]];
+                $res[] = ['equipement' => $q, 'links' => ['self' => ['href' => $router->pathFor('getEquipmentById', ['id' => $q->CODGEO])]]];
             }
 
-            $tab = ['salaires' => $res, 'links' => []];
+            $tab = ['equipements' => $res, 'links' => []];
             $encoded = json_encode($tab);
 
             $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
@@ -40,13 +42,13 @@ class SalaireController extends AbstractController
         }
     }
 
-    public function getSalariesById($id)
+    public function getEquipmentById($id)
     {
         $router = $this->app->getContainer()->get('router');
 
-        $salaries = Salaire::find($id);
+        $equipment = Salaire::find($id);
 
-        $res = ['salaires' => $salaries, 'Links' => []];
+        $res = ['equipement' => $equipment, 'Links' => []];
 
         $encoded = json_encode($res);
 
@@ -56,5 +58,4 @@ class SalaireController extends AbstractController
 
         return $response;
     }
-
 }
