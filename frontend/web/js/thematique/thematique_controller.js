@@ -15,7 +15,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
             .then(function (response) {
                     response.data.commerces.forEach(function (data) {
                         var newThematique = new Commerce(data.commerce);
-
+                        console.log($scope.pro);
                         $.each(newThematique, function (key, value) {
                             $scope.commerces += parseInt(value);
                         });
@@ -32,6 +32,9 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
     //        console.log(newValue);
     //    }
     //});
+
+    if(getElementsByClassName('selected'))
+
 
     var GetService = function (ville) {
         $http.get('../api/equipements?ville=' + ville)
