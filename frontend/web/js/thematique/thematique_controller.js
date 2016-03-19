@@ -1,5 +1,5 @@
-ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', function ($scope, $http, Commerce, Service_Public, Restaurant) {
-
+ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent) {
+    $scope.theme = "";
     //get sur les series pour initialiser les variables dans serie.js
     var GetCommerce = function (ville) {
         $scope.commerces = 0;
@@ -20,6 +20,13 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
                     console.log(error);
                 });
     };
+
+    $scope.villeCurrent = villeCurrent;
+    //$scope.$watch('theme', function (newValue) {
+    //    if (newValue != 0 && newValue != undefined) {
+    //        console.log(newValue);
+    //    }
+    //});
 
     var GetService = function (ville) {
         $http.get('../api/equipements?ville=' + ville)

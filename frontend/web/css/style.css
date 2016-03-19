@@ -77,11 +77,10 @@ input#inputPlace{
     height: 33px;
     width: 200px;
     background: #f4f4f4;
-    box-shadow: 2px 2px 8px -3px #000;
     color: #606061;
     outline: none;
 }
-input#inputPlace:hover {
+input#inputPlace:hover, input#inputPlace:focus {
     box-shadow: 3px 3px 15px -3px #000;
     transition: 0.3s;
 }
