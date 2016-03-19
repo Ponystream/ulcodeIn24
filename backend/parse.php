@@ -6,10 +6,10 @@
  * Time: 16:43
  */
 
-require_once '../src/greatgrandnancy/backend/controller/Classes/PHPExcel/IOFactory.php';
+require_once 'Classes/PHPExcel/IOFactory.php';
 
 $inputFileType = 'Excel5';
-$inputFileName = 'defm-2014.xls';
+$inputFileName = 'equip-sport-loisir-socio-com-2014.xls';
 
 $objReader = PHPExcel_IOFactory::createReader($inputFileType);
 //$objReader->setInputEncoding('UTF-8');
