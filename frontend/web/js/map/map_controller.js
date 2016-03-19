@@ -14,12 +14,9 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         xhr.send();
         var response = JSON.parse(xhr.response);
         if(response.status == "OK"){
-            console.log(response);
             //villeCurrent.ville = response.results[0].address_components[2].short_name;
             villeCurrent.lat = response.results[0].geometry.location.lat;
-            console.log(villeCurrent.lat);
             villeCurrent.lon = response.results[0].geometry.location.lng;
-            console.log(villeCurrent.lon);
             return true;
         }else{
             return false;
@@ -29,7 +26,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
     var init = function(){
         // on affiche la carte
         map.remove();
-        map = L.map('map').setView([villeCurrent.lat, villeCurrent.lon], 15);
+        map = L.map('map').setView([villeCurrent.lat, villeCurrent.lon], 13);
         marker = L.marker([villeCurrent.lat, villeCurrent.lon]).addTo(map);
         marker.bindPopup(villeCurrent.ville).openPopup();
 
@@ -44,12 +41,12 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
             fillOpacity: 0.5
         }).addTo(map);
 
+        //omnivore.kml('web/kml/Arrets.kml').addTo(map);
     };
 
 
     $scope.$watch('range', function(newvalue){
 
-        console.log(marker.length);
         map.removeLayer(circle);
         circle = L.circle([villeCurrent.lat, villeCurrent.lon], $scope.range*100, {
             color: 'red',
@@ -96,7 +93,6 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
             alert("Veuillez saisir un theme");
         }else{
             if(villeCurrent.ville != []){
-                console.log(villeCurrent.ville);
                 $http.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+villeCurrent.lat+"%2C"+villeCurrent.lon+"&radius="+$scope.range*100+"&name="+$scope.theme+"&key=AIzaSyD1Lsn0Qz9Tmaij6ET1yukF5vhEXC5FQVM").
                 success(function(data, status, headers, config) {
                     data.results.forEach(function(value) {
@@ -115,7 +111,6 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
 
     // on click on submit Place search button
     $('#submitTheme').click(getMarkers);
-
 
     getCoord();
     init();

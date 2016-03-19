@@ -214,7 +214,7 @@ input#inputTheme:focus, input#inputTheme:active {
 
 .mat-btn:hover ul .spin-btn {
     transform: rotate(360deg);
-    background-image: url("https://ssl.gstatic.com/bt/C3341AA7A1A076756462EE2E5CD71C11/2x/bt_compose2_2x.png ");
+    background-image: url("../img/gear.png");
 }
 
 .mat-btn ul li ul li {
