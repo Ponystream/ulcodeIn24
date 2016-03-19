@@ -36,11 +36,18 @@
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
             <li>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input ng-model="villeChoisie" type="text" id="inputPlace" class="form-control" placeholder="Lieu ...">
-                    </div>
-                    <button ng-click="localiser(villeChoisie)" type="submit" id="submitPlace" class="btn btn-default">Localiser</button>
+                <!--                <div class="range">
+                                    <input type="range" name="range" min="1" max="100" value="50" onchange="range.value=value">
+                                    <output id="range">50</output>
+                                </div>-->
+            </li>
+            <li>
+
+                <form class="navbar-form navbar-left" role="searchPlace">
+                    <input ng-model="villeChoisie" type="text" id="inputPlace" class="input-custom"
+                           placeholder="Lieu ...">
+                    <button ng-click="localiser(villeChoisie)" type="submit" id="submitPlace"><i
+                            class="fa fa-map-marker"></i></button>
                 </form>
 
             </li>
@@ -55,18 +62,22 @@
             </li>
         </ul>
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="ThematiqueController">
             <ul class="nav navbar-nav side-nav">
                 <li class="input-search">
-                    <span class="icon"><i class="fa fa-search"></i></span>
-                    <input type="search" id="search" placeholder="Search..."/>
+                    <form role="searchThematique">
+                        <input ng-model="theme" type="search" id="inputTheme" placeholder="Search..."/>
+                        <button type="submit" class="icon" id="submitTheme"><i class="fa fa-search"></i></button>
+
+                    </form>
                 </li>
                 <li>
                     <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i
                             class="fa fa-fw fa-arrows-v"></i>Thèmatique <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="demo" class="collapse">
                         <li>
-                            <a href="#"><i class="fa fa-cutlery"></i> Restauration </a>
+                            <a href="#"><i class="fa fa-cutlery"></i> Restauration <span
+                                    class="badge">{{restaurants}}</span></a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bus"></i> Transport</a>
@@ -84,31 +95,10 @@
                             <a><i class="fa fa-shopping-cart"></i> Commerce <span class="badge">{{commerces}}</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-university"></i> Institution</a>
+                            <a href="#"><i class="fa fa-university"></i> Service Public <span
+                                    class="badge">{{services}}</span></a>
                         </li>
                     </ul>
-                </li>
-                <li>
-                    <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-                </li>
-                <li>
-                    <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-                </li>
-                <li>
-                    <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-                </li>
-                <li>
-                    <a href="bootstrap-elements.html"><i class="fa fa-fw fa-desktop"></i> Bootstrap Elements</a>
-                </li>
-                <li>
-                    <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
-                </li>
-
-                <li>
-                    <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
-                </li>
-                <li>
-                    <a href="index-rtl.html"><i class="fa fa-fw fa-dashboard"></i> RTL Dashboard</a>
                 </li>
             </ul>
 
@@ -151,8 +141,11 @@
 <script src="web/lib/bootstrap.min.js"></script>
 <script src="web/js/app.js"></script>
 <script src="web/js/map/map_controller.js"></script>
+<script src="web/js/map/ville_current.js"></script>
 <script src="web/js/thematique/thematique_controller.js"></script>
-<script src="web/js/thematique/thematique.js"></script>
+<script src="web/js/thematique/commerces.js"></script>
+<script src="web/js/thematique/services_public.js"></script>
+<script src="web/js/thematique/restaurants.js"></script>
 <script src="web/lib/reqwest.min.js"></script>
 <script src="web/lib/cluster/leaflet.markercluster.js"></script>
 <script src="web/js/Leaflet.Photo.js"></script>
