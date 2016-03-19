@@ -1,6 +1,6 @@
 ulcodeIn24.controller('MapController', ['$scope', '$http', function($scope, $http){
 
-
+    $scope.ville = "";
     var map = L.map('map').setView([48.6880756,6.1384176], 13);
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -27,7 +27,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', function($scope, $htt
     var getCoord = function(){
         // on récupère la position de la ville souhaitée
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address="+ville, false);
+        xhr.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?address="+$scope.ville, false);
         xhr.send();
         var response = JSON.parse(xhr.response);
         console.log(response);
@@ -46,7 +46,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', function($scope, $htt
         // on affiche la carte
         map = L.map('map').setView([lat_nantes, lon_nantes], 12);
         marker = L.marker([lat_nantes, lon_nantes]).addTo(map);
-        marker.bindPopup(ville).openPopup();
+        marker.bindPopup($scope.ville).openPopup();
 
         //Ajout d'un layer de carte
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -57,8 +57,8 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', function($scope, $htt
     // on click on submit Place search button
     var submit = document.getElementById("submitPlace");
     submit.onclick = function(){
-        ville = document.getElementById("inputPlace").value;
-        if(ville == ""){
+        $scope.ville = document.getElementById("inputPlace").value;
+        if($scope.ville == ""){
             alert("Veuillez saisir un nom de ville");
         }else{
             if(getCoord()){
