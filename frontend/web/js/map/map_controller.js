@@ -56,7 +56,6 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
             attribution: '; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-        L.control.locate().addTo(map);
         omnivore.kml('web/kml/Arrets.kml').addTo(map);
     };
 
@@ -120,8 +119,9 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         }
     };
 
-    var meLocaliser = function () {
-
+    $scope.meLocaliser = function () {
+        var lc = L.control.locate().addTo(map);
+        lc.start();
     }
 
     getCoord();
