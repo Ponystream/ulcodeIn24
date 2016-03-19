@@ -62,7 +62,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
 
     $scope.$watch('range', function(newvalue){
         map.removeLayer(circle);
-        circle = L.circle([villeCurrent.lat, villeCurrent.lon], $scope.range*10, {
+        circle = L.circle([villeCurrent.lat, villeCurrent.lon], $scope.range*100, {
             color: 'red',
             fillColor: '#f03',
             fillOpacity: 0.5
@@ -77,7 +77,6 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
             alert("Veuillez saisir un nom de ville");
         }else{
             if(getCoord()){
-                map.remove();
                 init();
             }else{
                 alert("ville inconnue");
