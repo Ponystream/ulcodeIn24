@@ -3,8 +3,7 @@
 // Le namespace pour etre importe tout seul pas l'autoloader
 namespace greatgrandnancy\api\controller;
 
-use \greatgrandnancy\common\model\CommerceDetail;
-use greatgrandnancy\common\model\Salaire;
+use greatgrandnancy\common\model\Salaires;
 
 class SalaireController extends AbstractController
 {
@@ -18,7 +17,7 @@ class SalaireController extends AbstractController
             $parsed = urldecode($data['ville']);
             $explode = explode(';', $parsed);
             // foreach sur le resultat
-            $salaries = Salaire::select('*');
+            $salaries = Salaires::select('*');
 
             foreach ($explode as $e) {
                 $salaries->orWhere('LIBGEO', '=', $e);
@@ -29,7 +28,7 @@ class SalaireController extends AbstractController
 
                 $res = ['codeErreur' => 404,
                     'messageErreur' => "La ressource demandée n'a pas été trouvée",
-                    'ressourceDemandee' => $router->pathFor('getSalairesByCity', []) . '?ville=' . $data['ville']];
+                    'ressourceDemandee' => $router->pathFor('getSalariesByCity', []) . '?ville=' . $data['ville']];
                 $encoded = json_encode($res);
 
                 //Ecriture du header
@@ -41,7 +40,7 @@ class SalaireController extends AbstractController
             }
 
             foreach ($query as $q) {
-                $res[] = ['salaire' => $q, 'links' => ['self' => ['href' => $router->pathFor('getSalaireById', ['id' => $q->CODGEO])]]];
+                $res[] = ['salaire' => $q, 'links' => ['self' => ['href' => $router->pathFor('getSalariesById', ['id' => $q->CODGEO])]]];
             }
 
             $tab = ['salaires' => $res, 'links' => []];
@@ -59,9 +58,24 @@ class SalaireController extends AbstractController
     {
         $router = $this->app->getContainer()->get('router');
 
-        $salaries = Salaire::find($id);
+        $salaries = Salaires::find($id);
 
-        $res = ['salaires' => $salaries, 'Links' => []];
+        if (empty($salaries)) {
+
+            $res = ['codeErreur' => 404,
+                'messageErreur' => "La ressource demandée n'a pas été trouvée",
+                'ressourceDemandee' => $router->pathFor('getSalariesById', ['id' => $id])];
+            $encoded = json_encode($res);
+
+            //Ecriture du header
+            $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
+            $response = $this->Status($response, 404);
+            $response = $this->Write($response, $encoded);
+
+            return $response;
+        }
+
+        $res = ['salaire' => $salaries, 'Links' => []];
 
         $encoded = json_encode($res);
 

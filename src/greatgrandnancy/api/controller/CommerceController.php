@@ -7,7 +7,7 @@ use \greatgrandnancy\common\model\CommerceDetail;
 
 class CommerceController extends AbstractController
 {
-    public function getAllCommerce($data)
+    public function getAllCommerces($data)
     {
         $router = $this->app->getContainer()->get('router');
 
@@ -61,8 +61,22 @@ class CommerceController extends AbstractController
 
         $commerces = CommerceDetail::find($id);
 
+        if (empty($commerces)) {
 
-        $res = ['commerces' => $commerces, 'Links' => []];
+            $res = ['codeErreur' => 404,
+                'messageErreur' => "La ressource demandée n'a pas été trouvée",
+                'ressourceDemandee' => $router->pathFor('getCommerceById', ['id' => $id])];
+            $encoded = json_encode($res);
+
+            //Ecriture du header
+            $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
+            $response = $this->Status($response, 404);
+            $response = $this->Write($response, $encoded);
+
+            return $response;
+        }
+
+        $res = ['commerce' => $commerces, 'Links' => []];
 
         $encoded = json_encode($res);
 
