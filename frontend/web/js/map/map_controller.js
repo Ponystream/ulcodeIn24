@@ -2,7 +2,6 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
 
     villeCurrent.ville = "";
     $scope.theme = "";
-    $scope.radius=500;
     $scope.markers = [];
     var map = L.map('map').setView([48.6880756,6.1384176], 13);
 
@@ -90,7 +89,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         }else{
             if(villeCurrent.ville != []){
                 console.log(villeCurrent.ville);
-                $http.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+villeCurrent.lat+"%2C"+villeCurrent.lon+"&radius="+$scope.radius+"&name="+$scope.theme+"&key=AIzaSyD1Lsn0Qz9Tmaij6ET1yukF5vhEXC5FQVM").
+                $http.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+villeCurrent.lat+"%2C"+villeCurrent.lon+"&radius="+$scope.range+"&name="+$scope.theme+"&key=AIzaSyD1Lsn0Qz9Tmaij6ET1yukF5vhEXC5FQVM").
                 success(function(data, status, headers, config) {
                     data.results.forEach(function(value) {
                         $scope.markers.push(value);
