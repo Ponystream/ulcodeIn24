@@ -119,6 +119,10 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         }
     };
 
+    var meLocaliser = function () {
+        
+    }
+
     getCoord();
     init();
     //photoLayer.add(photos).addTo(map);
