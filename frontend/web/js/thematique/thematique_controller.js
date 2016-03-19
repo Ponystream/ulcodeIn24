@@ -5,8 +5,8 @@ $scope.commerces = 0;
     var GetCommerce = function () {
         $http.get('http://localhost/ulcodeIn24/api/commerces?ville=Nancy')
             .then(function (response) {
-                       response.data.villes.forEach(function (data) {
-                           var newThematique = new Thematique(data.ville);
+                       response.data.commerces.forEach(function (data) {
+                           var newThematique = new Thematique(data.commerce);
 
                            $.each(newThematique, function (key, value) {
                                $scope.commerces += parseInt(value);
