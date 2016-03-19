@@ -8,9 +8,8 @@ use greatgrandnancy\common\model\Salaire;
 
 class SalaireController extends AbstractController
 {
-    public function getAllSalaire($data)
+    public function getAllSalaries($data)
     {
-
         $router = $this->app->getContainer()->get('router');
 
         if (isset($data['ville'])) {
@@ -19,13 +18,12 @@ class SalaireController extends AbstractController
             $parsed = urldecode($data['ville']);
             $explode = explode(';', $parsed);
             // foreach sur le resultat
-            $salaire = Salaire::select('*');
+            $salaries = Salaire::select('*');
 
             foreach ($explode as $e) {
-                $salaire->orWhere('LIBGEO', '=', $e);
+                $salaries->orWhere('LIBGEO', '=', $e);
             }
-
-            $query = $salaire->get();
+            $query = $salaries->get();
 
             if (empty($query[0])) {
 
@@ -43,12 +41,10 @@ class SalaireController extends AbstractController
             }
 
             foreach ($query as $q) {
-                $res[] = ['salaire' => $q];
-//                    'links' => ['self' => ['href' => $router->pathFor('annonce', ['id' => $q->id]),
-//                    'annonceur' => $router->pathFor('annonceur', ['id' => $a->id])]]];
+                $res[] = ['salaire' => $q, 'links' => ['self' => ['href' => $router->pathFor('getSalaireById', ['id' => $q->CODGEO])]]];
             }
 
-            $tab = ['salaires' => $res];
+            $tab = ['salaires' => $res, 'links' => []];
             $encoded = json_encode($tab);
 
             $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
@@ -58,4 +54,22 @@ class SalaireController extends AbstractController
             return $response;
         }
     }
+
+    public function getSalariesById($id)
+    {
+        $router = $this->app->getContainer()->get('router');
+
+        $salaries = Salaire::find($id);
+
+        $res = ['salaires' => $salaries, 'Links' => []];
+
+        $encoded = json_encode($res);
+
+        $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
+        $response = $this->Status($response, 200);
+        $response = $this->Write($response, $encoded);
+
+        return $response;
+    }
+
 }

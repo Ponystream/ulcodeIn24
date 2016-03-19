@@ -6,7 +6,7 @@ namespace greatgrandnancy\common\model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class EquipementParticuliers extends Model
+class EquipementsServices extends Model
 {
 	protected $table = 'equipement_particuliers';
 	protected $primaryKey = 'CODGEO';

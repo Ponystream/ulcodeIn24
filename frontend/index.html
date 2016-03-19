@@ -36,11 +36,16 @@
         <!-- Top Menu Items -->
         <ul class="nav navbar-right top-nav">
             <li>
+<!--                <div class="range">
+                    <input type="range" name="range" min="1" max="100" value="50" onchange="range.value=value">
+                    <output id="range">50</output>
+                </div>-->
+            </li>
+            <li>
+
                 <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input ng-model="villeChoisie" type="text" id="inputPlace" class="form-control" placeholder="Lieu ...">
-                    </div>
-                    <button ng-click="localiser(villeChoisie)" type="submit" id="submitPlace" class="btn btn-default">Localiser</button>
+                        <input ng-model="villeChoisie" type="text" id="inputPlace" class="input-custom" placeholder="Lieu ...">
+                    <button ng-click="localiser(villeChoisie)" type="submit" id="submitPlace"><i class="fa fa-map-marker"></i></button>
                 </form>
 
             </li>
@@ -55,7 +60,7 @@
             </li>
         </ul>
         <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <div class="collapse navbar-collapse navbar-ex1-collapse" ng-controller="ThematiqueController">
             <ul class="nav navbar-nav side-nav">
                 <li class="input-search">
                     <span class="icon"><i class="fa fa-search"></i></span>
@@ -66,7 +71,7 @@
                             class="fa fa-fw fa-arrows-v"></i>Thèmatique <i class="fa fa-fw fa-caret-down"></i></a>
                     <ul id="demo" class="collapse">
                         <li>
-                            <a href="#"><i class="fa fa-cutlery"></i> Restauration </a>
+                            <a href="#"><i class="fa fa-cutlery"></i> Restauration <span class="badge">{{restaurants}}</span></a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bus"></i> Transport</a>
@@ -84,7 +89,7 @@
                             <a><i class="fa fa-shopping-cart"></i> Commerce <span class="badge">{{commerces}}</span></a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-university"></i> Institution</a>
+                            <a href="#"><i class="fa fa-university"></i> Service Public <span class="badge">{{services}}</span></a>
                         </li>
                     </ul>
                 </li>
@@ -153,7 +158,9 @@
 <script src="web/js/map/map_controller.js"></script>
 <script src="web/js/map/ville_current.js"></script>
 <script src="web/js/thematique/thematique_controller.js"></script>
-<script src="web/js/thematique/thematique.js"></script>
+<script src="web/js/thematique/commerces.js"></script>
+<script src="web/js/thematique/services_public.js"></script>
+<script src="web/js/thematique/restaurants.js"></script>
 <script src="web/lib/reqwest.min.js"></script>
 <script src="web/lib/cluster/leaflet.markercluster.js"></script>
 <script src="web/js/Leaflet.Photo.js"></script>

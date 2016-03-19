@@ -1,6 +1,6 @@
-ulcodeIn24.service('Thematique', [function() {
+ulcodeIn24.service('Commerce', [function() {
     //initialisation des variables
-    var Thematique = function (data) {
+    var Commerce = function (data) {
         this.Hypermarche = data['NB_B101'];
         this.Supermarche = data['NB_B102'];
         this.Bricolage = data['NB_B103'];
@@ -25,5 +25,5 @@ ulcodeIn24.service('Thematique', [function() {
         this.Optique = data['NB_B313'];
         this.Station_Service = data['NB_B314'];
     };
-    return Thematique;
+    return Commerce;
 }]);
