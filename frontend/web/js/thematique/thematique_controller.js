@@ -9,6 +9,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         $scope.restaurants = 0;
         $scope.enseignements = 0;
         $scope.entreprises = 0;
+        $scope.range = 50;
 
         $http.get('../api/commerces?ville=' + ville)
             .then(function (response) {
