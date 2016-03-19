@@ -125,5 +125,22 @@ $app->group('/sante', function () use ($app) {
     })->setName('getHealthById');
 });
 
+$app->group('/enseignement', function () use ($app) {
+
+    ///////////// Retourne la liste des photos /////////////
+    $app->get('', function ($req, $res) use ($app) {
+        $controller = new Controller\EnseignementController($req, $res, $app);
+        return $controller->getAllEducation($req->getQueryParams());
+    })->setName('getEducationByCity');
+
+    ///////////// Retourne la liste des photos /////////////
+    $app->get('/{id}', function ($req, $res, $args) use ($app) {
+
+        $id = $args['id'];
+        $controller = new Controller\EnseignementController($req, $res, $app);
+        return $controller->getEducationById($id);
+    })->setName('getEducationById');
+});
+
 // On lance slim, et voila !
 $app->run();
