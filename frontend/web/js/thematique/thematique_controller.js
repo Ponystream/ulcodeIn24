@@ -1,23 +1,26 @@
-ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', function($scope, $http) {
+ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Thematique', function($scope, $http, Thematique) {
 
     //get sur les series pour initialiser les variables dans serie.js
-    var GetCommerce = function () {
-        $http.get('../../api/commerce?ville=Nancy')
+    var GetCommerce = function (ville) {
+        $scope.commerces = 0;
+
+        $http.get('../api/commerces?ville=' + ville)
             .then(function (response) {
-                    // console.log(response.data.villes[0].ville);
-                    // $scope.commerces = [];
-                       response.data.villes.forEach(function (data) {
-                           console.log(data.ville);
+                       response.data.commerces.forEach(function (data) {
+                           var newThematique = new Thematique(data.commerce);
+
+                           $.each(newThematique, function (key, value) {
+                               $scope.commerces += parseInt(value);
+                           });
                     });
                              },
                 function (error) {
                     console.log(error);
                 });
     };
-    GetCommerce();
 
-    var nbCommerce = function(){
-        console.log('test');
-      GetCommerce();
+    $scope.localiser = function (ville){
+        GetCommerce(ville);
     };
+
 }]);
