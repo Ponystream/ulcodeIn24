@@ -1,4 +1,4 @@
-ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', 'Sante', 'Loisir', 'Enseignement', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent, Sante, Loisir, Enseignement) {
+ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'Service_Public', 'Restaurant', 'villeCurrent', 'Sante', 'Loisir', 'Enseignement', 'Entreprise', function ($scope, $http, Commerce, Service_Public, Restaurant, villeCurrent, Sante, Loisir, Enseignement, Entreprise) {
     $scope.theme = "";
     //get sur les series pour initialiser les variables dans serie.js
     var GetCommerce = function (ville) {
@@ -8,6 +8,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         $scope.santes = 0;
         $scope.restaurants = 0;
         $scope.enseignements = 0;
+        $scope.entreprises = 0;
 
         $http.get('../api/commerces?ville=' + ville)
             .then(function (response) {
@@ -116,6 +117,23 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
                 });
 
     };
+    var GetEntreprise= function (ville) {
+        $http.get('../api/entreprises?ville=' + ville)
+            .then(function (response) {
+                console.log(response);
+                    response.data.entreprises.forEach(function (data) {
+                        var newEntreprise = new Entreprise(data.entreprise);
+
+                        $.each(newEntreprise, function (key, value) {
+                            $scope.entreprises += parseInt(value);
+                        });
+                    });
+                },
+                function (error) {
+
+                });
+
+    };
 
     $scope.localiser = function (ville) {
         GetCommerce(ville);
@@ -124,6 +142,7 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
         GetLoisir(ville);
         GetSante(ville);
         GetEnseignement(ville);
+        GetEntreprise(ville);
     };
 
 }]);
