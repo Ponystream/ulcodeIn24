@@ -9,7 +9,7 @@
 require_once 'Classes/PHPExcel/IOFactory.php';
 
 $inputFileType = 'Excel5';
-$inputFileName = 'base-cc-logement-2012.xls';
+$inputFileName = 'equip-serv-sante-com-2014.xls';
 
 $objReader = PHPExcel_IOFactory::createReader($inputFileType);
 //$objReader->setInputEncoding('UTF-8');
