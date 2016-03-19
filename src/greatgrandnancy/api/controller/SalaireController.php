@@ -8,11 +8,12 @@ use greatgrandnancy\common\model\Salaire;
 
 class SalaireController extends AbstractController
 {
-    public function getAllSalaire($data) {
-        $router = $this->app->getContainer()->get('router');
-//        $ville = ['Art-sur-Meurthe', 'Dommartemont', 'Laneuveville-devant-Nancy', 'Saulxures', 'Pulnoy', 'Seichamps', 'Essey-les-Nancy', 'Tomblaine', 'Jarville', 'Nancy', 'Fléville-devant-Nancy']
+    public function getAllSalaire($data)
+    {
 
-        if(isset($data['ville'])){
+        $router = $this->app->getContainer()->get('router');
+
+        if (isset($data['ville'])) {
             $ville = [];
             // parser $data['villes']
             $parsed = urldecode($data['ville']);
@@ -20,10 +21,26 @@ class SalaireController extends AbstractController
             // foreach sur le resultat
             $salaire = Salaire::select('*');
 
-            foreach($explode as $e) {
+            foreach ($explode as $e) {
                 $salaire->orWhere('LIBGEO', '=', $e);
             }
+
             $query = $salaire->get();
+
+            if (empty($query[0])) {
+
+                $res = ['codeErreur' => 404,
+                    'messageErreur' => "La ressource demandée n'a pas été trouvée",
+                    'ressourceDemandee' => $router->pathFor('getSalairesByCity', []) . '?ville=' . $data['ville']];
+                $encoded = json_encode($res);
+
+                //Ecriture du header
+                $response = $this->jsonHeader($this->response, 'Content-Type', 'application/json');
+                $response = $this->Status($response, 404);
+                $response = $this->Write($response, $encoded);
+
+                return $response;
+            }
 
             foreach ($query as $q) {
                 $res[] = ['salaire' => $q];
