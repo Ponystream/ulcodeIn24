@@ -33,10 +33,6 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
             attribution: '; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-<<<<<<< HEAD
-        omnivore.kml('web/kml/Arrets.kml').addTo(map);
-=======
-        
         circle = L.circle([villeCurrent.lat, villeCurrent.lon], $scope.range*100, {
             color: 'red',
             fillColor: '#f03',
@@ -44,8 +40,6 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
         }).addTo(map);
 
         L.control.locate().addTo(map);
-        //omnivore.kml('web/kml/Arrets.kml').addTo(map);
->>>>>>> e8dbdd9c080f163c9125202d974e7014e970a7d7
     };
 
     $scope.afficheTransport = function (){
@@ -116,7 +110,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
             }
         }
     };
-    
+
     $scope.meLocaliser = function () {
         var lc = L.control.locate().addTo(map);
         lc.start();
