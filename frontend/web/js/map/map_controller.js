@@ -7,6 +7,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
     var circle = L.circle();
     var marker = L.marker();
     var save = 0;
+    $s = 1;
 
     var getCoord = function () {
         // on récupère la position de la ville souhaitée
@@ -50,7 +51,14 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
 
     };
     $scope.afficheTransport = function (){
-        omnivore.kml('web/kml/Arrets.kml').addTo(map);
+        if($s ==1) {
+            omnivore.kml('web/kml/Arrets.kml').addTo(map);
+            $s = 0;
+        }
+        else {
+            init();
+            $s = 1;
+        }
     };
 
     $scope.$watch('range', function (newvalue) {
@@ -124,7 +132,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
             lc.start();
         }
         save = 1;
-    }
+    };
     // on click on submit Place search button
     $('#submitTheme').click(getMarkers);
 
