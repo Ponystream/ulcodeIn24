@@ -44,7 +44,6 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
     var GetService = function (ville) {
         $http.get('../api/equipements?ville=' + ville)
             .then(function (response) {
-                console.log(response);
                     response.data.equipements.forEach(function (data) {
                         var newService = new Service_Public(data.equipement);
 
@@ -63,7 +62,6 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
     var GetRestaurant = function (ville) {
         $http.get('../api/equipements?ville=' + ville)
             .then(function (response) {
-                console.log(response);
                     response.data.equipements.forEach(function (data) {
                         var newRestaurant = new Restaurant(data.equipement);
 
@@ -155,7 +153,6 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
             .then(function (response) {
                     response.data.salaires.forEach(function (data) {
                         var newSalaire = new Salaires(data.salaire);
-                        console.log(newSalaire);
 
                         $.each(newSalaire, function (key, value) {
                             $scope.salaires += parseFloat(value);
