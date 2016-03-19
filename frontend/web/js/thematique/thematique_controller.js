@@ -63,6 +63,8 @@ ulcodeIn24.controller('ThematiqueController', ['$scope', '$http', 'Commerce', 'S
 
     };
 
+
+
     $scope.localiser = function (ville) {
         GetCommerce(ville);
         GetService(ville);

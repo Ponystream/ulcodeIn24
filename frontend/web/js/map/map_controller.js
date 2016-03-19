@@ -1,6 +1,7 @@
 ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', function($scope, $http, villeCurrent){
 
     villeCurrent.ville = "";
+    $scope.theme = "";
     var map = L.map('map').setView([48.6880756,6.1384176], 13);
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -63,6 +64,22 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
                 init();
             }else{
                 alert("ville inconnue");
+            }
+
+        }
+    };
+
+    // on click on submit Place search button
+    var submitTheme = document.getElementById("submitTheme");
+    submitTheme.onclick = function(){
+        $scope.theme = document.getElementById("inputTheme").value;
+        if($scope.theme == ""){
+            alert("Veuillez saisir un theme");
+        }else{
+            if(true){
+                console.log($scope.theme);
+            }else{
+                alert("theme inconnue");
             }
 
         }

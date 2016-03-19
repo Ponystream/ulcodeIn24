@@ -62,7 +62,7 @@ body {
     border: none;
 }
 
-input#search, input#inputPlace {
+input#inputTheme, input#inputPlace {
     width: 100%;
     height: 40px;
     background: #2b303b;
@@ -93,41 +93,43 @@ input#inputPlace:hover, input#inputPlace:focus {
     background: transparent;
     top: 22px;
     left: 10px;
+    cursor: text;
 }
 
 input#inputPlace::-webkit-input-placeholder{
     color: #5f5f5d;
 }
 
-input#search:hover > .icon {
+input#inputTheme:hover > .icon {
     color: #4f5b66;
 }
 
-input#search::-webkit-input-placeholder {
+input#inputTheme::-webkit-input-placeholder {
     color: #65737e;
 }
 
-input#search:-moz-placeholder { /* Firefox 18- */
+input#inputTheme:-moz-placeholder { /* Firefox 18- */
     color: #65737e;
 }
 
-input#search::-moz-placeholder { /* Firefox 19+ */
+input#inputTheme::-moz-placeholder { /* Firefox 19+ */
     color: #65737e;
 }
 
-input#search:-ms-input-placeholder {
+input#inputTheme:-ms-input-placeholder {
     color: #65737e;
 }
 
 .icon {
     position: absolute;
-    margin-left: 17px;
-    margin-top: 10px;
-    z-index: 1;
+    top: 8px;
+    left:2px;
+    background: none;
+    border: none;
     color: #4f5b66;
 }
 
-input#search:focus, input#search:active {
+input#inputTheme:focus, input#inputTheme:active {
     outline: none;
 }
 
@@ -267,6 +269,7 @@ input#search:focus, input#search:active {
     height: 38px !important;
     padding-top: 5px !important;
     width: 38px !important;
+    margin-top: 5px !important;
 }
 
 .leaflet-control-zoom-out:hover {
@@ -276,12 +279,18 @@ input#search:focus, input#search:active {
 .leaflet-bar{
     box-shadow: none !important;
 }
+.leaflet-disabled{
+    background-color: darkgrey!important;
+}
+.leaflet-disabled:hover{
+    background-color: darkgrey!important;
+}
 
 .range {
+    width: 370px;
     display: table;
-    position: relative;
     height: 25px;
-    margin-top: 20px;
+    margin-top: 12px;
     background-color: rgb(245, 245, 245);
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -433,7 +442,7 @@ input#search:focus, input#search:active {
 }
 
 @media screen and (min-width: 640px) {
-    input#search {
+    input#inputTheme {
         width: 225px;
     }
 
@@ -447,7 +456,7 @@ input#search:focus, input#search:active {
     }
 
     #submitPlace{
-        top: 13px;
-        left: 22px;
+        top: 14px;
+        left: 27px;
     }
 }

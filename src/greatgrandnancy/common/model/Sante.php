@@ -6,9 +6,9 @@ namespace greatgrandnancy\common\model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Salaire extends Model
+class Sante extends Model
 {
-	protected $table = 'salaire';
+	protected $table = 'sante';
 	protected $primaryKey = 'CODGEO';
 	public $timestamps = false;
 }

@@ -31,7 +31,7 @@ $app->group('/commerces', function () use ($app) {
     ///////////// Retourne la liste des photos /////////////
     $app->get('', function ($req, $res) use ($app) {
         $controller = new Controller\CommerceController($req, $res, $app);
-        return $controller->getAllCommerce($req->getQueryParams());
+        return $controller->getAllCommerces($req->getQueryParams());
     })->setName('getCommercesByCity');
 
     $app->get('/{id}', function ($req, $res, $args) use ($app) {
@@ -79,7 +79,7 @@ $app->group('/communes', function () use ($app) {
     $app->get('', function ($req, $res) use ($app) {
         $controller = new Controller\CommunesController($req, $res, $app);
         return $controller->getAllCommunes($req->getQueryParams());
-    })->setName('allCommunes');
+    })->setName('getAllCommunes');
 
     ///////////// Retourne la liste des photos /////////////
     $app->get('/{id}', function ($req, $res, $args) use ($app) {
@@ -87,7 +87,42 @@ $app->group('/communes', function () use ($app) {
         $id = $args['id'];
         $controller = new Controller\CommunesController($req, $res, $app);
         return $controller->getCommuneById($id);
-    })->setName('communeById');
+    })->setName('getCommuneById');
+});
+
+
+$app->group('/loisirs', function () use ($app) {
+
+    ///////////// Retourne la liste des photos /////////////
+    $app->get('', function ($req, $res) use ($app) {
+        $controller = new Controller\LoisirsController($req, $res, $app);
+        return $controller->getAllLoisirs($req->getQueryParams());
+    })->setName('getLoisirsByCity');
+
+    ///////////// Retourne la liste des photos /////////////
+    $app->get('/{id}', function ($req, $res, $args) use ($app) {
+
+        $id = $args['id'];
+        $controller = new Controller\LoisirsController($req, $res, $app);
+        return $controller->getLoisirsById($id);
+    })->setName('getLoisirsById');
+});
+
+$app->group('/sante', function () use ($app) {
+
+    ///////////// Retourne la liste des photos /////////////
+    $app->get('', function ($req, $res) use ($app) {
+        $controller = new Controller\SanteController($req, $res, $app);
+        return $controller->getAllHealth($req->getQueryParams());
+    })->setName('getHealthByCity');
+
+    ///////////// Retourne la liste des photos /////////////
+    $app->get('/{id}', function ($req, $res, $args) use ($app) {
+
+        $id = $args['id'];
+        $controller = new Controller\SanteController($req, $res, $app);
+        return $controller->getHealthById($id);
+    })->setName('getHealthById');
 });
 
 // On lance slim, et voila !
