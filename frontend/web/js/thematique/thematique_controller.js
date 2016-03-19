@@ -3,7 +3,7 @@ $scope.commerces = 0;
 
     //get sur les series pour initialiser les variables dans serie.js
     var GetCommerce = function () {
-        $http.get('http://localhost/ulcodeIn24/api/commerces?ville=Nancy')
+        $http.get('../api/commerces?ville=Nancy')
             .then(function (response) {
                        response.data.commerces.forEach(function (data) {
                            var newThematique = new Thematique(data.commerce);
