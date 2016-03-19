@@ -18,6 +18,17 @@ body {
     top: 161px;
 }
 
+.userBlock{
+    padding: 14px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.selected{
+    border-bottom: 3px solid #00d0d0;
+    background-color: #eef4f4;
+}
+
 .logo {
     display: inline !important;
     height: 33px;
