@@ -101,7 +101,7 @@ ulcodeIn24.controller('MapController', ['$scope', '$http', 'villeCurrent', funct
             alert("Veuillez saisir un theme");
         } else {
             if (villeCurrent.ville != []) {
-                $http.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + villeCurrent.lat + "%2C" + villeCurrent.lon + "&radius=" + $scope.range * 100 + "&name=" + $scope.theme + "&key=AIzaSyD1Lsn0Qz9Tmaij6ET1yukF5vhEXC5FQVM").success(function (data, status, headers, config) {
+                $http.get("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + villeCurrent.lat + "%2C" + villeCurrent.lon + "&radius=" + $scope.range * 100 + "&name=" + $scope.theme + "&key=AIzaSyB_UsS_FsR8nzX_jNoB5RoYigmW1QMyEk4").success(function (data, status, headers, config) {
                     data.results.forEach(function (value) {
                         $scope.markers.push(value);
                     });
