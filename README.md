@@ -2,7 +2,7 @@
 
 ### What's about ?
 
-* This project is the result of the Hackathon "ul.codeln24"
+* This project is the result of 24H of rush at the Hackathon "ul.codeln24"
 * The goal was to make an app which could help a family, a student or a professional
 to choose in which city they will wants move in, according
 their profile, the activities and interest points
@@ -36,3 +36,5 @@ which combine informations from our API and Google Places API.
 * Julien SPAETER
 * Michael GROSIO
 * Johan Khorchi
+
+Unfortunatly, Google API Key is revoked after 24 hours, so the theme research function will not work anymore
